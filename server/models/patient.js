@@ -28,7 +28,7 @@ var Patient = Schema({
 		, planID: { type: String, required: true }
 	}]
 	, patientGoals: [{
-		  status: ['New', 'Discontinued', 'Hold', 'Met', 'Ongoing']
+		  status: ["New", "Discontinued", "Hold", "Met", "Ongoing"]
 		, shortTermGoal: { type: String, required: true }
 		, procedure: { type: String, required: true }
 		, startDate: { type: Date, required: true, default: new Date() }

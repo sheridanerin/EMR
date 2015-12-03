@@ -6,9 +6,8 @@ module.exports = {
 		new Patient(req.body).save(function( err, patient ) {
 			if (err) { 
 				res.status(500).send(err);
-			} else {
-				res.send(patient);
 			}
+			res.send(patient);
 		});
 	},
 
@@ -16,9 +15,8 @@ module.exports = {
 		Patient.find(function( err, patients ) {
 			if (err) {
 				return console.error(err);
-			} else {
-			res.send(patients);
 			}
+			res.send(patients);
 		});
 	},
 
@@ -26,17 +24,16 @@ module.exports = {
 		Patient.findById(req.query.id, function( err, patient ) {
 			if (err) {
 				return console.error(err);
-			} else {
-			res.send(patient);
 			}
+			res.send(patient);
 		});
 	},
 
 	updatePatient: function( req, res ) {
 		Patient.findById(req.query.id, function( err, patient ) {
-			
+
 			for ( var property in req.body.changed ) {
-				if ( patient[property].typeOf !== Object ) {
+				if ( typeof patient[property] !== 'object' ) {
 					patient.set(property, req.body.changed[property]);
 				}
 			}		
@@ -44,27 +41,6 @@ module.exports = {
 				if (err) {
 					return res.status(500).send(err);
 				}
-	
-				res.send(updatedPatient)
-
-			})
-		})	
-	},
-
-	updatePatientVisitNotes: function( req, res ) {
-		Patient.findById(req.query.patientid, function( err, patient ) {
-			
-			patient.historicalVisitNotes.id(req.query.notesid, function( err, visitNotes ) {
-				for ( var property in req.body.changed ) {
-					visitNotes.set(property, req.body.changed[property]);
-				}
-			})			
-
-			visitNotes.save(function( err, updatedPatient ) {
-				if (err) {
-					return res.status(500).send(err);
-				}
-	
 				res.send(updatedPatient)
 
 			})
@@ -81,8 +57,24 @@ module.exports = {
 					if (err) {
 						res.status(500).send(err);
 					} 
-					
 					res.send( newNote );
+
+				})
+			}
+		})
+	},
+
+	addNewGoal: function( req, res ) {
+		Patient.findById(req.query.id, function( err, patient ) {
+			if (err) {
+				res.status(500).send(err);
+			} else {
+				patient.patientGoals.push(req.body);
+				patient.save(function( err, newGoal ) {
+					if (err) {
+						res.status(500).send(err);
+					} 
+					res.send( newGoal );
 
 				})
 			}
@@ -92,18 +84,32 @@ module.exports = {
 
 	updatePatientInsuranceInfo: function( req, res ) {
 		Patient.findById(req.query.patientid, function( err, patient ) {
-			
-			patient.insuranceInfo.id(req.query.notesid, function( err, insuranceInfo ) {
-				for ( var property in req.body.changed ) {
-					insuranceInfo.set(property, req.body.changed[property]);
-				}
-			})			
 
-			insuranceInfo.save(function( err, updatedPatient ) {
+				for ( var property in req.body.changed ) {
+					patient.insuranceInfo.id(req.query.insurid).set(property, req.body.changed[property]); 
+				}
+
+			patient.save(function( err, updatedPatient ) {
 				if (err) {
 					return res.status(500).send(err);
 				}
-	
+				res.send(updatedPatient)
+
+			})
+		})	
+	},
+
+	updatePatientVisitNotes: function( req, res ) {
+		Patient.findById(req.query.patientid, function( err, patient ) {
+			
+			for ( var property in req.body.changed ) {
+				patient.historicalVisitNotes.id(req.query.noteid).set(property, req.body.changed[property]); 
+			}
+		
+			patient.save(function( err, updatedPatient ) {
+				if (err) {
+					return res.status(500).send(err);
+				}
 				res.send(updatedPatient)
 
 			})
@@ -113,17 +119,14 @@ module.exports = {
 	updatePatientGoals: function( req, res ) {
 		Patient.findById(req.query.patientid, function( err, patient ) {
 			
-			patient.insuranceInfo.id(req.query.notesid, function( err, goals ) {
-				for ( var property in req.body.changed ) {
-					goals.set(property, req.body.changed[property]);
-				}
-			})			
+			for ( var property in req.body.changed ) {
+				patient.patientGoals.id(req.query.goalid).set(property, req.body.changed[property]); 
+			}
 
-			goals.save(function( err, updatedGoals ) {
+			patient.save(function( err, updatedGoals ) {
 				if (err) {
 					return res.status(500).send(err);
 				}
-	
 				res.send(updatedGoals)
 
 			})

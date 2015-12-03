@@ -13,7 +13,7 @@ module.exports = {
 	},
 
 	getAppointments: function( req, res ) {
-		Appointment.find().populate('patient').exec().then( function( err, appointment ) {
+		Appointment.find().populate('patient').exec().then( function( appointment, err ) {
 			if ( err ) {
 				return console.error( err );
 			} else {

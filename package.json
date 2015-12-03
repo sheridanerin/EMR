@@ -13,6 +13,13 @@
     "body-parser": "^1.14.1",
     "cors": "^2.7.1",
     "express": "^4.13.3",
-    "mongoose": "^4.2.8"
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-stylus": "^2.1.1",
+    "gulp-uglify": "^1.5.1",
+    "gulp-uglifycss": "^1.0.5",
+    "mongoose": "^4.2.8",
+    "stylus": "^0.52.4"
   }
 }
