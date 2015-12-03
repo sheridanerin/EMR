@@ -3,7 +3,7 @@ var   mongoose = require('mongoose')
 
 var Appointment = Schema({
 
-	  client: { type: Schema.Types.ObjectId, ref: 'Patient', required: true }
+	  patient: { type: Schema.Types.ObjectId, ref: 'Patient', required: true }
 	, description: { type: String, required: true }
 	, date: { type: Date, required: true }
 	, startTime: { type: Date, required: true }

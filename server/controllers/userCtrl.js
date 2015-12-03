@@ -40,6 +40,23 @@ module.exports = {
 				res.send( user );
 			}
 		});
+	},
+
+	updateUser: function( req, res ) {
+		User.findById(req.query.id, function( err, user ) {
+			
+			for ( var property in req.body.changed ) {
+				user.set(property, req.body.changed[property]);
+			}		
+			user.save(function( err, updatedUser ) {
+				if (err) {
+					return res.status(500).send(err);
+				}
+	
+				res.send(updatedUser)
+
+			})
+		})	
 	}
 
 };
