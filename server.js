@@ -27,7 +27,7 @@ app.post('/api/patient', patientCtrl.addPatient);
 app.get('/api/users', userCtrl.getUsers);
 app.get('/api/user', userCtrl.getUser);
 app.post('/api/user', userCtrl.addUser);
-// app.delete('/api/user', userCtrl.updateUser);
+app.delete('/api/user', userCtrl.deleteUser);
 // app.put('/api/user/update', userCtrl.updateUser);
 
 

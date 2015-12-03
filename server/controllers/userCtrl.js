@@ -32,6 +32,16 @@ module.exports = {
 		});
 	},
 
+	deleteUser: function( req, res ) {
+		User.findByIdAndRemove( req.query.id, function( err, user ) {
+			if ( err ) {
+				return console.error( err );
+			} else {
+				res.send( user );
+			}
+		});
+	}
+
 };
 
 
