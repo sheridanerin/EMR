@@ -45,13 +45,13 @@ module.exports = {
 	updateUser: function( req, res ) {
 		User.findById(req.query.id, function( err, user ) {
 			
-			var updatedUser = nestSetter(req.body.changed, user);
-			// for ( var property in req.body.changed ) {
-			// 	if (typeof user[property] !== 'object') {
-			// 		user.set(property, req.body.changed[property]);
-			// 	}
-			// }		
-			updatedUser.save(function( err, updatedUser ) {
+			// var updatedUser = nestSetter(req.body.changed, user);
+			for ( var property in req.body.changed ) {
+				if (typeof user[property] !== 'object') {
+					user.set(property, req.body.changed[property]);
+				}
+			}		
+			user.save(function( err, updatedUser ) {
 				if (err) {
 					return res.status(500).send(err);
 				}
@@ -62,42 +62,42 @@ module.exports = {
 		})	
 	},
 
-	// updateUserPermissions: function( req, res ) {
-	// 	User.findById(req.query.id, function( err, user ) {
+	updateUserPermissions: function( req, res ) {
+		User.findById(req.query.id, function( err, user ) {
 
- // 			for ( var property in req.body.changed ) {
-	// 			user.permissions.set(property, req.body.changed[property]); 
-	// 		}
+ 			for ( var property in req.body.changed ) {
+				user.permissions.set(property, req.body.changed[property]); 
+			}
 
-	// 		user.save(function( err, updatedPermissions ) {
-	// 			if (err) {
-	// 				return res.status(500).send(err);
-	// 			}
-	// 			res.send(updatedPermissions)
+			user.save(function( err, updatedPermissions ) {
+				if (err) {
+					return res.status(500).send(err);
+				}
+				res.send(updatedPermissions)
 
-	// 		})
-	// 	})	
-	// },
+			})
+		})	
+	},
 
 
 };
 
-function nestSetter( changed, documentToChange ) {
+// function nestSetter( changed, documentToChange ) {
 
-	for (var property in changed) {
+// 	for (var property in changed) {
 		
-		if (documentToChange.hasOwnProperty(property) && typeof documentToChange[property] === 'object' && !(Array.isArray(documentToChange[property]))) {
+// 		if (documentToChange.hasOwnProperty(property) && typeof documentToChange[property] === 'object' && !(Array.isArray(documentToChange[property]))) {
 
-			documentToChange[property].set(property, nestSetter( changed[property], documentToChange[property] ))
+// 			documentToChange[property].set(property, nestSetter( changed[property], documentToChange[property] ))
 
-		} else if (documentToChange.hasOwnProperty(property) && !(Array.isArray(documentToChange[property]))) {
+// 		} else if (documentToChange.hasOwnProperty(property) && !(Array.isArray(documentToChange[property]))) {
 
-			documentToChange[property].set(property, (changed[property]));
+// 			documentToChange[property].set(property, (changed[property]));
 
-		}
-	}
-	return documentToChange;
-}
+// 		}
+// 	}
+// 	return documentToChange;
+// }
 
 
 

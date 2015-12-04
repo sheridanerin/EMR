@@ -35,7 +35,7 @@ app.get('/api/user', userCtrl.getUser); //Need to provide user "id" query.
 app.post('/api/user', userCtrl.addUser); //No query needed.
 app.delete('/api/user', userCtrl.deleteUser); //Need to provide user "id" query.
 app.put('/api/user/update', userCtrl.updateUser); //Need to provide user "id" query.
-// app.put('/api/user/updateperm', userCtrl.updateUserPermissions); //Need to provide user "id" query.
+app.put('/api/user/updateperm', userCtrl.updateUserPermissions); //Need to provide user "id" query.
 
 
 	/////////////////
