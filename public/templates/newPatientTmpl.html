@@ -1,0 +1,571 @@
+
+<div class="newPatientView">
+
+	<div layout="column" class="md-inline-form md-whiteframe-2dp">
+		<h2>Patient Information</h2>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container>
+				<label>First Name</label>
+				<input ng-model="patient.firstName">
+			</md-input-container>
+
+			<md-input-container>
+				<label>Last Name</label>
+				<input ng-model="patient.lastName">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Gender</label>
+				<md-select ng-model="gender">
+					<md-option ng-repeat="gender in genders" value= "{{ gender }}"> {{ gender }}</md-option>
+				</md-select>
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>Day of birth</label>
+				<md-select ng-model="patient.birthDay">
+					<md-option ng-repeat="day in days" value= "{{ day }}"> {{ day }}</md-option>
+				</md-select>
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Month of birth</label>
+				<md-select ng-model="patient.birthMonth">
+					<md-option ng-repeat="month in months" value= "{{ month }}"> {{ month }}</md-option>
+				</md-select>
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Year of birth</label>
+				<md-select ng-model="patient.birthYear">
+					<md-option ng-repeat="year in years" value= "{{ year }}"> {{ year }}</md-option>
+				</md-select>
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>If separated/Divorced, child resides with: </label>
+				<input ng-model="patient.ifSepLivesWith">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>If separated/Divorced, mail statements to: </label>
+				<input ng-model="patient.ifSepLivesWith">
+			</md-input-container>
+
+		</md-content>
+
+	</div><br><br>
+	
+	<div layout="column" class="md-inline-form md-whiteframe-2dp">
+	
+		<h2>First Parent Information</h2>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container>
+				<label>First Name</label>
+				<input ng-model="patient.parent1FirstName">
+			</md-input-container>
+
+			<md-input-container>
+				<label>Last Name</label>
+				<input ng-model="patient.parent1LastName">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex class="md-block">
+				<label>Street Address</label>
+				<input ng-model="patient.parent1StreetAddress">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column"class="formBackground">
+
+			<md-input-container flex>
+				<label>Street Address 2</label>
+				<input ng-model="patient.parent1StreetAddress2">
+			</md-input-container>
+			
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>City</label>
+				<input ng-model="patient.parent1City">
+			</md-input-container>
+
+			<md-input-container>
+				<label>State</label>
+				<md-select ng-model="patient.parent1State">
+					<md-option ng-repeat="state in states" value= "{{ state }}"> {{ state }}</md-option>
+				</md-select>		
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Zip Code</label>
+				<input ng-model="patient.parent1Zip">
+			</md-input-container>
+			
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>Email</label>
+				<input ng-model="patient.parent1Email">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Phone 1</label>
+				<input ng-model="patient.parent1Phone1">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Phone 2</label>
+				<input ng-model="patient.parente1Phone2">
+			</md-input-container>
+
+		</md-content>
+
+	</div><br><br>
+
+	<div layout="column" class="md-inline-form md-whiteframe-2dp">	
+
+		<h2>Second Parent Information</h2>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container>
+				<label>First Name</label>
+				<input ng-model="patient.parent2FirstName">
+			</md-input-container>
+
+			<md-input-container>
+				<label>Last Name</label>
+				<input ng-model="patient.parent2FirstName">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex class="md-block">
+				<label>Street Address</label>
+				<input ng-model="patient.parent2StreetAddress">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>Street Address 2</label>
+				<input ng-model="patient.parent2StreetAddress2">
+			</md-input-container>
+			
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>City</label>
+				<input ng-model="patient.parent2City">
+			</md-input-container>
+
+			<md-input-container>
+				<label>State</label>
+				<md-select ng-model="patient.parent2State">
+					<md-option ng-repeat="state in states" value= "{{ state }}"> {{ state }}</md-option>
+				</md-select>		
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Zip Code</label>
+				<input ng-model="patient.parent2Zip">
+			</md-input-container>
+			
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>Email</label>
+				<input ng-model="patient.parent2Email">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Phone 1</label>
+				<input ng-model="patient.parent2Phone1">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Phone 2</label>
+				<input ng-model="patient.parent2Phone2">
+			</md-input-container>
+
+		</md-content>
+
+	</div><br><br>
+
+	<div layout="column" class="md-inline-form md-whiteframe-2dp">
+
+		<h2>Emergency Contact Info (If other than Parent)</h2>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container>
+				<label>First Name</label>
+				<input ng-model="patient.emergencyFirstName">
+			</md-input-container>
+
+			<md-input-container>
+				<label>Last Name</label>
+				<input ng-model="patient.emergencyLastName">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>Email</label>
+				<input ng-model="patient.emergencyEmail">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Phone 1</label>
+				<input ng-model="patient.emergencyPhone1">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Phone 2</label>
+				<input ng-model="patient.emergencyPhone2">
+			</md-input-container>
+
+		</md-content>
+
+	</div><br><br>
+
+		<div layout="column" class="md-inline-form md-whiteframe-2dp">	
+
+		<h2>Insurance Information</h2>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex="50">
+				<label>Insurance Company</label>
+				<input ng-model="insuaranceInfo.insuranceCompany">
+			</md-input-container>
+
+			<md-input-container flex="50">
+				<label>Group #</label>
+				<input ng-model="insuaranceInfo.groupID">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex="50">
+				<label>Name of Insured</label>
+				<input ng-model="insuaranceInfo.nameOfInsured">
+			</md-input-container>
+
+			<md-input-container flex="50">
+				<label>Relation to Patient</label>
+				<input ng-model="insuaranceInfo.relToPatient">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex class="md-block">
+				<label>Address</label>
+				<input ng-model="insuaranceInfo.streetAddress">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>City</label>
+				<input ng-model="insuaranceInfo.city">
+			</md-input-container>
+
+			<md-input-container>
+				<label>State</label>
+				<md-select ng-model="insuaranceInfo.state">
+					<md-option ng-repeat="state in states" value= "{{ state }}"> {{ state }}</md-option>
+				</md-select>		
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Zip Code</label>
+				<input ng-model="insuaranceInfo.zip">
+			</md-input-container>
+			
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>Email</label>
+				<input ng-model="insuaranceInfo.email">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Phone 1</label>
+				<input ng-model="insuaranceInfo.phone1">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Phone 2</label>
+				<input ng-model="insuaranceInfo.phone2">
+			</md-input-container>
+
+		</md-content>
+
+		<md-content layout="row" layout-sm="column" class="formBackground">
+
+			<md-input-container flex>
+				<label>Day of birth</label>
+				<md-select ng-model="insuaranceInfo.birthDay">
+					<md-option ng-repeat="day in days" value= "{{ day }}"> {{ day }}</md-option>
+				</md-select>
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Month of birth</label>
+				<md-select ng-model="insuaranceInfo.birthMonth">
+					<md-option ng-repeat="month in months" value= "{{ month }}"> {{ month }}</md-option>
+				</md-select>
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Year of birth</label>
+				<md-select ng-model="insuaranceInfo.birthYear">
+					<md-option ng-repeat="year in years | orderBy: '' : test" value= "{{ year }}"> {{ year }}</md-option>
+				</md-select>
+			</md-input-container>
+
+		</md-content>
+
+
+	</div><br><br>
+
+	<div layout="column" class="md-inline-form md-whiteframe-2dp">
+
+		<h2>Please check if you have, or have had, any of the following: </h2>
+
+		<fieldset class="standard">
+		<legend><code>Condition List</code></legend>
+		<div layout="row" layout-wrap>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.seasonalAllergies" class="md-primary">
+		          Seasonal Allergies
+		        </md-checkbox>
+		    </div>
+
+    		<div layout="row" flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.anemia" class="md-primary">
+		          Anemia
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.tensionHeadaches" class="md-primary">
+		          Tension Headaches
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.osteoarthritis" class="md-primary">
+		          Osteoarthritis
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.asthma" class="md-primary">
+		          Asthma
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.positiveTBTest" class="md-primary">
+		          Positive TB Test
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.GIBleed" class="md-primary">
+		          GI Bleed
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.anxiety" class="md-primary">
+		          Anxiety
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.emphsemaCOPD" class="md-primary">
+		          Emphsema/COPD
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.atrialFibrillation" class="md-primary">
+		          Atrial Fibrillation
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.migraines" class="md-primary">
+		          Migraines
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.rheumatoidArthritis" class="md-primary">
+		          Rheumatoid Arthritis
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.ADDADHD" class="md-primary">
+		          ADD/ADHD
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.GERD" class="md-primary">
+		          GERD
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.acne" class="md-primary">
+		          Acne
+		        </md-checkbox>
+		    </div>
+			
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.depression" class="md-primary">
+		          Depression
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.glaucoma" class="md-primary">
+		          Glaucoma
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.cataracts" class="md-primary">
+		          Cataracts
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.gout" class="md-primary">
+		          Gout
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.diabetes" class="md-primary">
+		          Diabetes
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.eczema" class="md-primary">
+		          Eczema
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.psoriasis" class="md-primary">
+		          Psoriasis
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.hearingLoss" class="md-primary">
+		          Hearing Loss
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.visionLoss" class="md-primary">
+		          Vision Loss
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.seizureDisorder" class="md-primary">
+		          Seizure Disorder
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.hypothyroidism" class="md-primary">
+		          Hypothyroidism
+		        </md-checkbox>
+		    </div>
+
+			<div flex="33">
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.hyperthyroidism" class="md-primary">
+		          Hyperthyroidism
+		        </md-checkbox>
+		    </div>
+
+			<div>
+				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.other.checked" class="md-primary">
+		          Other 
+		          <input ng-model="conditions.other.condition">
+		        </md-checkbox>
+		    </div>
+				    
+		</div>	
+
+	</fieldset> <br><br>
+	
+	<md-button class="md-raised md-primary buttonWidth">Submit</md-button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

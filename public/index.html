@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="EMRapp">
 <head>
 	<title>Home</title>
 
-	<link rel="stylesheet" type="text/css" href="public/styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
 
 </head>
 
 <body>
 
+	<div id="wrapper">
 
+		<div ui-view></div>
+	
+	</div>
 
-
-	<!-- Angular -->
+	<!-- Angular and Material Dependancies-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
     <!-- UI Router -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- App Scripts -->
-	<script src="public/scripts/all.js"></script>
+	<script src="./scripts/all.js"></script>
 
 </body>
 </html>
