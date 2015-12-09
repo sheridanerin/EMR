@@ -70,9 +70,9 @@ var Patient = Schema({
 		}
 	}
 	, historicalVisitNotes: [{
-		  date:  { type: Date, default: new Date(), required: true }
-		, description: { type: String, required: true }
-		, notes: { type: String, required: true }
+		  date:  { type: Date, default: new Date() }
+		, description: { type: String }
+		, notes: { type: String }
 	}]
 	, insuranceInfo: [{
 		  insuranceCompany: { type: String }
@@ -90,17 +90,18 @@ var Patient = Schema({
 		, birthMonth: { type: String }
 		, birthYear: { type: Number }
 		, zip: { type: Number }
-}
 	}]
 	, patientGoals: [{
 		  status: ["New", "Discontinued", "Hold", "Met", "Ongoing"]
-		, shortTermGoal: { type: String, required: true }
-		, procedure: { type: String, required: true }
-		, startDate: { type: Date, required: true, default: new Date() }
-		, endDate: { type: Date, required: true }
+		, shortTermGoal: { type: String }
+		, procedure: { type: String }
+		, startDate: { type: Date, default: new Date() }
+		, endDate: { type: Date }
 		, addressed: Boolean
 	}]
 
 });
 
 module.exports = mongoose.model('Patient', Patient);
+
+

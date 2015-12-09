@@ -1,5 +1,7 @@
-angular.module('EMRapp', ['ui.router', 'ngMaterial'])
+angular.module('EMRapp', ['ui.router', 'ngMaterial', 'ui.rCalendar'])
 	.config(function($stateProvider, $urlRouterProvider) {
+
+
 
 		$stateProvider
 			.state('home', {

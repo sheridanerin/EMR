@@ -1,3 +1,4 @@
+<navbar-dir></navbar-dir>
 
 <div class="newPatientView">
 
@@ -63,7 +64,7 @@
 
 			<md-input-container flex>
 				<label>If separated/Divorced, mail statements to: </label>
-				<input ng-model="patient.ifSepLivesWith">
+				<input ng-model="patient.ifSepBillAddress">
 			</md-input-container>
 
 		</md-content>
@@ -161,7 +162,7 @@
 
 			<md-input-container>
 				<label>Last Name</label>
-				<input ng-model="patient.parent2FirstName">
+				<input ng-model="patient.parent2LastName">
 			</md-input-container>
 
 		</md-content>
@@ -365,7 +366,7 @@
 			<md-input-container flex>
 				<label>Year of birth</label>
 				<md-select ng-model="insuaranceInfo.birthYear">
-					<md-option ng-repeat="year in years | orderBy: '' : test" value= "{{ year }}"> {{ year }}</md-option>
+					<md-option ng-repeat="year in years" value= "{{ year }}"> {{ year }}</md-option>
 				</md-select>
 			</md-input-container>
 
@@ -378,8 +379,10 @@
 
 		<h2>Please check if you have, or have had, any of the following: </h2>
 
-		<fieldset class="standard">
+	<fieldset class="standard">
+	
 		<legend><code>Condition List</code></legend>
+		
 		<div layout="row" layout-wrap>
 
 			<div flex="33">
@@ -555,7 +558,7 @@
 
 	</fieldset> <br><br>
 	
-	<md-button class="md-raised md-primary buttonWidth">Submit</md-button>
+	<md-button class="md-raised md-primary buttonWidth" ng-click="addNewPatient()">Submit</md-button>
 
 </div>
 

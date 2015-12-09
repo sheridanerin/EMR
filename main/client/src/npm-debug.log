@@ -1,0 +1,1628 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   'angular-material-calendar',
+1 verbose cli   '--save' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.1
+4 verbose install initial load of /Users/ErinSheridan/Documents/DM Projects/Personal-Project/package.json
+5 warn package.json personal-project@1.0.0 No description
+6 warn package.json personal-project@1.0.0 No repository field.
+7 warn package.json personal-project@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/body-parser/package.json
+9 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/cors/package.json
+10 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/express/package.json
+11 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/gulp/package.json
+12 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/gulp-concat/package.json
+13 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/gulp-ng-annotate/package.json
+14 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/gulp-stylus/package.json
+15 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/gulp-uglify/package.json
+16 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/gulp-uglifycss/package.json
+17 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/mongoose/package.json
+18 verbose installManyTop reading scoped package data from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/stylus/package.json
+19 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/package.json
+20 silly cache add args [ 'angular-material-calendar', null ]
+21 verbose cache add spec angular-material-calendar
+22 silly cache add parsed spec Result {
+22 silly cache add   raw: 'angular-material-calendar',
+22 silly cache add   scope: null,
+22 silly cache add   name: 'angular-material-calendar',
+22 silly cache add   rawSpec: '',
+22 silly cache add   spec: '*',
+22 silly cache add   type: 'range' }
+23 silly addNamed angular-material-calendar@*
+24 verbose addNamed "*" is a valid semver range for angular-material-calendar
+25 silly addNameRange { name: 'angular-material-calendar', range: '*', hasData: false }
+26 silly mapToRegistry name angular-material-calendar
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry uri https://registry.npmjs.org/angular-material-calendar
+30 verbose addNameRange registry:https://registry.npmjs.org/angular-material-calendar not in flight; fetching
+31 verbose request uri https://registry.npmjs.org/angular-material-calendar
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 12:07:39 PM
+34 verbose request id 1bc2aa9237551754
+35 verbose etag "3RN87XZKUVROMVOGQ69NRTM3A"
+36 http request GET https://registry.npmjs.org/angular-material-calendar
+37 http 304 https://registry.npmjs.org/angular-material-calendar
+38 silly get cb [ 304,
+38 silly get   { date: 'Tue, 08 Dec 2015 19:07:40 GMT',
+38 silly get     via: '1.1 varnish',
+38 silly get     'cache-control': 'max-age=60',
+38 silly get     etag: '"3RN87XZKUVROMVOGQ69NRTM3A"',
+38 silly get     age: '19',
+38 silly get     connection: 'keep-alive',
+38 silly get     'x-served-by': 'cache-ord1727-ORD',
+38 silly get     'x-cache': 'HIT',
+38 silly get     'x-cache-hits': '1',
+38 silly get     'x-timer': 'S1449601660.342037,VS0,VE0',
+38 silly get     vary: 'Accept' } ]
+39 verbose etag https://registry.npmjs.org/angular-material-calendar from cache
+40 verbose get saving angular-material-calendar to /Users/ErinSheridan/.npm/registry.npmjs.org/angular-material-calendar/.cache.json
+41 silly addNameRange number 2 { name: 'angular-material-calendar', range: '*', hasData: true }
+42 silly addNameRange versions [ 'angular-material-calendar',
+42 silly addNameRange   [ '0.2.1',
+42 silly addNameRange     '0.2.2',
+42 silly addNameRange     '0.2.3',
+42 silly addNameRange     '0.2.4',
+42 silly addNameRange     '0.2.6',
+42 silly addNameRange     '0.2.7',
+42 silly addNameRange     '0.2.9',
+42 silly addNameRange     '0.2.10',
+42 silly addNameRange     '0.2.11',
+42 silly addNameRange     '0.2.12' ] ]
+43 silly addNamed angular-material-calendar@0.2.12
+44 verbose addNamed "0.2.12" is a plain semver version for angular-material-calendar
+45 silly cache afterAdd angular-material-calendar@0.2.12
+46 verbose afterAdd /Users/ErinSheridan/.npm/angular-material-calendar/0.2.12/package/package.json not in flight; writing
+47 verbose afterAdd /Users/ErinSheridan/.npm/angular-material-calendar/0.2.12/package/package.json written
+48 silly install resolved [ { name: 'angular-material-calendar',
+48 silly install resolved     version: '0.2.12',
+48 silly install resolved     description: 'A calendar directive for AngularJS and Angular Material Design',
+48 silly install resolved     keywords:
+48 silly install resolved      [ 'angular',
+48 silly install resolved        'material',
+48 silly install resolved        'design',
+48 silly install resolved        'calendar',
+48 silly install resolved        'ngCalendar',
+48 silly install resolved        'mdCalendar',
+48 silly install resolved        'calendarMd',
+48 silly install resolved        'calendar-md',
+48 silly install resolved        'md-calendar',
+48 silly install resolved        'ng-calendar' ],
+48 silly install resolved     main: 'gulpfile.js',
+48 silly install resolved     scripts:
+48 silly install resolved      { postinstall: './node_modules/protractor/bin/webdriver-manager update',
+48 silly install resolved        test: 'karma start --single-run && gulp test' },
+48 silly install resolved     repository:
+48 silly install resolved      { type: 'git',
+48 silly install resolved        url: 'git+https://github.com/bradberger/material-calendar.git' },
+48 silly install resolved     maintainers: [ [Object] ],
+48 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+48 silly install resolved     license: 'MPL-2.0',
+48 silly install resolved     bugs: { url: 'https://github.com/bradberger/material-calendar/issues' },
+48 silly install resolved     devDependencies:
+48 silly install resolved      { 'angular-mocks': '~1.4',
+48 silly install resolved        eslint: '~1.4',
+48 silly install resolved        gulp: '~3.9',
+48 silly install resolved        'gulp-autoprefixer': '~2.3',
+48 silly install resolved        'gulp-connect': '~2.2',
+48 silly install resolved        'gulp-eslint': '~1.0',
+48 silly install resolved        'gulp-file-insert': '~1.0',
+48 silly install resolved        'gulp-htmlmin': '~1.1',
+48 silly install resolved        'gulp-minify-css': '~1.2',
+48 silly install resolved        'gulp-minify-html': '~1.0',
+48 silly install resolved        'gulp-protractor': '~1.0',
+48 silly install resolved        'gulp-rename': '~1.2',
+48 silly install resolved        'gulp-replace': '~0.5',
+48 silly install resolved        'gulp-sass': '~2.0',
+48 silly install resolved        'gulp-size': '~2.0',
+48 silly install resolved        'gulp-uglify': '~1.2',
+48 silly install resolved        karma: '~0.13',
+48 silly install resolved        'karma-chrome-launcher': '~0.2',
+48 silly install resolved        'karma-coverage': '~0.5',
+48 silly install resolved        'karma-coveralls': '~1.1',
+48 silly install resolved        'karma-firefox-launcher': '~0.1',
+48 silly install resolved        'karma-jasmine': '~0.3',
+48 silly install resolved        'node-sass': '^3.3',
+48 silly install resolved        protractor: '~2.2',
+48 silly install resolved        replacestream: '~4.0',
+48 silly install resolved        'run-sequence': '~1.1' },
+48 silly install resolved     dependencies:
+48 silly install resolved      { angular: '~1.4',
+48 silly install resolved        'angular-animate': '~1.4',
+48 silly install resolved        'angular-aria': '~1.4',
+48 silly install resolved        'angular-sanitize': '~1.4',
+48 silly install resolved        'angular-material': '~0.11' },
+48 silly install resolved     gitHead: '4383dfa9adf416bbd8ee3c4c6427e31097f8b444',
+48 silly install resolved     homepage: 'https://github.com/bradberger/material-calendar#readme',
+48 silly install resolved     _id: 'angular-material-calendar@0.2.12',
+48 silly install resolved     _shasum: 'bc4b15b45842dda661da0fc8b524e7741e55fd9b',
+48 silly install resolved     _from: 'angular-material-calendar@*',
+48 silly install resolved     _npmVersion: '2.11.3',
+48 silly install resolved     _nodeVersion: '0.12.7',
+48 silly install resolved     _npmUser: { name: 'bradberger', email: 'brad@bradb.net' },
+48 silly install resolved     dist:
+48 silly install resolved      { shasum: 'bc4b15b45842dda661da0fc8b524e7741e55fd9b',
+48 silly install resolved        tarball: 'http://registry.npmjs.org/angular-material-calendar/-/angular-material-calendar-0.2.12.tgz' },
+48 silly install resolved     directories: {},
+48 silly install resolved     _resolved: 'https://registry.npmjs.org/angular-material-calendar/-/angular-material-calendar-0.2.12.tgz',
+48 silly install resolved     readme: 'ERROR: No README data found!' } ]
+49 info install angular-material-calendar@0.2.12 into /Users/ErinSheridan/Documents/DM Projects/Personal-Project
+50 info installOne angular-material-calendar@0.2.12
+51 verbose installOne of angular-material-calendar to /Users/ErinSheridan/Documents/DM Projects/Personal-Project not in flight; installing
+52 verbose lock using /Users/ErinSheridan/.npm/_locks/angular-material-calenda-128e13d97dff6498.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+53 silly install write writing angular-material-calendar 0.2.12 to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+54 verbose unbuild node_modules/angular-material-calendar
+55 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar is being purged from base /Users/ErinSheridan/Documents/DM Projects/Personal-Project
+56 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+57 verbose tar unpack /Users/ErinSheridan/.npm/angular-material-calendar/0.2.12/package.tgz
+58 verbose tar unpacking to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+59 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar is being purged
+60 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+61 silly gunzTarPerm modes [ '755', '644' ]
+62 silly gunzTarPerm extractEntry package.json
+63 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+64 silly gunzTarPerm extractEntry .npmignore
+65 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+66 silly gunzTarPerm extractEntry README.md
+67 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+68 silly gunzTarPerm extractEntry angular-material-calendar.min.js
+69 silly gunzTarPerm modified mode [ 'angular-material-calendar.min.js', 436, 420 ]
+70 silly gunzTarPerm extractEntry angular-material-calendar.js
+71 silly gunzTarPerm modified mode [ 'angular-material-calendar.js', 436, 420 ]
+72 silly gunzTarPerm extractEntry gulpfile.js
+73 silly gunzTarPerm modified mode [ 'gulpfile.js', 436, 420 ]
+74 silly gunzTarPerm extractEntry karma.conf.js
+75 silly gunzTarPerm modified mode [ 'karma.conf.js', 436, 420 ]
+76 silly gunzTarPerm extractEntry protractor.conf.js
+77 silly gunzTarPerm modified mode [ 'protractor.conf.js', 436, 420 ]
+78 silly gunzTarPerm extractEntry angular-material-calendar.css
+79 silly gunzTarPerm modified mode [ 'angular-material-calendar.css', 436, 420 ]
+80 silly gunzTarPerm extractEntry angular-material-calendar.html
+81 silly gunzTarPerm modified mode [ 'angular-material-calendar.html', 436, 420 ]
+82 silly gunzTarPerm extractEntry .gitattributes
+83 silly gunzTarPerm modified mode [ '.gitattributes', 436, 420 ]
+84 silly gunzTarPerm extractEntry angular-material-calendar.min.css
+85 silly gunzTarPerm modified mode [ 'angular-material-calendar.min.css', 436, 420 ]
+86 silly gunzTarPerm extractEntry .coveralls.yml
+87 silly gunzTarPerm modified mode [ '.coveralls.yml', 436, 420 ]
+88 silly gunzTarPerm extractEntry bower.json
+89 silly gunzTarPerm modified mode [ 'bower.json', 436, 420 ]
+90 silly gunzTarPerm extractEntry dist/angular-material-calendar.js
+91 silly gunzTarPerm modified mode [ 'dist/angular-material-calendar.js', 436, 420 ]
+92 silly gunzTarPerm extractEntry dist/angular-material-calendar.min.js
+93 silly gunzTarPerm modified mode [ 'dist/angular-material-calendar.min.js', 436, 420 ]
+94 silly gunzTarPerm extractEntry dist/angular-material-calendar.css
+95 silly gunzTarPerm modified mode [ 'dist/angular-material-calendar.css', 436, 420 ]
+96 silly gunzTarPerm extractEntry dist/angular-material-calendar.html
+97 silly gunzTarPerm modified mode [ 'dist/angular-material-calendar.html', 436, 420 ]
+98 silly gunzTarPerm extractEntry dist/angular-material-calendar.min.css
+99 silly gunzTarPerm modified mode [ 'dist/angular-material-calendar.min.css', 436, 420 ]
+100 silly gunzTarPerm extractEntry .codeclimate.yml
+101 silly gunzTarPerm modified mode [ '.codeclimate.yml', 436, 420 ]
+102 silly gunzTarPerm extractEntry CHANGELOG.md
+103 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+104 silly gunzTarPerm extractEntry upload
+105 silly gunzTarPerm modified mode [ 'upload', 509, 493 ]
+106 silly gunzTarPerm extractEntry LICENSE.md
+107 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+108 silly gunzTarPerm extractEntry .eslintrc
+109 silly gunzTarPerm modified mode [ '.eslintrc', 436, 420 ]
+110 silly gunzTarPerm extractEntry src/angular-material-calendar.js
+111 silly gunzTarPerm modified mode [ 'src/angular-material-calendar.js', 436, 420 ]
+112 silly gunzTarPerm extractEntry src/angular-material-calendar.html
+113 silly gunzTarPerm modified mode [ 'src/angular-material-calendar.html', 436, 420 ]
+114 silly gunzTarPerm extractEntry src/angular-material-calendar.scss
+115 silly gunzTarPerm modified mode [ 'src/angular-material-calendar.scss', 436, 420 ]
+116 silly gunzTarPerm extractEntry test/e2e/calendarMdDirective.spec.js
+117 silly gunzTarPerm modified mode [ 'test/e2e/calendarMdDirective.spec.js', 436, 420 ]
+118 silly gunzTarPerm extractEntry test/e2e/calendarService.spec.js
+119 silly gunzTarPerm modified mode [ 'test/e2e/calendarService.spec.js', 436, 420 ]
+120 silly gunzTarPerm extractEntry test/e2e/dateToGmtFilter.spec.js
+121 silly gunzTarPerm modified mode [ 'test/e2e/dateToGmtFilter.spec.js', 436, 420 ]
+122 silly gunzTarPerm extractEntry test/e2e/website.spec.js
+123 silly gunzTarPerm modified mode [ 'test/e2e/website.spec.js', 436, 420 ]
+124 silly gunzTarPerm extractEntry test/unit/calendarDataService.spec.js
+125 silly gunzTarPerm modified mode [ 'test/unit/calendarDataService.spec.js', 436, 420 ]
+126 silly gunzTarPerm extractEntry test/unit/calendarMdDirective.spec.js
+127 silly gunzTarPerm modified mode [ 'test/unit/calendarMdDirective.spec.js', 436, 420 ]
+128 silly gunzTarPerm extractEntry test/unit/calendarService.spec.js
+129 silly gunzTarPerm modified mode [ 'test/unit/calendarService.spec.js', 436, 420 ]
+130 silly gunzTarPerm extractEntry website/404.html
+131 silly gunzTarPerm modified mode [ 'website/404.html', 436, 420 ]
+132 silly gunzTarPerm extractEntry website/css/styles.css
+133 silly gunzTarPerm modified mode [ 'website/css/styles.css', 436, 420 ]
+134 silly gunzTarPerm extractEntry website/fullscreen.html
+135 silly gunzTarPerm modified mode [ 'website/fullscreen.html', 436, 420 ]
+136 silly gunzTarPerm extractEntry website/index.html
+137 silly gunzTarPerm modified mode [ 'website/index.html', 436, 420 ]
+138 silly gunzTarPerm extractEntry website/js/demo.js
+139 silly gunzTarPerm modified mode [ 'website/js/demo.js', 436, 420 ]
+140 verbose write writing to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/package.json
+141 info preinstall angular-material-calendar@0.2.12
+142 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/package.json
+143 silly prepareForInstallMany adding angular@~1.4 from angular-material-calendar dependencies
+144 silly prepareForInstallMany adding angular-animate@~1.4 from angular-material-calendar dependencies
+145 silly prepareForInstallMany adding angular-aria@~1.4 from angular-material-calendar dependencies
+146 silly prepareForInstallMany adding angular-sanitize@~1.4 from angular-material-calendar dependencies
+147 silly prepareForInstallMany adding angular-material@~0.11 from angular-material-calendar dependencies
+148 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/package.json
+149 silly cache add args [ 'angular@~1.4', null ]
+150 verbose cache add spec angular@~1.4
+151 silly cache add args [ 'angular-animate@~1.4', null ]
+152 verbose cache add spec angular-animate@~1.4
+153 silly cache add parsed spec Result {
+153 silly cache add   raw: 'angular@~1.4',
+153 silly cache add   scope: null,
+153 silly cache add   name: 'angular',
+153 silly cache add   rawSpec: '~1.4',
+153 silly cache add   spec: '>=1.4.0 <1.5.0',
+153 silly cache add   type: 'range' }
+154 silly addNamed angular@>=1.4.0 <1.5.0
+155 verbose addNamed ">=1.4.0 <1.5.0" is a valid semver range for angular
+156 silly addNameRange { name: 'angular', range: '>=1.4.0 <1.5.0', hasData: false }
+157 silly mapToRegistry name angular
+158 silly mapToRegistry using default registry
+159 silly mapToRegistry registry https://registry.npmjs.org/
+160 silly mapToRegistry uri https://registry.npmjs.org/angular
+161 verbose addNameRange registry:https://registry.npmjs.org/angular not in flight; fetching
+162 silly cache add parsed spec Result {
+162 silly cache add   raw: 'angular-animate@~1.4',
+162 silly cache add   scope: null,
+162 silly cache add   name: 'angular-animate',
+162 silly cache add   rawSpec: '~1.4',
+162 silly cache add   spec: '>=1.4.0 <1.5.0',
+162 silly cache add   type: 'range' }
+163 silly addNamed angular-animate@>=1.4.0 <1.5.0
+164 verbose addNamed ">=1.4.0 <1.5.0" is a valid semver range for angular-animate
+165 silly addNameRange { name: 'angular-animate',
+165 silly addNameRange   range: '>=1.4.0 <1.5.0',
+165 silly addNameRange   hasData: false }
+166 silly mapToRegistry name angular-animate
+167 silly mapToRegistry using default registry
+168 silly mapToRegistry registry https://registry.npmjs.org/
+169 silly mapToRegistry uri https://registry.npmjs.org/angular-animate
+170 verbose addNameRange registry:https://registry.npmjs.org/angular-animate not in flight; fetching
+171 silly cache add args [ 'angular-aria@~1.4', null ]
+172 verbose cache add spec angular-aria@~1.4
+173 silly cache add parsed spec Result {
+173 silly cache add   raw: 'angular-aria@~1.4',
+173 silly cache add   scope: null,
+173 silly cache add   name: 'angular-aria',
+173 silly cache add   rawSpec: '~1.4',
+173 silly cache add   spec: '>=1.4.0 <1.5.0',
+173 silly cache add   type: 'range' }
+174 silly addNamed angular-aria@>=1.4.0 <1.5.0
+175 verbose addNamed ">=1.4.0 <1.5.0" is a valid semver range for angular-aria
+176 silly addNameRange { name: 'angular-aria', range: '>=1.4.0 <1.5.0', hasData: false }
+177 silly mapToRegistry name angular-aria
+178 silly mapToRegistry using default registry
+179 silly mapToRegistry registry https://registry.npmjs.org/
+180 silly mapToRegistry uri https://registry.npmjs.org/angular-aria
+181 verbose addNameRange registry:https://registry.npmjs.org/angular-aria not in flight; fetching
+182 silly cache add args [ 'angular-sanitize@~1.4', null ]
+183 verbose cache add spec angular-sanitize@~1.4
+184 silly cache add parsed spec Result {
+184 silly cache add   raw: 'angular-sanitize@~1.4',
+184 silly cache add   scope: null,
+184 silly cache add   name: 'angular-sanitize',
+184 silly cache add   rawSpec: '~1.4',
+184 silly cache add   spec: '>=1.4.0 <1.5.0',
+184 silly cache add   type: 'range' }
+185 silly addNamed angular-sanitize@>=1.4.0 <1.5.0
+186 verbose addNamed ">=1.4.0 <1.5.0" is a valid semver range for angular-sanitize
+187 silly addNameRange { name: 'angular-sanitize',
+187 silly addNameRange   range: '>=1.4.0 <1.5.0',
+187 silly addNameRange   hasData: false }
+188 silly mapToRegistry name angular-sanitize
+189 silly mapToRegistry using default registry
+190 silly mapToRegistry registry https://registry.npmjs.org/
+191 silly mapToRegistry uri https://registry.npmjs.org/angular-sanitize
+192 verbose addNameRange registry:https://registry.npmjs.org/angular-sanitize not in flight; fetching
+193 silly cache add args [ 'angular-material@~0.11', null ]
+194 verbose cache add spec angular-material@~0.11
+195 silly cache add parsed spec Result {
+195 silly cache add   raw: 'angular-material@~0.11',
+195 silly cache add   scope: null,
+195 silly cache add   name: 'angular-material',
+195 silly cache add   rawSpec: '~0.11',
+195 silly cache add   spec: '>=0.11.0 <0.12.0',
+195 silly cache add   type: 'range' }
+196 silly addNamed angular-material@>=0.11.0 <0.12.0
+197 verbose addNamed ">=0.11.0 <0.12.0" is a valid semver range for angular-material
+198 silly addNameRange { name: 'angular-material',
+198 silly addNameRange   range: '>=0.11.0 <0.12.0',
+198 silly addNameRange   hasData: false }
+199 silly mapToRegistry name angular-material
+200 silly mapToRegistry using default registry
+201 silly mapToRegistry registry https://registry.npmjs.org/
+202 silly mapToRegistry uri https://registry.npmjs.org/angular-material
+203 verbose addNameRange registry:https://registry.npmjs.org/angular-material not in flight; fetching
+204 verbose request uri https://registry.npmjs.org/angular
+205 verbose request no auth needed
+206 info attempt registry request try #1 at 12:07:40 PM
+207 verbose etag "8QMZ6D5GU8T5TLS630LGTO14D"
+208 http request GET https://registry.npmjs.org/angular
+209 verbose request uri https://registry.npmjs.org/angular-animate
+210 verbose request no auth needed
+211 info attempt registry request try #1 at 12:07:40 PM
+212 verbose etag "2WSICBUVI70ZDVP7YCIY0VLYI"
+213 http request GET https://registry.npmjs.org/angular-animate
+214 verbose request uri https://registry.npmjs.org/angular-aria
+215 verbose request no auth needed
+216 info attempt registry request try #1 at 12:07:40 PM
+217 verbose etag "BJ5YWZGS23I82ZHH1QYH46QNN"
+218 http request GET https://registry.npmjs.org/angular-aria
+219 verbose request uri https://registry.npmjs.org/angular-sanitize
+220 verbose request no auth needed
+221 info attempt registry request try #1 at 12:07:40 PM
+222 verbose etag "AFGISOS3O0BAFZX5GDFUF5KJB"
+223 http request GET https://registry.npmjs.org/angular-sanitize
+224 verbose request uri https://registry.npmjs.org/angular-material
+225 verbose request no auth needed
+226 info attempt registry request try #1 at 12:07:40 PM
+227 verbose etag "EN64G2W6IOTWMFBTXM3WDK4BR"
+228 http request GET https://registry.npmjs.org/angular-material
+229 http 304 https://registry.npmjs.org/angular
+230 silly get cb [ 304,
+230 silly get   { date: 'Tue, 08 Dec 2015 19:07:40 GMT',
+230 silly get     via: '1.1 varnish',
+230 silly get     'cache-control': 'max-age=60',
+230 silly get     etag: '"8QMZ6D5GU8T5TLS630LGTO14D"',
+230 silly get     age: '16',
+230 silly get     connection: 'keep-alive',
+230 silly get     'x-served-by': 'cache-ord1724-ORD',
+230 silly get     'x-cache': 'HIT',
+230 silly get     'x-cache-hits': '1',
+230 silly get     'x-timer': 'S1449601660.813559,VS0,VE0',
+230 silly get     vary: 'Accept' } ]
+231 verbose etag https://registry.npmjs.org/angular from cache
+232 verbose get saving angular to /Users/ErinSheridan/.npm/registry.npmjs.org/angular/.cache.json
+233 http 304 https://registry.npmjs.org/angular-animate
+234 silly get cb [ 304,
+234 silly get   { date: 'Tue, 08 Dec 2015 19:07:40 GMT',
+234 silly get     via: '1.1 varnish',
+234 silly get     'cache-control': 'max-age=60',
+234 silly get     etag: '"2WSICBUVI70ZDVP7YCIY0VLYI"',
+234 silly get     age: '17',
+234 silly get     connection: 'keep-alive',
+234 silly get     'x-served-by': 'cache-ord1731-ORD',
+234 silly get     'x-cache': 'HIT',
+234 silly get     'x-cache-hits': '1',
+234 silly get     'x-timer': 'S1449601660.818314,VS0,VE0',
+234 silly get     vary: 'Accept' } ]
+235 verbose etag https://registry.npmjs.org/angular-animate from cache
+236 verbose get saving angular-animate to /Users/ErinSheridan/.npm/registry.npmjs.org/angular-animate/.cache.json
+237 http 304 https://registry.npmjs.org/angular-aria
+238 silly get cb [ 304,
+238 silly get   { date: 'Tue, 08 Dec 2015 19:07:40 GMT',
+238 silly get     via: '1.1 varnish',
+238 silly get     'cache-control': 'max-age=60',
+238 silly get     etag: '"BJ5YWZGS23I82ZHH1QYH46QNN"',
+238 silly get     age: '16',
+238 silly get     connection: 'keep-alive',
+238 silly get     'x-served-by': 'cache-ord1730-ORD',
+238 silly get     'x-cache': 'HIT',
+238 silly get     'x-cache-hits': '2',
+238 silly get     'x-timer': 'S1449601660.812796,VS0,VE0',
+238 silly get     vary: 'Accept' } ]
+239 verbose etag https://registry.npmjs.org/angular-aria from cache
+240 verbose get saving angular-aria to /Users/ErinSheridan/.npm/registry.npmjs.org/angular-aria/.cache.json
+241 http 304 https://registry.npmjs.org/angular-sanitize
+242 silly get cb [ 304,
+242 silly get   { date: 'Tue, 08 Dec 2015 19:07:40 GMT',
+242 silly get     via: '1.1 varnish',
+242 silly get     'cache-control': 'max-age=60',
+242 silly get     etag: '"AFGISOS3O0BAFZX5GDFUF5KJB"',
+242 silly get     age: '16',
+242 silly get     connection: 'keep-alive',
+242 silly get     'x-served-by': 'cache-ord1734-ORD',
+242 silly get     'x-cache': 'HIT',
+242 silly get     'x-cache-hits': '1',
+242 silly get     'x-timer': 'S1449601660.815700,VS0,VE0',
+242 silly get     vary: 'Accept' } ]
+243 verbose etag https://registry.npmjs.org/angular-sanitize from cache
+244 verbose get saving angular-sanitize to /Users/ErinSheridan/.npm/registry.npmjs.org/angular-sanitize/.cache.json
+245 http 304 https://registry.npmjs.org/angular-material
+246 silly get cb [ 304,
+246 silly get   { date: 'Tue, 08 Dec 2015 19:07:40 GMT',
+246 silly get     via: '1.1 varnish',
+246 silly get     'cache-control': 'max-age=60',
+246 silly get     etag: '"EN64G2W6IOTWMFBTXM3WDK4BR"',
+246 silly get     age: '16',
+246 silly get     connection: 'keep-alive',
+246 silly get     'x-served-by': 'cache-ord1720-ORD',
+246 silly get     'x-cache': 'HIT',
+246 silly get     'x-cache-hits': '1',
+246 silly get     'x-timer': 'S1449601660.816654,VS0,VE0',
+246 silly get     vary: 'Accept' } ]
+247 verbose etag https://registry.npmjs.org/angular-material from cache
+248 verbose get saving angular-material to /Users/ErinSheridan/.npm/registry.npmjs.org/angular-material/.cache.json
+249 silly addNameRange number 2 { name: 'angular', range: '>=1.4.0 <1.5.0', hasData: true }
+250 silly addNameRange versions [ 'angular',
+250 silly addNameRange   [ '0.0.1',
+250 silly addNameRange     '0.0.1-1',
+250 silly addNameRange     '0.0.1-2',
+250 silly addNameRange     '0.0.2',
+250 silly addNameRange     '0.0.3',
+250 silly addNameRange     '0.0.4',
+250 silly addNameRange     '1.0.0',
+250 silly addNameRange     '1.0.1',
+250 silly addNameRange     '1.0.2',
+250 silly addNameRange     '1.0.3',
+250 silly addNameRange     '1.0.4',
+250 silly addNameRange     '1.0.5',
+250 silly addNameRange     '1.0.6',
+250 silly addNameRange     '1.0.7',
+250 silly addNameRange     '1.0.8',
+250 silly addNameRange     '1.1.0',
+250 silly addNameRange     '1.1.1',
+250 silly addNameRange     '1.1.2',
+250 silly addNameRange     '1.1.3',
+250 silly addNameRange     '1.1.4',
+250 silly addNameRange     '1.1.5',
+250 silly addNameRange     '1.2.0',
+250 silly addNameRange     '1.2.1',
+250 silly addNameRange     '1.2.2',
+250 silly addNameRange     '1.2.3',
+250 silly addNameRange     '1.2.4',
+250 silly addNameRange     '1.2.5',
+250 silly addNameRange     '1.2.6',
+250 silly addNameRange     '1.2.7',
+250 silly addNameRange     '1.2.8',
+250 silly addNameRange     '1.2.9',
+250 silly addNameRange     '1.2.10',
+250 silly addNameRange     '1.2.11',
+250 silly addNameRange     '1.2.12',
+250 silly addNameRange     '1.2.13',
+250 silly addNameRange     '1.2.14',
+250 silly addNameRange     '1.2.15',
+250 silly addNameRange     '1.2.16',
+250 silly addNameRange     '1.2.17',
+250 silly addNameRange     '1.2.18',
+250 silly addNameRange     '1.2.19',
+250 silly addNameRange     '1.2.20',
+250 silly addNameRange     '1.2.21',
+250 silly addNameRange     '1.2.22',
+250 silly addNameRange     '1.2.23',
+250 silly addNameRange     '1.3.0-rc.5',
+250 silly addNameRange     '1.3.0',
+250 silly addNameRange     '1.3.1',
+250 silly addNameRange     '1.3.2',
+250 silly addNameRange     '1.3.3',
+250 silly addNameRange     '1.3.4-build.3588',
+250 silly addNameRange     '1.2.27',
+250 silly addNameRange     '1.3.4',
+250 silly addNameRange     '1.3.5',
+250 silly addNameRange     '1.3.6',
+250 silly addNameRange     '1.3.7',
+250 silly addNameRange     '1.2.28',
+250 silly addNameRange     '1.3.8',
+250 silly addNameRange     '1.4.0-beta.0',
+250 silly addNameRange     '1.3.9',
+250 silly addNameRange     '1.3.10',
+250 silly addNameRange     '1.4.0-beta.1',
+250 silly addNameRange     '1.4.0-beta.2',
+250 silly addNameRange     '1.3.11',
+250 silly addNameRange     '1.4.0-beta.3',
+250 silly addNameRange     '1.3.12',
+250 silly addNameRange     '1.3.13',
+250 silly addNameRange     '1.4.0-beta.4',
+250 silly addNameRange     '1.3.14',
+250 silly addNameRange     '1.4.0-beta.5',
+250 silly addNameRange     '1.4.0-beta.6',
+250 silly addNameRange     '1.3.15',
+250 silly addNameRange     '1.4.0-rc.0',
+250 silly addNameRange     '1.4.0-rc.1',
+250 silly addNameRange     '1.4.0-rc.2',
+250 silly addNameRange     '1.4.0',
+250 silly addNameRange     '1.3.16',
+250 silly addNameRange     '1.4.1',
+250 silly addNameRange     '1.4.2',
+250 silly addNameRange     '1.3.17',
+250 silly addNameRange     '1.4.3',
+250 silly addNameRange     '1.4.4',
+250 silly addNameRange     '1.3.18',
+250 silly addNameRange     '1.4.5',
+250 silly addNameRange     '1.3.19',
+250 silly addNameRange     '1.4.6',
+250 silly addNameRange     '1.5.0-beta.0',
+250 silly addNameRange     '1.2.29',
+250 silly addNameRange     '1.3.20',
+250 silly addNameRange     '1.4.7',
+250 silly addNameRange     '1.5.0-beta.2',
+250 silly addNameRange     '1.4.8' ] ]
+251 silly addNamed angular@1.4.8
+252 verbose addNamed "1.4.8" is a plain semver version for angular
+253 silly addNameRange number 2 { name: 'angular-sanitize',
+253 silly addNameRange   range: '>=1.4.0 <1.5.0',
+253 silly addNameRange   hasData: true }
+254 silly addNameRange versions [ 'angular-sanitize',
+254 silly addNameRange   [ '0.0.1',
+254 silly addNameRange     '1.3.0-rc.5',
+254 silly addNameRange     '1.3.0',
+254 silly addNameRange     '1.3.1',
+254 silly addNameRange     '1.3.2',
+254 silly addNameRange     '1.3.3',
+254 silly addNameRange     '1.3.4-build.3587',
+254 silly addNameRange     '1.2.27',
+254 silly addNameRange     '1.3.4',
+254 silly addNameRange     '1.3.5',
+254 silly addNameRange     '1.3.6',
+254 silly addNameRange     '1.3.7',
+254 silly addNameRange     '1.2.28',
+254 silly addNameRange     '1.3.8',
+254 silly addNameRange     '1.4.0-beta.0',
+254 silly addNameRange     '1.3.9',
+254 silly addNameRange     '1.3.10',
+254 silly addNameRange     '1.4.0-beta.1',
+254 silly addNameRange     '1.4.0-beta.2',
+254 silly addNameRange     '1.3.11',
+254 silly addNameRange     '1.4.0-beta.3',
+254 silly addNameRange     '1.3.12',
+254 silly addNameRange     '1.3.13',
+254 silly addNameRange     '1.4.0-beta.4',
+254 silly addNameRange     '1.3.14',
+254 silly addNameRange     '1.4.0-beta.5',
+254 silly addNameRange     '1.4.0-beta.6',
+254 silly addNameRange     '1.3.15',
+254 silly addNameRange     '1.4.0-rc.0',
+254 silly addNameRange     '1.4.0-rc.1',
+254 silly addNameRange     '1.4.0-rc.2',
+254 silly addNameRange     '1.4.0',
+254 silly addNameRange     '1.3.16',
+254 silly addNameRange     '1.4.1',
+254 silly addNameRange     '1.4.2',
+254 silly addNameRange     '1.3.17',
+254 silly addNameRange     '1.4.3',
+254 silly addNameRange     '1.4.4',
+254 silly addNameRange     '1.3.18',
+254 silly addNameRange     '1.4.5',
+254 silly addNameRange     '1.3.19',
+254 silly addNameRange     '1.4.6',
+254 silly addNameRange     '1.5.0-beta.0',
+254 silly addNameRange     '1.2.29',
+254 silly addNameRange     '1.3.20',
+254 silly addNameRange     '1.4.7',
+254 silly addNameRange     '1.5.0-beta.2',
+254 silly addNameRange     '1.4.8' ] ]
+255 silly addNamed angular-sanitize@1.4.8
+256 verbose addNamed "1.4.8" is a plain semver version for angular-sanitize
+257 silly addNameRange number 2 { name: 'angular-animate',
+257 silly addNameRange   range: '>=1.4.0 <1.5.0',
+257 silly addNameRange   hasData: true }
+258 silly addNameRange versions [ 'angular-animate',
+258 silly addNameRange   [ '0.0.1',
+258 silly addNameRange     '0.0.2',
+258 silly addNameRange     '1.2.19-build.256',
+258 silly addNameRange     '1.2.16',
+258 silly addNameRange     '1.2.23',
+258 silly addNameRange     '1.3.0-rc.5',
+258 silly addNameRange     '1.3.0',
+258 silly addNameRange     '1.3.1',
+258 silly addNameRange     '1.3.2',
+258 silly addNameRange     '1.3.3',
+258 silly addNameRange     '1.3.4-build.3588',
+258 silly addNameRange     '1.2.27',
+258 silly addNameRange     '1.3.4',
+258 silly addNameRange     '1.3.5',
+258 silly addNameRange     '1.3.6',
+258 silly addNameRange     '1.3.7',
+258 silly addNameRange     '1.2.28',
+258 silly addNameRange     '1.3.8',
+258 silly addNameRange     '1.4.0-beta.0',
+258 silly addNameRange     '1.3.9',
+258 silly addNameRange     '1.3.10',
+258 silly addNameRange     '1.4.0-beta.1',
+258 silly addNameRange     '1.4.0-beta.2',
+258 silly addNameRange     '1.3.11',
+258 silly addNameRange     '1.4.0-beta.3',
+258 silly addNameRange     '1.3.12',
+258 silly addNameRange     '1.3.13',
+258 silly addNameRange     '1.4.0-beta.4',
+258 silly addNameRange     '1.3.14',
+258 silly addNameRange     '1.4.0-beta.5',
+258 silly addNameRange     '1.4.0-beta.6',
+258 silly addNameRange     '1.3.15',
+258 silly addNameRange     '1.4.0-rc.0',
+258 silly addNameRange     '1.4.0-rc.1',
+258 silly addNameRange     '1.4.0-rc.2',
+258 silly addNameRange     '1.4.0',
+258 silly addNameRange     '1.3.16',
+258 silly addNameRange     '1.4.1',
+258 silly addNameRange     '1.4.2',
+258 silly addNameRange     '1.3.17',
+258 silly addNameRange     '1.4.3',
+258 silly addNameRange     '1.4.4',
+258 silly addNameRange     '1.3.18',
+258 silly addNameRange     '1.4.5',
+258 silly addNameRange     '1.3.19',
+258 silly addNameRange     '1.4.6',
+258 silly addNameRange     '1.5.0-beta.0',
+258 silly addNameRange     '1.2.29',
+258 silly addNameRange     '1.3.20',
+258 silly addNameRange     '1.4.7',
+258 silly addNameRange     '1.5.0-beta.2',
+258 silly addNameRange     '1.4.8' ] ]
+259 silly addNamed angular-animate@1.4.8
+260 verbose addNamed "1.4.8" is a plain semver version for angular-animate
+261 silly addNameRange number 2 { name: 'angular-aria', range: '>=1.4.0 <1.5.0', hasData: true }
+262 silly addNameRange versions [ 'angular-aria',
+262 silly addNameRange   [ '1.3.0-rc.5',
+262 silly addNameRange     '1.3.0',
+262 silly addNameRange     '1.3.1',
+262 silly addNameRange     '1.3.2',
+262 silly addNameRange     '1.3.3',
+262 silly addNameRange     '1.3.4',
+262 silly addNameRange     '1.3.5',
+262 silly addNameRange     '1.3.6',
+262 silly addNameRange     '1.3.7',
+262 silly addNameRange     '1.3.8',
+262 silly addNameRange     '1.4.0-beta.0',
+262 silly addNameRange     '1.3.9',
+262 silly addNameRange     '1.3.10',
+262 silly addNameRange     '1.4.0-beta.1',
+262 silly addNameRange     '1.4.0-beta.2',
+262 silly addNameRange     '1.3.11',
+262 silly addNameRange     '1.4.0-beta.3',
+262 silly addNameRange     '1.3.12',
+262 silly addNameRange     '1.3.13',
+262 silly addNameRange     '1.4.0-beta.4',
+262 silly addNameRange     '1.3.14',
+262 silly addNameRange     '1.4.0-beta.5',
+262 silly addNameRange     '1.4.0-beta.6',
+262 silly addNameRange     '1.3.15',
+262 silly addNameRange     '1.4.0-rc.0',
+262 silly addNameRange     '1.4.0-rc.1',
+262 silly addNameRange     '1.4.0-rc.2',
+262 silly addNameRange     '1.4.0',
+262 silly addNameRange     '1.3.16',
+262 silly addNameRange     '1.4.1',
+262 silly addNameRange     '1.4.2',
+262 silly addNameRange     '1.3.17',
+262 silly addNameRange     '1.4.3',
+262 silly addNameRange     '1.4.4',
+262 silly addNameRange     '1.3.18',
+262 silly addNameRange     '1.4.5',
+262 silly addNameRange     '1.3.19',
+262 silly addNameRange     '1.4.6',
+262 silly addNameRange     '1.5.0-beta.0',
+262 silly addNameRange     '1.3.20',
+262 silly addNameRange     '1.4.7',
+262 silly addNameRange     '1.5.0-beta.2',
+262 silly addNameRange     '1.4.8' ] ]
+263 silly addNamed angular-aria@1.4.8
+264 verbose addNamed "1.4.8" is a plain semver version for angular-aria
+265 silly addNameRange number 2 { name: 'angular-material',
+265 silly addNameRange   range: '>=0.11.0 <0.12.0',
+265 silly addNameRange   hasData: true }
+266 silly addNameRange versions [ 'angular-material',
+266 silly addNameRange   [ '0.7.1',
+266 silly addNameRange     '0.8.0',
+266 silly addNameRange     '0.8.1',
+266 silly addNameRange     '0.8.2',
+266 silly addNameRange     '0.8.3',
+266 silly addNameRange     '0.9.2',
+266 silly addNameRange     '0.9.3',
+266 silly addNameRange     '0.9.4',
+266 silly addNameRange     '0.9.5',
+266 silly addNameRange     '0.9.6',
+266 silly addNameRange     '0.9.7',
+266 silly addNameRange     '0.9.8',
+266 silly addNameRange     '0.10.0',
+266 silly addNameRange     '0.10.1',
+266 silly addNameRange     '0.11.0',
+266 silly addNameRange     '0.11.1',
+266 silly addNameRange     '0.11.2',
+266 silly addNameRange     '0.11.3',
+266 silly addNameRange     '0.11.4' ] ]
+267 silly addNamed angular-material@0.11.4
+268 verbose addNamed "0.11.4" is a plain semver version for angular-material
+269 silly cache afterAdd angular@1.4.8
+270 verbose afterAdd /Users/ErinSheridan/.npm/angular/1.4.8/package/package.json not in flight; writing
+271 silly cache afterAdd angular-sanitize@1.4.8
+272 verbose afterAdd /Users/ErinSheridan/.npm/angular-sanitize/1.4.8/package/package.json not in flight; writing
+273 silly cache afterAdd angular-animate@1.4.8
+274 verbose afterAdd /Users/ErinSheridan/.npm/angular-animate/1.4.8/package/package.json not in flight; writing
+275 silly cache afterAdd angular-aria@1.4.8
+276 verbose afterAdd /Users/ErinSheridan/.npm/angular-aria/1.4.8/package/package.json not in flight; writing
+277 silly cache afterAdd angular-material@0.11.4
+278 verbose afterAdd /Users/ErinSheridan/.npm/angular-material/0.11.4/package/package.json not in flight; writing
+279 verbose afterAdd /Users/ErinSheridan/.npm/angular-sanitize/1.4.8/package/package.json written
+280 verbose afterAdd /Users/ErinSheridan/.npm/angular-animate/1.4.8/package/package.json written
+281 verbose afterAdd /Users/ErinSheridan/.npm/angular/1.4.8/package/package.json written
+282 verbose afterAdd /Users/ErinSheridan/.npm/angular-material/0.11.4/package/package.json written
+283 verbose afterAdd /Users/ErinSheridan/.npm/angular-aria/1.4.8/package/package.json written
+284 silly install resolved [ { name: 'angular-sanitize',
+284 silly install resolved     version: '1.4.8',
+284 silly install resolved     description: 'AngularJS module for sanitizing HTML',
+284 silly install resolved     main: 'index.js',
+284 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+284 silly install resolved     repository:
+284 silly install resolved      { type: 'git',
+284 silly install resolved        url: 'git+https://github.com/angular/angular.js.git' },
+284 silly install resolved     keywords: [ 'angular', 'framework', 'browser', 'html', 'client-side' ],
+284 silly install resolved     author:
+284 silly install resolved      { name: 'Angular Core Team',
+284 silly install resolved        email: 'angular-core+npm@google.com' },
+284 silly install resolved     license: 'MIT',
+284 silly install resolved     bugs: { url: 'https://github.com/angular/angular.js/issues' },
+284 silly install resolved     homepage: 'http://angularjs.org',
+284 silly install resolved     gitHead: '0c5944519fbac1d6a633f6a647efbc4cf6a1c5c9',
+284 silly install resolved     _id: 'angular-sanitize@1.4.8',
+284 silly install resolved     _shasum: '43a6d79b65ec8c9d5f6651b945493e585f83d713',
+284 silly install resolved     _from: 'angular-sanitize@>=1.4.0 <1.5.0',
+284 silly install resolved     _npmVersion: '2.0.2',
+284 silly install resolved     _nodeVersion: '0.10.26',
+284 silly install resolved     _npmUser: { name: 'angularcore', email: 'angular-core+npm@google.com' },
+284 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+284 silly install resolved     dist:
+284 silly install resolved      { shasum: '43a6d79b65ec8c9d5f6651b945493e585f83d713',
+284 silly install resolved        tarball: 'http://registry.npmjs.org/angular-sanitize/-/angular-sanitize-1.4.8.tgz' },
+284 silly install resolved     directories: {},
+284 silly install resolved     _resolved: 'https://registry.npmjs.org/angular-sanitize/-/angular-sanitize-1.4.8.tgz',
+284 silly install resolved     readme: 'ERROR: No README data found!' },
+284 silly install resolved   { name: 'angular-animate',
+284 silly install resolved     version: '1.4.8',
+284 silly install resolved     description: 'AngularJS module for animations',
+284 silly install resolved     main: 'index.js',
+284 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+284 silly install resolved     repository:
+284 silly install resolved      { type: 'git',
+284 silly install resolved        url: 'git+https://github.com/angular/angular.js.git' },
+284 silly install resolved     keywords: [ 'angular', 'framework', 'browser', 'animation', 'client-side' ],
+284 silly install resolved     author:
+284 silly install resolved      { name: 'Angular Core Team',
+284 silly install resolved        email: 'angular-core+npm@google.com' },
+284 silly install resolved     license: 'MIT',
+284 silly install resolved     bugs: { url: 'https://github.com/angular/angular.js/issues' },
+284 silly install resolved     homepage: 'http://angularjs.org',
+284 silly install resolved     gitHead: 'cc1d9740059f5e8fd43abf0e2e80695d43b3b6b1',
+284 silly install resolved     _id: 'angular-animate@1.4.8',
+284 silly install resolved     _shasum: '2c388a066d16677aecbebbddaf27a217f7002a57',
+284 silly install resolved     _from: 'angular-animate@>=1.4.0 <1.5.0',
+284 silly install resolved     _npmVersion: '2.0.2',
+284 silly install resolved     _nodeVersion: '0.10.26',
+284 silly install resolved     _npmUser: { name: 'angularcore', email: 'angular-core+npm@google.com' },
+284 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+284 silly install resolved     dist:
+284 silly install resolved      { shasum: '2c388a066d16677aecbebbddaf27a217f7002a57',
+284 silly install resolved        tarball: 'http://registry.npmjs.org/angular-animate/-/angular-animate-1.4.8.tgz' },
+284 silly install resolved     directories: {},
+284 silly install resolved     _resolved: 'https://registry.npmjs.org/angular-animate/-/angular-animate-1.4.8.tgz',
+284 silly install resolved     readme: 'ERROR: No README data found!' },
+284 silly install resolved   { name: 'angular',
+284 silly install resolved     version: '1.4.8',
+284 silly install resolved     description: 'HTML enhanced for web apps',
+284 silly install resolved     main: 'index.js',
+284 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+284 silly install resolved     repository:
+284 silly install resolved      { type: 'git',
+284 silly install resolved        url: 'git+https://github.com/angular/angular.js.git' },
+284 silly install resolved     keywords: [ 'angular', 'framework', 'browser', 'client-side' ],
+284 silly install resolved     author:
+284 silly install resolved      { name: 'Angular Core Team',
+284 silly install resolved        email: 'angular-core+npm@google.com' },
+284 silly install resolved     license: 'MIT',
+284 silly install resolved     bugs: { url: 'https://github.com/angular/angular.js/issues' },
+284 silly install resolved     homepage: 'http://angularjs.org',
+284 silly install resolved     gitHead: '572a4fcc552c27c0f4bb1b9aab395249218c1255',
+284 silly install resolved     _id: 'angular@1.4.8',
+284 silly install resolved     _shasum: 'f4573d5019d21ebf44a6b5c28a14fbd9d5967449',
+284 silly install resolved     _from: 'angular@>=1.4.0 <1.5.0',
+284 silly install resolved     _npmVersion: '2.0.2',
+284 silly install resolved     _nodeVersion: '0.10.26',
+284 silly install resolved     _npmUser: { name: 'angularcore', email: 'angular-core+npm@google.com' },
+284 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+284 silly install resolved     dist:
+284 silly install resolved      { shasum: 'f4573d5019d21ebf44a6b5c28a14fbd9d5967449',
+284 silly install resolved        tarball: 'http://registry.npmjs.org/angular/-/angular-1.4.8.tgz' },
+284 silly install resolved     directories: {},
+284 silly install resolved     _resolved: 'https://registry.npmjs.org/angular/-/angular-1.4.8.tgz',
+284 silly install resolved     readme: 'ERROR: No README data found!' },
+284 silly install resolved   { name: 'angular-material',
+284 silly install resolved     version: '0.11.4',
+284 silly install resolved     main: 'index',
+284 silly install resolved     format: 'cjs',
+284 silly install resolved     registry: 'github',
+284 silly install resolved     peerDependencies:
+284 silly install resolved      { angular: '^1.3.15 || >1.4.0-beta.0',
+284 silly install resolved        'angular-animate': '^1.3.15 || >1.4.0-beta.0',
+284 silly install resolved        'angular-aria': '^1.3.15 || >1.4.0-beta.0' },
+284 silly install resolved     jspm: { dependencies: [Object], shim: [Object], peerDependencies: {} },
+284 silly install resolved     homepage: 'https://material.angularjs.org',
+284 silly install resolved     repository: { type: 'git', url: 'git://github.com/angular/material.git' },
+284 silly install resolved     licenses: [ [Object] ],
+284 silly install resolved     keywords: [ 'angular', 'material', 'browser', 'client-side' ],
+284 silly install resolved     bugs: { url: 'https://github.com/angular/material/issues' },
+284 silly install resolved     gitHead: '2f17e27fd96c3b3aa7f278a34a199a56869ee86f',
+284 silly install resolved     description: 'This repo is for distribution on `npm` and `bower`. The source for this module is in the [main Angular Material repo](https://github.com/angular/material). Please file issues and pull requests against that repo.',
+284 silly install resolved     _id: 'angular-material@0.11.4',
+284 silly install resolved     scripts: {},
+284 silly install resolved     _shasum: '67ea772b130ace8c80b02b81d74b80351b91976d',
+284 silly install resolved     _from: 'angular-material@>=0.11.0 <0.12.0',
+284 silly install resolved     _npmVersion: '2.10.1',
+284 silly install resolved     _nodeVersion: '0.12.4',
+284 silly install resolved     _npmUser: { name: 'angularcore', email: 'angular-core+npm@google.com' },
+284 silly install resolved     maintainers: [ [Object] ],
+284 silly install resolved     dist:
+284 silly install resolved      { shasum: '67ea772b130ace8c80b02b81d74b80351b91976d',
+284 silly install resolved        tarball: 'http://registry.npmjs.org/angular-material/-/angular-material-0.11.4.tgz' },
+284 silly install resolved     directories: {},
+284 silly install resolved     _resolved: 'https://registry.npmjs.org/angular-material/-/angular-material-0.11.4.tgz',
+284 silly install resolved     readme: 'ERROR: No README data found!' },
+284 silly install resolved   { name: 'angular-aria',
+284 silly install resolved     version: '1.4.8',
+284 silly install resolved     description: 'AngularJS module for making accessibility easy',
+284 silly install resolved     main: 'index.js',
+284 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+284 silly install resolved     repository:
+284 silly install resolved      { type: 'git',
+284 silly install resolved        url: 'git+https://github.com/angular/angular.js.git' },
+284 silly install resolved     keywords:
+284 silly install resolved      [ 'angular',
+284 silly install resolved        'framework',
+284 silly install resolved        'browser',
+284 silly install resolved        'accessibility',
+284 silly install resolved        'a11y',
+284 silly install resolved        'client-side' ],
+284 silly install resolved     author:
+284 silly install resolved      { name: 'Angular Core Team',
+284 silly install resolved        email: 'angular-core+npm@google.com' },
+284 silly install resolved     license: 'MIT',
+284 silly install resolved     bugs: { url: 'https://github.com/angular/angular.js/issues' },
+284 silly install resolved     homepage: 'http://angularjs.org',
+284 silly install resolved     gitHead: '8486cc179b0bcfb280d27f765ebe366dd1098ea5',
+284 silly install resolved     _id: 'angular-aria@1.4.8',
+284 silly install resolved     _shasum: 'ddea768ad30b58f875e5181141a7ffa9cd100e8e',
+284 silly install resolved     _from: 'angular-aria@>=1.4.0 <1.5.0',
+284 silly install resolved     _npmVersion: '2.0.2',
+284 silly install resolved     _nodeVersion: '0.10.26',
+284 silly install resolved     _npmUser: { name: 'angularcore', email: 'angular-core+npm@google.com' },
+284 silly install resolved     maintainers: [ [Object], [Object] ],
+284 silly install resolved     dist:
+284 silly install resolved      { shasum: 'ddea768ad30b58f875e5181141a7ffa9cd100e8e',
+284 silly install resolved        tarball: 'http://registry.npmjs.org/angular-aria/-/angular-aria-1.4.8.tgz' },
+284 silly install resolved     directories: {},
+284 silly install resolved     _resolved: 'https://registry.npmjs.org/angular-aria/-/angular-aria-1.4.8.tgz',
+284 silly install resolved     readme: 'ERROR: No README data found!' } ]
+285 info install angular-sanitize@1.4.8 into /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+286 info install angular-animate@1.4.8 into /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+287 info install angular@1.4.8 into /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+288 info install angular-material@0.11.4 into /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+289 info install angular-aria@1.4.8 into /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+290 info installOne angular-sanitize@1.4.8
+291 verbose installOne of angular-sanitize to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar not in flight; installing
+292 info installOne angular-animate@1.4.8
+293 verbose installOne of angular-animate to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar not in flight; installing
+294 info installOne angular@1.4.8
+295 verbose installOne of angular to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar not in flight; installing
+296 info installOne angular-material@0.11.4
+297 verbose installOne of angular-material to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar not in flight; installing
+298 info installOne angular-aria@1.4.8
+299 verbose installOne of angular-aria to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar not in flight; installing
+300 verbose lock using /Users/ErinSheridan/.npm/_locks/angular-sanitize-546a6169d699f257.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize
+301 verbose lock using /Users/ErinSheridan/.npm/_locks/angular-animate-2a7219857403f8a2.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate
+302 verbose lock using /Users/ErinSheridan/.npm/_locks/angular-3aba27b108386478.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular
+303 verbose lock using /Users/ErinSheridan/.npm/_locks/angular-material-cb6edad25989c29b.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material
+304 verbose lock using /Users/ErinSheridan/.npm/_locks/angular-aria-593e977aed65bf1f.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria
+305 silly install write writing angular-sanitize 1.4.8 to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize
+306 silly install write writing angular-animate 1.4.8 to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate
+307 silly install write writing angular 1.4.8 to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular
+308 silly install write writing angular-material 0.11.4 to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material
+309 silly install write writing angular-aria 1.4.8 to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria
+310 verbose unbuild node_modules/angular-material-calendar/node_modules/angular-sanitize
+311 verbose unbuild node_modules/angular-material-calendar/node_modules/angular-animate
+312 verbose unbuild node_modules/angular-material-calendar/node_modules/angular
+313 verbose unbuild node_modules/angular-material-calendar/node_modules/angular-material
+314 verbose unbuild node_modules/angular-material-calendar/node_modules/angular-aria
+315 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize is being purged from base /Users/ErinSheridan/Documents/DM Projects/Personal-Project
+316 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize
+317 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate is being purged from base /Users/ErinSheridan/Documents/DM Projects/Personal-Project
+318 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate
+319 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular is being purged from base /Users/ErinSheridan/Documents/DM Projects/Personal-Project
+320 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular
+321 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material is being purged from base /Users/ErinSheridan/Documents/DM Projects/Personal-Project
+322 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material
+323 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria is being purged from base /Users/ErinSheridan/Documents/DM Projects/Personal-Project
+324 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria
+325 verbose tar unpack /Users/ErinSheridan/.npm/angular-sanitize/1.4.8/package.tgz
+326 verbose tar unpacking to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize
+327 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize is being purged
+328 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize
+329 verbose tar unpack /Users/ErinSheridan/.npm/angular-animate/1.4.8/package.tgz
+330 verbose tar unpacking to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate
+331 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate is being purged
+332 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate
+333 verbose tar unpack /Users/ErinSheridan/.npm/angular/1.4.8/package.tgz
+334 verbose tar unpacking to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular
+335 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular is being purged
+336 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular
+337 verbose tar unpack /Users/ErinSheridan/.npm/angular-material/0.11.4/package.tgz
+338 verbose tar unpacking to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material
+339 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material is being purged
+340 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material
+341 verbose tar unpack /Users/ErinSheridan/.npm/angular-aria/1.4.8/package.tgz
+342 verbose tar unpacking to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria
+343 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria is being purged
+344 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria
+345 silly gunzTarPerm modes [ '755', '644' ]
+346 silly gunzTarPerm modes [ '755', '644' ]
+347 silly gunzTarPerm modes [ '755', '644' ]
+348 silly gunzTarPerm modes [ '755', '644' ]
+349 silly gunzTarPerm modes [ '755', '644' ]
+350 silly gunzTarPerm extractEntry package.json
+351 silly gunzTarPerm extractEntry package.json
+352 silly gunzTarPerm extractEntry package.json
+353 silly gunzTarPerm extractEntry package.json
+354 silly gunzTarPerm extractEntry package.json
+355 silly gunzTarPerm extractEntry README.md
+356 silly gunzTarPerm extractEntry angular-sanitize.js
+357 silly gunzTarPerm extractEntry README.md
+358 silly gunzTarPerm extractEntry angular-animate.js
+359 silly gunzTarPerm extractEntry README.md
+360 silly gunzTarPerm extractEntry angular.js
+361 silly gunzTarPerm extractEntry .npmignore
+362 silly gunzTarPerm extractEntry README.md
+363 silly gunzTarPerm extractEntry README.md
+364 silly gunzTarPerm extractEntry angular-aria.js
+365 silly gunzTarPerm extractEntry angular-sanitize.min.js
+366 silly gunzTarPerm extractEntry angular-animate.min.js
+367 silly gunzTarPerm extractEntry LICENSE
+368 silly gunzTarPerm extractEntry angular-material-mocks.js
+369 silly gunzTarPerm extractEntry angular-aria.min.js
+370 silly gunzTarPerm extractEntry index.js
+371 silly gunzTarPerm extractEntry angular-sanitize.min.js.map
+372 silly gunzTarPerm extractEntry bower.json
+373 silly gunzTarPerm extractEntry angular-material.js
+374 silly gunzTarPerm extractEntry index.js
+375 silly gunzTarPerm extractEntry angular-animate.min.js.map
+376 silly gunzTarPerm extractEntry index.js
+377 silly gunzTarPerm extractEntry angular-aria.min.js.map
+378 silly gunzTarPerm extractEntry bower.json
+379 silly gunzTarPerm extractEntry bower.json
+380 silly gunzTarPerm extractEntry angular-material.min.js
+381 silly gunzTarPerm extractEntry angular.min.js
+382 verbose write writing to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria/package.json
+383 verbose write writing to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize/package.json
+384 info preinstall angular-aria@1.4.8
+385 silly gunzTarPerm extractEntry index.js
+386 info preinstall angular-sanitize@1.4.8
+387 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria/package.json
+388 silly gunzTarPerm extractEntry index.js
+389 silly gunzTarPerm extractEntry CHANGELOG.md
+390 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize/package.json
+391 silly gunzTarPerm extractEntry angular-csp.css
+392 silly gunzTarPerm extractEntry angular.min.js.gzip
+393 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria/package.json
+394 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize/package.json
+395 silly gunzTarPerm extractEntry angular.min.js.map
+396 silly install resolved []
+397 verbose about to build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria
+398 info build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria
+399 silly install resolved []
+400 verbose about to build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize
+401 info build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize
+402 silly gunzTarPerm extractEntry angular-material.css
+403 info linkStuff angular-aria@1.4.8
+404 silly linkStuff angular-aria@1.4.8 has /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules as its parent node_modules
+405 info linkStuff angular-sanitize@1.4.8
+406 silly linkStuff angular-sanitize@1.4.8 has /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules as its parent node_modules
+407 verbose write writing to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate/package.json
+408 info preinstall angular-animate@1.4.8
+409 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate/package.json
+410 verbose linkBins angular-aria@1.4.8
+411 verbose linkMans angular-aria@1.4.8
+412 verbose rebuildBundles angular-aria@1.4.8
+413 info install angular-aria@1.4.8
+414 verbose linkBins angular-sanitize@1.4.8
+415 verbose linkMans angular-sanitize@1.4.8
+416 verbose rebuildBundles angular-sanitize@1.4.8
+417 info install angular-sanitize@1.4.8
+418 info postinstall angular-aria@1.4.8
+419 silly gunzTarPerm extractEntry angular-material.layouts.min.css
+420 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate/package.json
+421 info postinstall angular-sanitize@1.4.8
+422 silly gunzTarPerm extractEntry bower.json
+423 verbose unlock done using /Users/ErinSheridan/.npm/_locks/angular-aria-593e977aed65bf1f.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-aria
+424 verbose unlock done using /Users/ErinSheridan/.npm/_locks/angular-sanitize-546a6169d699f257.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-sanitize
+425 silly gunzTarPerm extractEntry angular-material.scss
+426 silly install resolved []
+427 verbose about to build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate
+428 info build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate
+429 info linkStuff angular-animate@1.4.8
+430 silly linkStuff angular-animate@1.4.8 has /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules as its parent node_modules
+431 silly gunzTarPerm extractEntry bower.json
+432 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/copy.svg
+433 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/copy2.svg
+434 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/facebook.svg
+435 verbose linkBins angular-animate@1.4.8
+436 verbose linkMans angular-animate@1.4.8
+437 verbose rebuildBundles angular-animate@1.4.8
+438 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/hangout.svg
+439 info install angular-animate@1.4.8
+440 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/mail.svg
+441 info postinstall angular-animate@1.4.8
+442 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/message.svg
+443 verbose unlock done using /Users/ErinSheridan/.npm/_locks/angular-animate-2a7219857403f8a2.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-animate
+444 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/print.svg
+445 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/share-arrow.svg
+446 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/twitter.svg
+447 silly gunzTarPerm extractEntry demos/bottomSheet/demoBasicUsage/img/icons/upload.svg
+448 silly gunzTarPerm extractEntry demos/chips/demoBasicUsage/style.scss
+449 silly gunzTarPerm extractEntry demos/chips/demoContactChips/style.scss
+450 silly gunzTarPerm extractEntry demos/gridList/demoBasicUsage/style.scss
+451 silly gunzTarPerm extractEntry demos/gridList/demoDynamicTiles/style.scss
+452 silly gunzTarPerm extractEntry demos/gridList/demoResponsiveUsage/style.scss
+453 silly gunzTarPerm extractEntry demos/icon/demoLoadSvgIconsFromUrl/img/icons/addShoppingCart.svg
+454 silly gunzTarPerm extractEntry demos/icon/demoLoadSvgIconsFromUrl/img/icons/android.svg
+455 silly gunzTarPerm extractEntry demos/icon/demoLoadSvgIconsFromUrl/img/icons/cake.svg
+456 silly gunzTarPerm extractEntry demos/icon/demoSvgIconSets/assets/cake.svg
+457 silly gunzTarPerm extractEntry demos/icon/demoSvgIconSets/assets/core-icons.svg
+458 silly gunzTarPerm extractEntry demos/icon/demoSvgIconSets/assets/social-icons.svg
+459 silly gunzTarPerm extractEntry demos/icon/demoSvgIconsFromURL/img/icons/addShoppingCart.svg
+460 silly gunzTarPerm extractEntry demos/icon/demoSvgIconsFromURL/img/icons/android.svg
+461 silly gunzTarPerm extractEntry demos/icon/demoSvgIconsFromURL/img/icons/cake.svg
+462 silly gunzTarPerm extractEntry demos/icon/demoUsingTemplateCache/assets/android.svg
+463 silly gunzTarPerm extractEntry demos/icon/demoUsingTemplateCache/assets/cake.svg
+464 silly gunzTarPerm extractEntry demos/icon/demoUsingTemplateCache/assets/core-icons.svg
+465 silly gunzTarPerm extractEntry demos/input/demoIcons/icons/ic_email_24px.svg
+466 silly gunzTarPerm extractEntry demos/input/demoIcons/icons/ic_person_24px.svg
+467 silly gunzTarPerm extractEntry demos/input/demoIcons/icons/ic_phone_24px.svg
+468 silly gunzTarPerm extractEntry demos/input/demoIcons/icons/ic_place_24px.svg
+469 silly gunzTarPerm extractEntry demos/input/demoIcons/style.scss
+470 silly gunzTarPerm extractEntry demos/list/demoListControls/img/100-0.jpeg
+471 silly gunzTarPerm extractEntry demos/list/demoListControls/img/100-1.jpeg
+472 silly gunzTarPerm extractEntry demos/list/demoListControls/img/100-2.jpeg
+473 silly gunzTarPerm extractEntry demos/tabs/demoDynamicHeight/style.scss
+474 silly gunzTarPerm extractEntry demos/tabs/demoDynamicTabs/style.scss
+475 silly gunzTarPerm extractEntry demos/tabs/demoStaticTabs/style.scss
+476 silly gunzTarPerm extractEntry demos/toolbar/demoBasicUsage/img/icons/favorite.svg
+477 silly gunzTarPerm extractEntry demos/toolbar/demoBasicUsage/img/icons/menu.svg
+478 silly gunzTarPerm extractEntry demos/toolbar/demoBasicUsage/img/icons/more_vert.svg
+479 silly gunzTarPerm extractEntry angular-material.layouts.css
+480 silly gunzTarPerm extractEntry modules/closure/list/list.js
+481 silly gunzTarPerm extractEntry modules/closure/list/list.min.js
+482 silly gunzTarPerm extractEntry modules/closure/list/list-default-theme.css
+483 silly gunzTarPerm extractEntry modules/closure/list/list-default-theme.min.css
+484 silly gunzTarPerm extractEntry modules/closure/list/list.css
+485 silly gunzTarPerm extractEntry modules/closure/list/list.min.css
+486 silly gunzTarPerm extractEntry modules/closure/autocomplete/autocomplete.js
+487 silly gunzTarPerm extractEntry modules/closure/autocomplete/autocomplete.min.js
+488 silly gunzTarPerm extractEntry modules/closure/autocomplete/autocomplete-default-theme.css
+489 silly gunzTarPerm extractEntry modules/closure/autocomplete/autocomplete-default-theme.min.css
+490 silly gunzTarPerm extractEntry modules/closure/autocomplete/autocomplete.css
+491 silly gunzTarPerm extractEntry modules/closure/autocomplete/autocomplete.min.css
+492 silly gunzTarPerm extractEntry modules/closure/bottomSheet/bottomSheet.js
+493 silly gunzTarPerm extractEntry modules/closure/bottomSheet/bottomSheet.min.js
+494 silly gunzTarPerm extractEntry modules/closure/bottomSheet/bottomSheet-default-theme.css
+495 silly gunzTarPerm extractEntry modules/closure/bottomSheet/bottomSheet-default-theme.min.css
+496 silly gunzTarPerm extractEntry modules/closure/bottomSheet/bottomSheet.css
+497 silly gunzTarPerm extractEntry modules/closure/bottomSheet/bottomSheet.min.css
+498 silly gunzTarPerm extractEntry modules/closure/button/button.js
+499 silly gunzTarPerm extractEntry modules/closure/button/button.min.js
+500 silly gunzTarPerm extractEntry modules/closure/button/button-default-theme.css
+501 silly gunzTarPerm extractEntry modules/closure/button/button-default-theme.min.css
+502 silly gunzTarPerm extractEntry modules/closure/button/button.css
+503 silly gunzTarPerm extractEntry modules/closure/button/button.min.css
+504 silly gunzTarPerm extractEntry modules/closure/card/card.js
+505 silly gunzTarPerm extractEntry modules/closure/card/card.min.js
+506 silly gunzTarPerm extractEntry modules/closure/card/card-default-theme.css
+507 silly gunzTarPerm extractEntry modules/closure/card/card-default-theme.min.css
+508 silly gunzTarPerm extractEntry modules/closure/card/card.css
+509 silly gunzTarPerm extractEntry modules/closure/card/card.min.css
+510 verbose write writing to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular/package.json
+511 info preinstall angular@1.4.8
+512 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular/package.json
+513 silly gunzTarPerm extractEntry modules/closure/checkbox/checkbox.js
+514 silly gunzTarPerm extractEntry modules/closure/checkbox/checkbox.min.js
+515 silly gunzTarPerm extractEntry modules/closure/checkbox/checkbox-default-theme.css
+516 silly gunzTarPerm extractEntry modules/closure/checkbox/checkbox-default-theme.min.css
+517 silly gunzTarPerm extractEntry modules/closure/checkbox/checkbox.css
+518 silly gunzTarPerm extractEntry modules/closure/checkbox/checkbox.min.css
+519 silly gunzTarPerm extractEntry modules/closure/chips/chips.js
+520 silly gunzTarPerm extractEntry modules/closure/chips/chips.min.js
+521 silly gunzTarPerm extractEntry modules/closure/chips/chips-default-theme.css
+522 silly gunzTarPerm extractEntry modules/closure/chips/chips-default-theme.min.css
+523 silly gunzTarPerm extractEntry modules/closure/chips/chips.css
+524 silly gunzTarPerm extractEntry modules/closure/chips/chips.min.css
+525 silly gunzTarPerm extractEntry modules/closure/content/content.js
+526 silly gunzTarPerm extractEntry modules/closure/content/content.min.js
+527 silly gunzTarPerm extractEntry modules/closure/content/content-default-theme.css
+528 silly gunzTarPerm extractEntry modules/closure/content/content-default-theme.min.css
+529 silly gunzTarPerm extractEntry modules/closure/content/content.css
+530 silly gunzTarPerm extractEntry modules/closure/content/content.min.css
+531 silly gunzTarPerm extractEntry modules/closure/core/core.js
+532 silly gunzTarPerm extractEntry modules/closure/core/core.min.js
+533 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular/package.json
+534 silly install resolved []
+535 verbose about to build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular
+536 info build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular
+537 silly gunzTarPerm extractEntry modules/closure/core/default-theme.js
+538 info linkStuff angular@1.4.8
+539 silly linkStuff angular@1.4.8 has /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules as its parent node_modules
+540 silly gunzTarPerm extractEntry modules/closure/core/core.css
+541 silly gunzTarPerm extractEntry modules/closure/core/core.min.css
+542 verbose linkBins angular@1.4.8
+543 verbose linkMans angular@1.4.8
+544 verbose rebuildBundles angular@1.4.8
+545 silly gunzTarPerm extractEntry modules/closure/datepicker/datepicker.js
+546 info install angular@1.4.8
+547 info postinstall angular@1.4.8
+548 verbose unlock done using /Users/ErinSheridan/.npm/_locks/angular-3aba27b108386478.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular
+549 silly gunzTarPerm extractEntry modules/closure/datepicker/datepicker.min.js
+550 silly gunzTarPerm extractEntry modules/closure/datepicker/datepicker-default-theme.css
+551 silly gunzTarPerm extractEntry modules/closure/datepicker/datepicker-default-theme.min.css
+552 silly gunzTarPerm extractEntry modules/closure/datepicker/datepicker.css
+553 silly gunzTarPerm extractEntry modules/closure/datepicker/datepicker.min.css
+554 silly gunzTarPerm extractEntry modules/closure/dialog/dialog.js
+555 silly gunzTarPerm extractEntry modules/closure/dialog/dialog.min.js
+556 silly gunzTarPerm extractEntry modules/closure/dialog/dialog-default-theme.css
+557 silly gunzTarPerm extractEntry modules/closure/dialog/dialog-default-theme.min.css
+558 silly gunzTarPerm extractEntry modules/closure/dialog/dialog.css
+559 silly gunzTarPerm extractEntry modules/closure/dialog/dialog.min.css
+560 silly gunzTarPerm extractEntry modules/closure/divider/divider.js
+561 silly gunzTarPerm extractEntry modules/closure/divider/divider.min.js
+562 silly gunzTarPerm extractEntry modules/closure/divider/divider-default-theme.css
+563 silly gunzTarPerm extractEntry modules/closure/divider/divider-default-theme.min.css
+564 silly gunzTarPerm extractEntry modules/closure/divider/divider.css
+565 silly gunzTarPerm extractEntry modules/closure/divider/divider.min.css
+566 silly gunzTarPerm extractEntry modules/closure/fabActions/fabActions.js
+567 silly gunzTarPerm extractEntry modules/closure/fabActions/fabActions.min.js
+568 silly gunzTarPerm extractEntry modules/closure/fabSpeedDial/fabSpeedDial.js
+569 silly gunzTarPerm extractEntry modules/closure/fabSpeedDial/fabSpeedDial.min.js
+570 silly gunzTarPerm extractEntry modules/closure/fabSpeedDial/fabSpeedDial.css
+571 silly gunzTarPerm extractEntry modules/closure/fabSpeedDial/fabSpeedDial.min.css
+572 silly gunzTarPerm extractEntry modules/closure/fabToolbar/fabToolbar.js
+573 silly gunzTarPerm extractEntry modules/closure/fabToolbar/fabToolbar.min.js
+574 silly gunzTarPerm extractEntry modules/closure/fabToolbar/fabToolbar.css
+575 silly gunzTarPerm extractEntry modules/closure/fabToolbar/fabToolbar.min.css
+576 silly gunzTarPerm extractEntry modules/closure/fabTrigger/fabTrigger.js
+577 silly gunzTarPerm extractEntry modules/closure/fabTrigger/fabTrigger.min.js
+578 silly gunzTarPerm extractEntry modules/closure/gridList/gridList.js
+579 silly gunzTarPerm extractEntry modules/closure/gridList/gridList.min.js
+580 silly gunzTarPerm extractEntry modules/closure/gridList/gridList-default-theme.css
+581 silly gunzTarPerm extractEntry modules/closure/gridList/gridList.css
+582 silly gunzTarPerm extractEntry modules/closure/gridList/gridList.min.css
+583 silly gunzTarPerm extractEntry modules/closure/icon/icon.js
+584 silly gunzTarPerm extractEntry modules/closure/icon/icon.min.js
+585 silly gunzTarPerm extractEntry modules/closure/icon/icon-default-theme.css
+586 silly gunzTarPerm extractEntry modules/closure/icon/icon-default-theme.min.css
+587 silly gunzTarPerm extractEntry modules/closure/icon/icon.css
+588 silly gunzTarPerm extractEntry modules/closure/icon/icon.min.css
+589 silly gunzTarPerm extractEntry modules/closure/input/input.js
+590 silly gunzTarPerm extractEntry modules/closure/input/input.min.js
+591 silly gunzTarPerm extractEntry modules/closure/input/input-default-theme.css
+592 silly gunzTarPerm extractEntry modules/closure/input/input-default-theme.min.css
+593 silly gunzTarPerm extractEntry modules/closure/input/input.css
+594 silly gunzTarPerm extractEntry modules/closure/input/input.min.css
+595 silly gunzTarPerm extractEntry modules/closure/backdrop/backdrop.js
+596 silly gunzTarPerm extractEntry modules/closure/backdrop/backdrop.min.js
+597 silly gunzTarPerm extractEntry modules/closure/backdrop/backdrop-default-theme.css
+598 silly gunzTarPerm extractEntry modules/closure/backdrop/backdrop-default-theme.min.css
+599 silly gunzTarPerm extractEntry modules/closure/backdrop/backdrop.css
+600 silly gunzTarPerm extractEntry modules/closure/backdrop/backdrop.min.css
+601 silly gunzTarPerm extractEntry modules/closure/menu/menu.js
+602 silly gunzTarPerm extractEntry modules/closure/menu/menu.min.js
+603 silly gunzTarPerm extractEntry modules/closure/menu/menu-default-theme.css
+604 silly gunzTarPerm extractEntry modules/closure/menu/menu-default-theme.min.css
+605 silly gunzTarPerm extractEntry modules/closure/menu/menu.css
+606 silly gunzTarPerm extractEntry modules/closure/menu/menu.min.css
+607 silly gunzTarPerm extractEntry modules/closure/menuBar/menuBar.js
+608 silly gunzTarPerm extractEntry modules/closure/menuBar/menuBar.min.js
+609 silly gunzTarPerm extractEntry modules/closure/menuBar/menuBar-default-theme.css
+610 silly gunzTarPerm extractEntry modules/closure/menuBar/menuBar-default-theme.min.css
+611 silly gunzTarPerm extractEntry modules/closure/menuBar/menuBar.css
+612 silly gunzTarPerm extractEntry modules/closure/menuBar/menuBar.min.css
+613 silly gunzTarPerm extractEntry modules/closure/progressCircular/progressCircular.js
+614 silly gunzTarPerm extractEntry modules/closure/progressCircular/progressCircular.min.js
+615 silly gunzTarPerm extractEntry modules/closure/progressCircular/progressCircular-default-theme.css
+616 silly gunzTarPerm extractEntry modules/closure/progressCircular/progressCircular-default-theme.min.css
+617 silly gunzTarPerm extractEntry modules/closure/progressCircular/progressCircular.css
+618 silly gunzTarPerm extractEntry modules/closure/progressCircular/progressCircular.min.css
+619 silly gunzTarPerm extractEntry modules/closure/progressLinear/progressLinear.js
+620 silly gunzTarPerm extractEntry modules/closure/progressLinear/progressLinear.min.js
+621 silly gunzTarPerm extractEntry modules/closure/progressLinear/progressLinear-default-theme.css
+622 silly gunzTarPerm extractEntry modules/closure/progressLinear/progressLinear-default-theme.min.css
+623 silly gunzTarPerm extractEntry modules/closure/progressLinear/progressLinear.css
+624 silly gunzTarPerm extractEntry modules/closure/progressLinear/progressLinear.min.css
+625 silly gunzTarPerm extractEntry modules/closure/radioButton/radioButton.js
+626 silly gunzTarPerm extractEntry modules/closure/radioButton/radioButton.min.js
+627 silly gunzTarPerm extractEntry modules/closure/radioButton/radioButton-default-theme.css
+628 silly gunzTarPerm extractEntry modules/closure/radioButton/radioButton-default-theme.min.css
+629 silly gunzTarPerm extractEntry modules/closure/radioButton/radioButton.css
+630 silly gunzTarPerm extractEntry modules/closure/radioButton/radioButton.min.css
+631 silly gunzTarPerm extractEntry modules/closure/select/select.js
+632 silly gunzTarPerm extractEntry modules/closure/select/select.min.js
+633 silly gunzTarPerm extractEntry modules/closure/select/select-default-theme.css
+634 silly gunzTarPerm extractEntry modules/closure/select/select-default-theme.min.css
+635 silly gunzTarPerm extractEntry modules/closure/select/select.css
+636 silly gunzTarPerm extractEntry modules/closure/select/select.min.css
+637 silly gunzTarPerm extractEntry modules/closure/sidenav/sidenav.js
+638 silly gunzTarPerm extractEntry modules/closure/sidenav/sidenav.min.js
+639 silly gunzTarPerm extractEntry modules/closure/sidenav/sidenav-default-theme.css
+640 silly gunzTarPerm extractEntry modules/closure/sidenav/sidenav-default-theme.min.css
+641 silly gunzTarPerm extractEntry modules/closure/sidenav/sidenav.css
+642 silly gunzTarPerm extractEntry modules/closure/sidenav/sidenav.min.css
+643 silly gunzTarPerm extractEntry modules/closure/slider/slider.js
+644 silly gunzTarPerm extractEntry modules/closure/slider/slider.min.js
+645 silly gunzTarPerm extractEntry modules/closure/slider/slider-default-theme.css
+646 silly gunzTarPerm extractEntry modules/closure/slider/slider-default-theme.min.css
+647 silly gunzTarPerm extractEntry modules/closure/slider/slider.css
+648 silly gunzTarPerm extractEntry modules/closure/slider/slider.min.css
+649 silly gunzTarPerm extractEntry modules/closure/sticky/sticky.js
+650 silly gunzTarPerm extractEntry modules/closure/sticky/sticky.min.js
+651 silly gunzTarPerm extractEntry modules/closure/sticky/sticky.css
+652 silly gunzTarPerm extractEntry modules/closure/sticky/sticky.min.css
+653 silly gunzTarPerm extractEntry modules/closure/subheader/subheader.js
+654 silly gunzTarPerm extractEntry modules/closure/subheader/subheader.min.js
+655 silly gunzTarPerm extractEntry modules/closure/subheader/subheader-default-theme.css
+656 silly gunzTarPerm extractEntry modules/closure/subheader/subheader-default-theme.min.css
+657 silly gunzTarPerm extractEntry modules/closure/subheader/subheader.css
+658 silly gunzTarPerm extractEntry modules/closure/subheader/subheader.min.css
+659 silly gunzTarPerm extractEntry modules/closure/swipe/swipe.js
+660 silly gunzTarPerm extractEntry modules/closure/swipe/swipe.min.js
+661 silly gunzTarPerm extractEntry modules/closure/switch/switch.js
+662 silly gunzTarPerm extractEntry modules/closure/switch/switch.min.js
+663 silly gunzTarPerm extractEntry modules/closure/switch/switch-default-theme.css
+664 silly gunzTarPerm extractEntry modules/closure/switch/switch-default-theme.min.css
+665 silly gunzTarPerm extractEntry modules/closure/switch/switch.css
+666 silly gunzTarPerm extractEntry modules/closure/switch/switch.min.css
+667 silly gunzTarPerm extractEntry modules/closure/tabs/tabs.js
+668 silly gunzTarPerm extractEntry modules/closure/tabs/tabs.min.js
+669 silly gunzTarPerm extractEntry modules/closure/tabs/tabs-arrow.svg
+670 silly gunzTarPerm extractEntry modules/closure/tabs/tabs-default-theme.css
+671 silly gunzTarPerm extractEntry modules/closure/tabs/tabs-default-theme.min.css
+672 silly gunzTarPerm extractEntry modules/closure/tabs/tabs.css
+673 silly gunzTarPerm extractEntry modules/closure/tabs/tabs.min.css
+674 silly gunzTarPerm extractEntry modules/closure/textField/textField.js
+675 silly gunzTarPerm extractEntry modules/closure/textField/textField-default-theme.css
+676 silly gunzTarPerm extractEntry modules/closure/textField/textField.css
+677 silly gunzTarPerm extractEntry modules/closure/toast/toast.js
+678 silly gunzTarPerm extractEntry modules/closure/toast/toast.min.js
+679 silly gunzTarPerm extractEntry modules/closure/toast/toast-default-theme.css
+680 silly gunzTarPerm extractEntry modules/closure/toast/toast-default-theme.min.css
+681 silly gunzTarPerm extractEntry modules/closure/toast/toast.css
+682 silly gunzTarPerm extractEntry modules/closure/toast/toast.min.css
+683 silly gunzTarPerm extractEntry modules/closure/toolbar/toolbar.js
+684 silly gunzTarPerm extractEntry modules/closure/toolbar/toolbar.min.js
+685 silly gunzTarPerm extractEntry modules/closure/toolbar/toolbar-default-theme.css
+686 silly gunzTarPerm extractEntry modules/closure/toolbar/toolbar-default-theme.min.css
+687 silly gunzTarPerm extractEntry modules/closure/toolbar/toolbar.css
+688 silly gunzTarPerm extractEntry modules/closure/toolbar/toolbar.min.css
+689 silly gunzTarPerm extractEntry modules/closure/tooltip/tooltip.js
+690 silly gunzTarPerm extractEntry modules/closure/tooltip/tooltip.min.js
+691 silly gunzTarPerm extractEntry modules/closure/tooltip/tooltip-default-theme.css
+692 silly gunzTarPerm extractEntry modules/closure/tooltip/tooltip-default-theme.min.css
+693 silly gunzTarPerm extractEntry modules/closure/tooltip/tooltip.css
+694 silly gunzTarPerm extractEntry modules/closure/tooltip/tooltip.min.css
+695 silly gunzTarPerm extractEntry modules/closure/virtualRepeat/virtualRepeat.js
+696 silly gunzTarPerm extractEntry modules/closure/virtualRepeat/virtualRepeat.min.js
+697 silly gunzTarPerm extractEntry modules/closure/virtualRepeat/virtualRepeat.css
+698 silly gunzTarPerm extractEntry modules/closure/virtualRepeat/virtualRepeat.min.css
+699 silly gunzTarPerm extractEntry modules/closure/whiteframe/whiteframe.js
+700 silly gunzTarPerm extractEntry modules/closure/whiteframe/whiteframe.min.js
+701 silly gunzTarPerm extractEntry modules/closure/whiteframe/whiteframe.css
+702 silly gunzTarPerm extractEntry modules/closure/whiteframe/whiteframe.min.css
+703 silly gunzTarPerm extractEntry modules/css/angular-material-layout.css
+704 silly gunzTarPerm extractEntry modules/css/angular-material-layouts.css
+705 silly gunzTarPerm extractEntry modules/js/list/list.js
+706 silly gunzTarPerm extractEntry modules/js/list/list.min.js
+707 silly gunzTarPerm extractEntry modules/js/list/bower.json
+708 silly gunzTarPerm extractEntry modules/js/list/list-default-theme.css
+709 silly gunzTarPerm extractEntry modules/js/list/list-default-theme.min.css
+710 silly gunzTarPerm extractEntry modules/js/list/list.css
+711 silly gunzTarPerm extractEntry modules/js/list/list.min.css
+712 silly gunzTarPerm extractEntry modules/js/autocomplete/autocomplete.js
+713 silly gunzTarPerm extractEntry modules/js/autocomplete/autocomplete.min.js
+714 silly gunzTarPerm extractEntry modules/js/autocomplete/autocomplete-default-theme.css
+715 silly gunzTarPerm extractEntry modules/js/autocomplete/autocomplete-default-theme.min.css
+716 silly gunzTarPerm extractEntry modules/js/autocomplete/autocomplete.css
+717 silly gunzTarPerm extractEntry modules/js/autocomplete/autocomplete.min.css
+718 silly gunzTarPerm extractEntry modules/js/autocomplete/bower.json
+719 silly gunzTarPerm extractEntry modules/js/bottomSheet/bottomSheet.js
+720 silly gunzTarPerm extractEntry modules/js/bottomSheet/bottomSheet.min.js
+721 silly gunzTarPerm extractEntry modules/js/bottomSheet/bottomSheet-default-theme.css
+722 silly gunzTarPerm extractEntry modules/js/bottomSheet/bottomSheet-default-theme.min.css
+723 silly gunzTarPerm extractEntry modules/js/bottomSheet/bottomSheet.css
+724 silly gunzTarPerm extractEntry modules/js/bottomSheet/bottomSheet.min.css
+725 silly gunzTarPerm extractEntry modules/js/bottomSheet/bower.json
+726 silly gunzTarPerm extractEntry modules/js/button/button.js
+727 silly gunzTarPerm extractEntry modules/js/button/button.min.js
+728 silly gunzTarPerm extractEntry modules/js/button/bower.json
+729 silly gunzTarPerm extractEntry modules/js/button/button-default-theme.css
+730 silly gunzTarPerm extractEntry modules/js/button/button-default-theme.min.css
+731 silly gunzTarPerm extractEntry modules/js/button/button.css
+732 silly gunzTarPerm extractEntry modules/js/button/button.min.css
+733 silly gunzTarPerm extractEntry modules/js/card/card.js
+734 silly gunzTarPerm extractEntry modules/js/card/card.min.js
+735 silly gunzTarPerm extractEntry modules/js/card/bower.json
+736 silly gunzTarPerm extractEntry modules/js/card/card-default-theme.css
+737 silly gunzTarPerm extractEntry modules/js/card/card-default-theme.min.css
+738 silly gunzTarPerm extractEntry modules/js/card/card.css
+739 silly gunzTarPerm extractEntry modules/js/card/card.min.css
+740 silly gunzTarPerm extractEntry modules/js/checkbox/checkbox.js
+741 silly gunzTarPerm extractEntry modules/js/checkbox/checkbox.min.js
+742 silly gunzTarPerm extractEntry modules/js/checkbox/bower.json
+743 silly gunzTarPerm extractEntry modules/js/checkbox/checkbox-default-theme.css
+744 silly gunzTarPerm extractEntry modules/js/checkbox/checkbox-default-theme.min.css
+745 silly gunzTarPerm extractEntry modules/js/checkbox/checkbox.css
+746 silly gunzTarPerm extractEntry modules/js/checkbox/checkbox.min.css
+747 silly gunzTarPerm extractEntry modules/js/chips/chips.js
+748 silly gunzTarPerm extractEntry modules/js/chips/chips.min.js
+749 silly gunzTarPerm extractEntry modules/js/chips/bower.json
+750 silly gunzTarPerm extractEntry modules/js/chips/chips-default-theme.css
+751 silly gunzTarPerm extractEntry modules/js/chips/chips-default-theme.min.css
+752 silly gunzTarPerm extractEntry modules/js/chips/chips.css
+753 silly gunzTarPerm extractEntry modules/js/chips/chips.min.css
+754 silly gunzTarPerm extractEntry modules/js/content/content.js
+755 silly gunzTarPerm extractEntry modules/js/content/content.min.js
+756 silly gunzTarPerm extractEntry modules/js/content/bower.json
+757 silly gunzTarPerm extractEntry modules/js/content/content-default-theme.css
+758 silly gunzTarPerm extractEntry modules/js/content/content-default-theme.min.css
+759 silly gunzTarPerm extractEntry modules/js/content/content.css
+760 silly gunzTarPerm extractEntry modules/js/content/content.min.css
+761 silly gunzTarPerm extractEntry modules/js/core/core.js
+762 silly gunzTarPerm extractEntry modules/js/core/core.min.js
+763 silly gunzTarPerm extractEntry modules/js/core/default-theme.js
+764 silly gunzTarPerm extractEntry modules/js/core/bower.json
+765 silly gunzTarPerm extractEntry modules/js/core/core.css
+766 silly gunzTarPerm extractEntry modules/js/core/core.min.css
+767 silly gunzTarPerm extractEntry modules/js/datepicker/datepicker.js
+768 silly gunzTarPerm extractEntry modules/js/datepicker/datepicker.min.js
+769 silly gunzTarPerm extractEntry modules/js/datepicker/bower.json
+770 silly gunzTarPerm extractEntry modules/js/datepicker/datepicker-default-theme.css
+771 silly gunzTarPerm extractEntry modules/js/datepicker/datepicker-default-theme.min.css
+772 silly gunzTarPerm extractEntry modules/js/datepicker/datepicker.css
+773 silly gunzTarPerm extractEntry modules/js/datepicker/datepicker.min.css
+774 silly gunzTarPerm extractEntry modules/js/dialog/dialog.js
+775 silly gunzTarPerm extractEntry modules/js/dialog/dialog.min.js
+776 silly gunzTarPerm extractEntry modules/js/dialog/bower.json
+777 silly gunzTarPerm extractEntry modules/js/dialog/dialog-default-theme.css
+778 silly gunzTarPerm extractEntry modules/js/dialog/dialog-default-theme.min.css
+779 silly gunzTarPerm extractEntry modules/js/dialog/dialog.css
+780 silly gunzTarPerm extractEntry modules/js/dialog/dialog.min.css
+781 silly gunzTarPerm extractEntry modules/js/divider/divider.js
+782 silly gunzTarPerm extractEntry modules/js/divider/divider.min.js
+783 silly gunzTarPerm extractEntry modules/js/divider/bower.json
+784 silly gunzTarPerm extractEntry modules/js/divider/divider-default-theme.css
+785 silly gunzTarPerm extractEntry modules/js/divider/divider-default-theme.min.css
+786 silly gunzTarPerm extractEntry modules/js/divider/divider.css
+787 silly gunzTarPerm extractEntry modules/js/divider/divider.min.css
+788 silly gunzTarPerm extractEntry modules/js/fabActions/fabActions.js
+789 silly gunzTarPerm extractEntry modules/js/fabActions/fabActions.min.js
+790 silly gunzTarPerm extractEntry modules/js/fabActions/bower.json
+791 silly gunzTarPerm extractEntry modules/js/fabSpeedDial/fabSpeedDial.js
+792 silly gunzTarPerm extractEntry modules/js/fabSpeedDial/fabSpeedDial.min.js
+793 silly gunzTarPerm extractEntry modules/js/fabSpeedDial/bower.json
+794 silly gunzTarPerm extractEntry modules/js/fabSpeedDial/fabSpeedDial.css
+795 silly gunzTarPerm extractEntry modules/js/fabSpeedDial/fabSpeedDial.min.css
+796 silly gunzTarPerm extractEntry modules/js/fabToolbar/fabToolbar.js
+797 silly gunzTarPerm extractEntry modules/js/fabToolbar/fabToolbar.min.js
+798 silly gunzTarPerm extractEntry modules/js/fabToolbar/bower.json
+799 silly gunzTarPerm extractEntry modules/js/fabToolbar/fabToolbar.css
+800 silly gunzTarPerm extractEntry modules/js/fabToolbar/fabToolbar.min.css
+801 silly gunzTarPerm extractEntry modules/js/fabTrigger/fabTrigger.js
+802 silly gunzTarPerm extractEntry modules/js/fabTrigger/fabTrigger.min.js
+803 silly gunzTarPerm extractEntry modules/js/fabTrigger/bower.json
+804 silly gunzTarPerm extractEntry modules/js/gridList/gridList.js
+805 silly gunzTarPerm extractEntry modules/js/gridList/gridList.min.js
+806 silly gunzTarPerm extractEntry modules/js/gridList/bower.json
+807 silly gunzTarPerm extractEntry modules/js/gridList/gridList.css
+808 silly gunzTarPerm extractEntry modules/js/gridList/gridList.min.css
+809 silly gunzTarPerm extractEntry modules/js/icon/icon.js
+810 silly gunzTarPerm extractEntry modules/js/icon/icon.min.js
+811 silly gunzTarPerm extractEntry modules/js/icon/bower.json
+812 silly gunzTarPerm extractEntry modules/js/icon/icon-default-theme.css
+813 silly gunzTarPerm extractEntry modules/js/icon/icon-default-theme.min.css
+814 silly gunzTarPerm extractEntry modules/js/icon/icon.css
+815 silly gunzTarPerm extractEntry modules/js/icon/icon.min.css
+816 silly gunzTarPerm extractEntry modules/js/input/input.js
+817 silly gunzTarPerm extractEntry modules/js/input/input.min.js
+818 silly gunzTarPerm extractEntry modules/js/input/bower.json
+819 silly gunzTarPerm extractEntry modules/js/input/input-default-theme.css
+820 silly gunzTarPerm extractEntry modules/js/input/input-default-theme.min.css
+821 silly gunzTarPerm extractEntry modules/js/input/input.css
+822 silly gunzTarPerm extractEntry modules/js/input/input.min.css
+823 silly gunzTarPerm extractEntry modules/js/backdrop/backdrop.js
+824 silly gunzTarPerm extractEntry modules/js/backdrop/backdrop.min.js
+825 silly gunzTarPerm extractEntry modules/js/backdrop/backdrop-default-theme.css
+826 silly gunzTarPerm extractEntry modules/js/backdrop/backdrop-default-theme.min.css
+827 silly gunzTarPerm extractEntry modules/js/backdrop/backdrop.css
+828 silly gunzTarPerm extractEntry modules/js/backdrop/backdrop.min.css
+829 silly gunzTarPerm extractEntry modules/js/backdrop/bower.json
+830 silly gunzTarPerm extractEntry modules/js/menu/menu.js
+831 silly gunzTarPerm extractEntry modules/js/menu/menu.min.js
+832 silly gunzTarPerm extractEntry modules/js/menu/bower.json
+833 silly gunzTarPerm extractEntry modules/js/menu/menu-default-theme.css
+834 silly gunzTarPerm extractEntry modules/js/menu/menu-default-theme.min.css
+835 silly gunzTarPerm extractEntry modules/js/menu/menu.css
+836 silly gunzTarPerm extractEntry modules/js/menu/menu.min.css
+837 silly gunzTarPerm extractEntry modules/js/menuBar/menuBar.js
+838 silly gunzTarPerm extractEntry modules/js/menuBar/menuBar.min.js
+839 silly gunzTarPerm extractEntry modules/js/menuBar/bower.json
+840 silly gunzTarPerm extractEntry modules/js/menuBar/menuBar-default-theme.css
+841 silly gunzTarPerm extractEntry modules/js/menuBar/menuBar-default-theme.min.css
+842 silly gunzTarPerm extractEntry modules/js/menuBar/menuBar.css
+843 silly gunzTarPerm extractEntry modules/js/menuBar/menuBar.min.css
+844 silly gunzTarPerm extractEntry modules/js/progressCircular/progressCircular.js
+845 silly gunzTarPerm extractEntry modules/js/progressCircular/progressCircular.min.js
+846 silly gunzTarPerm extractEntry modules/js/progressCircular/bower.json
+847 silly gunzTarPerm extractEntry modules/js/progressCircular/progressCircular-default-theme.css
+848 silly gunzTarPerm extractEntry modules/js/progressCircular/progressCircular-default-theme.min.css
+849 silly gunzTarPerm extractEntry modules/js/progressCircular/progressCircular.css
+850 silly gunzTarPerm extractEntry modules/js/progressCircular/progressCircular.min.css
+851 silly gunzTarPerm extractEntry modules/js/progressLinear/progressLinear.js
+852 silly gunzTarPerm extractEntry modules/js/progressLinear/progressLinear.min.js
+853 silly gunzTarPerm extractEntry modules/js/progressLinear/bower.json
+854 silly gunzTarPerm extractEntry modules/js/progressLinear/progressLinear-default-theme.css
+855 silly gunzTarPerm extractEntry modules/js/progressLinear/progressLinear-default-theme.min.css
+856 silly gunzTarPerm extractEntry modules/js/progressLinear/progressLinear.css
+857 silly gunzTarPerm extractEntry modules/js/progressLinear/progressLinear.min.css
+858 silly gunzTarPerm extractEntry modules/js/radioButton/radioButton.js
+859 silly gunzTarPerm extractEntry modules/js/radioButton/radioButton.min.js
+860 silly gunzTarPerm extractEntry modules/js/radioButton/bower.json
+861 silly gunzTarPerm extractEntry modules/js/radioButton/radioButton-default-theme.css
+862 silly gunzTarPerm extractEntry modules/js/radioButton/radioButton-default-theme.min.css
+863 silly gunzTarPerm extractEntry modules/js/radioButton/radioButton.css
+864 silly gunzTarPerm extractEntry modules/js/radioButton/radioButton.min.css
+865 silly gunzTarPerm extractEntry modules/js/select/select.js
+866 silly gunzTarPerm extractEntry modules/js/select/select.min.js
+867 silly gunzTarPerm extractEntry modules/js/select/bower.json
+868 silly gunzTarPerm extractEntry modules/js/select/select-default-theme.css
+869 silly gunzTarPerm extractEntry modules/js/select/select-default-theme.min.css
+870 silly gunzTarPerm extractEntry modules/js/select/select.css
+871 silly gunzTarPerm extractEntry modules/js/select/select.min.css
+872 silly gunzTarPerm extractEntry modules/js/sidenav/sidenav.js
+873 silly gunzTarPerm extractEntry modules/js/sidenav/sidenav.min.js
+874 silly gunzTarPerm extractEntry modules/js/sidenav/bower.json
+875 silly gunzTarPerm extractEntry modules/js/sidenav/sidenav-default-theme.css
+876 silly gunzTarPerm extractEntry modules/js/sidenav/sidenav-default-theme.min.css
+877 silly gunzTarPerm extractEntry modules/js/sidenav/sidenav.css
+878 silly gunzTarPerm extractEntry modules/js/sidenav/sidenav.min.css
+879 silly gunzTarPerm extractEntry modules/js/slider/slider.js
+880 silly gunzTarPerm extractEntry modules/js/slider/slider.min.js
+881 silly gunzTarPerm extractEntry modules/js/slider/bower.json
+882 silly gunzTarPerm extractEntry modules/js/slider/slider-default-theme.css
+883 silly gunzTarPerm extractEntry modules/js/slider/slider-default-theme.min.css
+884 silly gunzTarPerm extractEntry modules/js/slider/slider.css
+885 silly gunzTarPerm extractEntry modules/js/slider/slider.min.css
+886 silly gunzTarPerm extractEntry modules/js/sticky/sticky.js
+887 silly gunzTarPerm extractEntry modules/js/sticky/sticky.min.js
+888 silly gunzTarPerm extractEntry modules/js/sticky/bower.json
+889 silly gunzTarPerm extractEntry modules/js/sticky/sticky.css
+890 silly gunzTarPerm extractEntry modules/js/sticky/sticky.min.css
+891 silly gunzTarPerm extractEntry modules/js/subheader/subheader.js
+892 silly gunzTarPerm extractEntry modules/js/subheader/subheader.min.js
+893 silly gunzTarPerm extractEntry modules/js/subheader/bower.json
+894 silly gunzTarPerm extractEntry modules/js/subheader/subheader-default-theme.css
+895 silly gunzTarPerm extractEntry modules/js/subheader/subheader-default-theme.min.css
+896 silly gunzTarPerm extractEntry modules/js/subheader/subheader.css
+897 silly gunzTarPerm extractEntry modules/js/subheader/subheader.min.css
+898 silly gunzTarPerm extractEntry modules/js/swipe/swipe.js
+899 silly gunzTarPerm extractEntry modules/js/swipe/swipe.min.js
+900 silly gunzTarPerm extractEntry modules/js/swipe/bower.json
+901 silly gunzTarPerm extractEntry modules/js/switch/switch.js
+902 silly gunzTarPerm extractEntry modules/js/switch/switch.min.js
+903 silly gunzTarPerm extractEntry modules/js/switch/bower.json
+904 silly gunzTarPerm extractEntry modules/js/switch/switch-default-theme.css
+905 silly gunzTarPerm extractEntry modules/js/switch/switch-default-theme.min.css
+906 silly gunzTarPerm extractEntry modules/js/switch/switch.css
+907 silly gunzTarPerm extractEntry modules/js/switch/switch.min.css
+908 silly gunzTarPerm extractEntry modules/js/tabs/tabs.js
+909 silly gunzTarPerm extractEntry modules/js/tabs/tabs.min.js
+910 silly gunzTarPerm extractEntry modules/js/tabs/bower.json
+911 silly gunzTarPerm extractEntry modules/js/tabs/tabs-default-theme.css
+912 silly gunzTarPerm extractEntry modules/js/tabs/tabs-default-theme.min.css
+913 silly gunzTarPerm extractEntry modules/js/tabs/tabs.css
+914 silly gunzTarPerm extractEntry modules/js/tabs/tabs.min.css
+915 silly gunzTarPerm extractEntry modules/js/textField/textField.js
+916 silly gunzTarPerm extractEntry modules/js/textField/textField.min.js
+917 silly gunzTarPerm extractEntry modules/js/textField/bower.json
+918 silly gunzTarPerm extractEntry modules/js/textField/textField-default-theme.css
+919 silly gunzTarPerm extractEntry modules/js/textField/textField-default-theme.min.css
+920 silly gunzTarPerm extractEntry modules/js/textField/textField.css
+921 silly gunzTarPerm extractEntry modules/js/textField/textField.min.css
+922 silly gunzTarPerm extractEntry modules/js/toast/toast.js
+923 silly gunzTarPerm extractEntry modules/js/toast/toast.min.js
+924 silly gunzTarPerm extractEntry modules/js/toast/bower.json
+925 silly gunzTarPerm extractEntry modules/js/toast/toast-default-theme.css
+926 silly gunzTarPerm extractEntry modules/js/toast/toast-default-theme.min.css
+927 silly gunzTarPerm extractEntry modules/js/toast/toast.css
+928 silly gunzTarPerm extractEntry modules/js/toast/toast.min.css
+929 silly gunzTarPerm extractEntry modules/js/toolbar/toolbar.js
+930 silly gunzTarPerm extractEntry modules/js/toolbar/toolbar.min.js
+931 silly gunzTarPerm extractEntry modules/js/toolbar/bower.json
+932 silly gunzTarPerm extractEntry modules/js/toolbar/toolbar-default-theme.css
+933 silly gunzTarPerm extractEntry modules/js/toolbar/toolbar-default-theme.min.css
+934 silly gunzTarPerm extractEntry modules/js/toolbar/toolbar.css
+935 silly gunzTarPerm extractEntry modules/js/toolbar/toolbar.min.css
+936 silly gunzTarPerm extractEntry modules/js/tooltip/tooltip.js
+937 silly gunzTarPerm extractEntry modules/js/tooltip/tooltip.min.js
+938 silly gunzTarPerm extractEntry modules/js/tooltip/bower.json
+939 silly gunzTarPerm extractEntry modules/js/tooltip/tooltip-default-theme.css
+940 silly gunzTarPerm extractEntry modules/js/tooltip/tooltip-default-theme.min.css
+941 silly gunzTarPerm extractEntry modules/js/tooltip/tooltip.css
+942 silly gunzTarPerm extractEntry modules/js/tooltip/tooltip.min.css
+943 silly gunzTarPerm extractEntry modules/js/virtualRepeat/virtualRepeat.js
+944 silly gunzTarPerm extractEntry modules/js/virtualRepeat/virtualRepeat.min.js
+945 silly gunzTarPerm extractEntry modules/js/virtualRepeat/bower.json
+946 silly gunzTarPerm extractEntry modules/js/virtualRepeat/virtualRepeat.css
+947 silly gunzTarPerm extractEntry modules/js/virtualRepeat/virtualRepeat.min.css
+948 silly gunzTarPerm extractEntry modules/js/whiteframe/whiteframe.js
+949 silly gunzTarPerm extractEntry modules/js/whiteframe/whiteframe.min.js
+950 silly gunzTarPerm extractEntry modules/js/whiteframe/bower.json
+951 silly gunzTarPerm extractEntry modules/js/whiteframe/whiteframe.css
+952 silly gunzTarPerm extractEntry modules/js/whiteframe/whiteframe.min.css
+953 silly gunzTarPerm extractEntry angular-material.min.css
+954 verbose write writing to /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material/package.json
+955 info preinstall angular-material@0.11.4
+956 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material/package.json
+957 verbose readDependencies loading dependencies from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material/package.json
+958 silly install resolved []
+959 verbose about to build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material
+960 info build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material
+961 info linkStuff angular-material@0.11.4
+962 silly linkStuff angular-material@0.11.4 has /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules as its parent node_modules
+963 verbose linkBins angular-material@0.11.4
+964 verbose linkMans angular-material@0.11.4
+965 verbose rebuildBundles angular-material@0.11.4
+966 info install angular-material@0.11.4
+967 info postinstall angular-material@0.11.4
+968 verbose unlock done using /Users/ErinSheridan/.npm/_locks/angular-material-cb6edad25989c29b.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar/node_modules/angular-material
+969 verbose about to build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+970 info build /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+971 info linkStuff angular-material-calendar@0.2.12
+972 silly linkStuff angular-material-calendar@0.2.12 has /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules as its parent node_modules
+973 verbose linkBins angular-material-calendar@0.2.12
+974 verbose linkMans angular-material-calendar@0.2.12
+975 verbose rebuildBundles angular-material-calendar@0.2.12
+976 verbose rebuildBundles [ 'angular',
+976 verbose rebuildBundles   'angular-animate',
+976 verbose rebuildBundles   'angular-aria',
+976 verbose rebuildBundles   'angular-material',
+976 verbose rebuildBundles   'angular-sanitize' ]
+977 info install angular-material-calendar@0.2.12
+978 info postinstall angular-material-calendar@0.2.12
+979 verbose unsafe-perm in lifecycle true
+980 info angular-material-calendar@0.2.12 Failed to exec postinstall script
+981 verbose unlock done using /Users/ErinSheridan/.npm/_locks/angular-material-calenda-128e13d97dff6498.lock for /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+982 verbose stack Error: angular-material-calendar@0.2.12 postinstall: `./node_modules/protractor/bin/webdriver-manager update`
+982 verbose stack spawn ENOENT
+982 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:17:16)
+982 verbose stack     at emitTwo (events.js:87:13)
+982 verbose stack     at ChildProcess.emit (events.js:172:7)
+982 verbose stack     at maybeClose (internal/child_process.js:817:16)
+982 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+983 verbose pkgid angular-material-calendar@0.2.12
+984 verbose cwd /Users/ErinSheridan/Documents/DM Projects/Personal-Project/main/client/src
+985 error Darwin 14.5.0
+986 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "angular-material-calendar" "--save"
+987 error node v4.1.1
+988 error npm  v2.14.4
+989 error file sh
+990 error code ELIFECYCLE
+991 error errno ENOENT
+992 error syscall spawn
+993 error angular-material-calendar@0.2.12 postinstall: `./node_modules/protractor/bin/webdriver-manager update`
+993 error spawn ENOENT
+994 error Failed at the angular-material-calendar@0.2.12 postinstall script './node_modules/protractor/bin/webdriver-manager update'.
+994 error This is most likely a problem with the angular-material-calendar package,
+994 error not with npm itself.
+994 error Tell the author that this fails on your system:
+994 error     ./node_modules/protractor/bin/webdriver-manager update
+994 error You can get their info via:
+994 error     npm owner ls angular-material-calendar
+994 error There is likely additional logging output above.
+995 verbose exit [ 1, true ]
+996 verbose unbuild node_modules/angular-material-calendar
+997 info preuninstall angular-material-calendar@0.2.12
+998 info uninstall angular-material-calendar@0.2.12
+999 verbose unbuild rmStuff angular-material-calendar@0.2.12 from /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules
+1000 info postuninstall angular-material-calendar@0.2.12
+1001 silly gentlyRm /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar is being purged from base /Users/ErinSheridan/Documents/DM Projects/Personal-Project
+1002 verbose gentlyRm don't care about contents; nuking /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+1003 silly vacuum-fs purging /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules/angular-material-calendar
+1004 silly vacuum-fs quitting because other entries in /Users/ErinSheridan/Documents/DM Projects/Personal-Project/node_modules
