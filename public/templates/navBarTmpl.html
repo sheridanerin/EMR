@@ -1,13 +1,50 @@
 <md-content>
 
 	<md-toolbar>
-		<div class="md-toolbar-tools">
-			<md-button class="md-icon-button" aria-label="Settings">
+		<div class="md-toolbar-tools" layout="row">
+			<md-button class="md-icon-button" aria-label="Settings" flex="5">
 				<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
 			</md-button>
-			<h2>
+			<h2 flex="15">
 				<span>Pediatric EMR</span>
 			</h2>
+			<div flex="60"></div>
+			    <form ng-submit="$event.preventDefault()">
+			    
+			    <div class="searchBar" flex="20">
+
+			      	<md-autocomplete
+			        	ng-disabled="ctrl.isDisabled"
+			            md-no-cache="ctrl.noCache"
+			        	md-selected-item="ctrl.selectedItem"
+			        	md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+			        	md-search-text="ctrl.searchText"
+			        	md-selected-item-change="ctrl.selectedItemChange(item)"
+			        	md-items="item in ctrl.querySearch(ctrl.searchText)"
+			        	md-item-text="item.name"
+			        	md-min-length="0"
+			        	placeholder="Search for a Patient"
+			        	md-menu-class="autocomplete-custom-template">
+
+				        <md-item-template>
+					        <span class="item-title">
+					            <span> {{ patient.firstName }} {{ patient.lastName }} </span>
+					        </span>
+					        <span class="item-metadata">
+						        <span class="item-metastat">
+					            	<strong>{{ patient.birthDay }}, >{{ patient.birthMonth }} >{{ patient.birthYear }}</strong> Birthday
+					            </span>
+					            <span class="item-metastat">			              
+					            	<strong>{{ patient.gender }}</strong> Gender
+						        </span>
+				        	</span>
+				        </md-item-template>
+
+			    	</md-autocomplete>
+			    
+			    </div>
+			    </form>
+
 		</div>
 	</md-toolbar>
 
