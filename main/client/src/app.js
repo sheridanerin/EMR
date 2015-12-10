@@ -34,6 +34,11 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial', 'ui.rCalendar'])
 				templateUrl: 'templates/patientChartTmpl.html',
 				controller: 'patientChartCtrl'
 			})
+			.state('admin', {
+				url:'/admin',
+				templateUrl: 'templates/adminTmpl.html',
+				controller: 'adminCtrl'
+			})
 
 			$urlRouterProvider.otherwise('/');
 			

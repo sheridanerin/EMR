@@ -6,11 +6,38 @@ var   express = require('express')
 	, mongoUri = 'mongodb://localhost:27017/'
 	, patientCtrl = require('./server/controllers/patientCtrl')
 	, userCtrl = require('./server/controllers/userCtrl')
-	, appointmentCtrl = require('./server/controllers/appointmentCtrl');
+	, appointmentCtrl = require('./server/controllers/appointmentCtrl')
+	, session = require('express-session')
+	, passport = require('passport')
+	, config = require('./server/Config/auth');
 
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
+app.use(session({ secret: config.sessionSecret }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+	//////////
+	// AUTH //
+	//////////
+app.post('/api/signup', passport.authenticate('local-signup'), function( req, res ) {
+	if (!req.user) {
+		return res.status(401).send('not allowed');
+	}
+	res.redirect('/#/admin');
+});
+app.post('/api/login', passport.authenticate('local-login', { failure: '/#/home' }),
+	function( req, res ) {
+		res.send(req.user);
+	});
+app.get('/api/logout', function( req, res ) {
+	req.logout();
+	req.session.destroy();
+	res.redirect('/#/home');
+});
+app.get('/api/auth', userCtrl.isAuth, userCtrl.auth);
 
 
 	/////////////

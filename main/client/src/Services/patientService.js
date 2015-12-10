@@ -1,5 +1,5 @@
 angular.module('EMRapp')
-.service('newClientService', function( $state, $http ) {
+.service('patientService', function( $state, $http ) {
 
 	this.addNewPatient = function( patient ) {
 		
@@ -16,10 +16,15 @@ angular.module('EMRapp')
 	};
 
 	this.getOnePatient = function() {
-		
-		
-		$http.get('api/patient')
-	}
 
+
+		$http.get('api/patient')
+	};
+
+	this.getPatients = function() {
+
+		return $http.get('/api/patients');
+	
+	};
 
 });
