@@ -13,12 +13,16 @@
 		
 			<table class="login">
 				<tr>
-					<td>Username: </td> <td><input ng-model="user.username"></input></td>
+					<td>Username: </td> <td><input ng-model="user.username"></td>
 				</tr>
 				<tr>
-					<td>Password: </td> <td><input ng-model="user.password"></input></td>
+					<td>Password: </td> <td><input type="password" ng-model="user.password"></td>
 				</tr>
 			</table>
+
+			<br>
+
+			<md-button class="md-raised md-primary buttonWidth loginButton" ng-click="login()">Submit</md-button>
 		</div>
 
 </div>

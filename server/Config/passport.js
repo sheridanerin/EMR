@@ -1,4 +1,4 @@
-var localStrategy = require('passport-local').Strategy,
+var LocalStrategy = require('passport-local').Strategy,
 	User = require('../models/user');
 
 module.exports = function( passport ) {
@@ -19,6 +19,7 @@ module.exports = function( passport ) {
 		passReqToCallback: true
 		}, function( req, username, password, done ) {
 			process.nextTick(function() {
+				console.log(req.body);
 
 				User.findOne({ 'username': username }, function( err, user ) {
 					if (err) {
@@ -33,7 +34,11 @@ module.exports = function( passport ) {
 						newUser.password = newUser.generateHash(password);
 						newUser.firstName = req.body.firstName;
 						newUser.lastName = req.body.lastName;
+						newUser.email = req.body.email;
 						newUser.permissions = req.body.permissions;
+						if (req.body.admin) {
+							newUser.admin = req.body.admin;
+						}
 
 						newUser.save(function( err ) {
 							if (err) {

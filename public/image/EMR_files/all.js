@@ -11,51 +11,51 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				url:'/userhome',
 				templateUrl: 'templates/userHomeTmpl.html',
 				controller: 'userHomeCtrl',
-				resolve: {
-					user: ["authService", function( authService ) {
-						return authService.getAuth();
-					}]
-				}
+				// resolve: {
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	}
+				// }
 			})
 			.state('newPatient', {
 				url:'/newpatient',
 				templateUrl: 'templates/newPatientTmpl.html',
 				controller: 'newPatientCtrl',
-				resolve: {
-					user: ["authService", function( authService ) {
-						return authService.getAuth();
-					}]
-				}
+				// resolve: {
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	}
+				// }
 			})
 			.state('searchResults', {
 				url:'/searchresults',
 				templateUrl: 'templates/searchResultsTmpl.html',
 				controller: 'searchResultsCtrl',
-				resolve: {
-					user: ["authService", function( authService ) {
-						return authService.getAuth();
-					}]
-				}
+				// resolve: {
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	}
+				// }
 			})
 			.state('fullSchedule', {
 				url:'/fullschedule',
 				templateUrl: 'templates/fullScheduleTmpl.html',
 				controller: 'fullScheduleCtrl',
-				resolve: {
-					user: ["authService", function( authService ) {
-						return authService.getAuth();
-					}]
-				}
+				// resolve: {
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	}
+				// }
 			})
 			.state('patientChart', {
 				url:'/patientchart',
 				templateUrl: 'templates/patientChartTmpl.html',
 				controller: 'patientChartCtrl',
-				resolve: {
-					user: ["authService", function( authService ) {
-						return authService.getAuth();
-					}]
-				}
+				// resolve: {
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	}
+				// }
 			})
 			.state('admin', {
 				url:'/admin',
@@ -106,7 +106,7 @@ angular.module('EMRapp')
 
 }]);
 angular.module('EMRapp')
-.controller('navBarCtrl', ["$scope", "$state", "patientService", "$timeout", "$q", "$log", "$mdDialog", "authService", function( $scope, $state, patientService, $timeout, $q, $log, $mdDialog, authService ) {
+.controller('navBarCtrl', ["$scope", "patientService", "$timeout", "$q", "$log", "$mdDialog", function( $scope, patientService, $timeout, $q, $log, $mdDialog ) {
 	
     var self = this;
     self.simulateQuery = false;
@@ -169,18 +169,10 @@ angular.module('EMRapp')
   
     // Menu Stuff
     var originatorEv;
-    self.openMenu = function($mdOpenMenu, ev) {
+    this.openMenu = function($mdOpenMenu, ev) {
         originatorEv = ev;
         $mdOpenMenu(ev);
     };
-
-    $scope.redirect = function( state ) {
-        $state.go( state );
-    }
-
-    $scope.currentUser = authService.currentUser();
-
-
 
 }]);
 
@@ -278,7 +270,6 @@ angular.module('EMRapp')
 angular.module('EMRapp')
 .controller('userHomeCtrl', ["$scope", function( $scope ) {
 
-    this.times = ['7:00', '7:30', '8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '1:00', '1:30', '2:00', '2:30', '3:00', '3:30', '4:00', '4:30', '5:00', '5:30', '6:00', '6:30', '7:00', '7:30', '8:00'];
 
 	
 
@@ -294,11 +285,8 @@ angular.module('EMRapp').directive('navbarDir', function() {
 angular.module('EMRapp')
 .service('authService', ["$http", "$state", function( $http, $state ) {
 
-	var currentUser;
-
 	this.getAuth = function() {
 		return $http.get('/api/auth').success(function(user) {
-			currentUser = user;
 			return user;
 		}).error(function(err) {
 			$state.go('home')
@@ -307,7 +295,6 @@ angular.module('EMRapp')
 
 	this.getAdminAuth = function() {
 		return $http.get('/api/adminauth').success(function(user) {
-			currentUser = user;
 			return user;
 		}).error(function(err) {
 			$state.go('home');
@@ -316,17 +303,12 @@ angular.module('EMRapp')
 
 	this.login = function( user ) {
 		return $http.post('/api/login', user).success(function(user) {
-			currentUser = user;
 			if (user.admin) {
 				$state.go('admin');
 			} else {
 			$state.go('userHome');
 			}
 		});
-	}
-
-	this.currentUser = function() {
-		return currentUser;
 	}
 	
 }]);

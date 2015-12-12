@@ -1,6 +1,8 @@
 angular.module('EMRapp')
-	.controller('homeCtrl', function( $scope ) {
+	.controller('homeCtrl', function( $scope, authService ) {
 	
-	
+	$scope.login = function() {
+		authService.login($scope.user);
+	}
 
 });

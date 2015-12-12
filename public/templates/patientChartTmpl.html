@@ -2,18 +2,25 @@
 
 <div class="patientChartView">
 
-	<div class="md-inline-form md-whiteframe-2dp">
+	<div class="md-inline-form md-whiteframe-3dp">
 
-		<md-content class="md-padding">
-			<md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
+		<!-- <md-content class="md-padding"> -->
+			<md-tabs md-selected="selectedIndex" md-dynamic-height md-border-bottom md-autoselect>
 
 				<md-tab label="Contact Information">
+					<br>
+					<div flex="50"> Last Name: {{ patient.lastName }} </div> 
+					<div flex="50"> First Name: {{ patient.firstName}} </div
+
 				<md-tab label="Medical History">
+					<br>
 				<md-tab label="Visit Notes">
+					<br>
 				<md-tab label="Insurance Information">
+					<br>
 
 			</md-tabs>
-		</md-content>
+		<!-- </md-content -->
 
 	</div>
 

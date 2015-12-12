@@ -1,0 +1,16 @@
+<navbar-dir></navbar-dir>
+
+<div class="userHomeView" ng-controller="userHomeCtrl as userHomeCtrl" ng-cloak>
+
+	<div class="md-inline-form md-whiteframe-3dp">
+
+        <md-content layout="column" id="calendar-content">
+            <md-virtual-repeat-container id="vertical-container">
+                <div md-virtual-repeat="time in userHomeCtrl.times" class="repeated-item" flex>
+                {{ time }}
+                </div>
+            </md-virtual-repeat-container>
+        </md-content>
+	</div>
+
+</div>

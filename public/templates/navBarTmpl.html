@@ -1,17 +1,70 @@
-<md-content>
+<md-content ng-controller="navBarCtrl as navBarCtrl">
 
 	<md-toolbar>
+
 		<div class="md-toolbar-tools" layout="row">
-			<md-button class="md-icon-button" aria-label="Settings" flex="5">
-				<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-			</md-button>
+			
+			 <md-menu> <!-- ng-controller="navBarCtrl as ctrl" ng-cloak -->
+				
+				<md-button aria-label="Open menu" class="md-icon-button" flex="5" ng-click="navBarCtrl.openMenu($mdOpenMenu, $event)">
+					<i md-menu-origin class="fa fa-bars fa-2x menuButton"></i>
+				</md-button>
+
+				<md-menu-content width="4">
+					<md-menu-item>
+						<md-button ng-click="redirect('userHome')">
+							<i class="fa fa-home" md-menu-align-target></i>
+							Home
+						</md-button>
+					</md-menu-item>
+			
+					<md-menu-item>
+						<md-button ng-click="redirect('fullSchedule')">
+							<i class="fa fa-calendar-check-o" md-menu-align-target></i>
+							Schedule
+						</md-button>
+					</md-menu-item>
+
+					<md-menu-item>
+						<md-button ng-click="redirect('newPatient')">
+							<i class="fa fa-plus" md-menu-align-target></i>
+							Add New Patient
+						</md-button>
+					</md-menu-item>
+
+					<md-menu-item>
+						<md-button ng-click="redirect('patientChart')">
+							<i class="fa fa-file-text-o" md-menu-align-target></i>
+							Patient Charts
+						</md-button>
+					</md-menu-item>
+
+					<md-menu-item ng-if="currentUser.admin">
+						<md-button ng-click="redirect('admin')">
+							<i class="fa fa-lock" md-menu-align-target></i>
+							Admin
+						</md-button>
+					</md-menu-item>
+
+					<md-menu-item>
+						<md-button ng-click="redirect('home')">
+							<i class="fa fa-sign-out" md-menu-align-target></i>
+							LogOut
+						</md-button>
+					</md-menu-item>
+				</md-menu-content>
+
+			</md-menu>
+			
 			<h2 flex="15">
 				<span>Pediatric EMR</span>
 			</h2>
-			<div flex="50"></div>
-			    <form ng-submit="$event.preventDefault()">
+
+			<div flex="60"></div>
+
+			<form ng-submit="$event.preventDefault()">
 			    
-			    <div flex="30" ng-controller="navBarCtrl as navBarCtrl">
+			    <div flex="20">
 
 			      	<md-autocomplete
 			        	ng-disabled="navBarCtrl.isDisabled"
@@ -44,7 +97,7 @@
 			    	</md-autocomplete>
 			    
 			    </div>
-			    </form>
+			</form>
 
 		</div>
 	</md-toolbar>

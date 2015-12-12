@@ -11,6 +11,7 @@ var   express = require('express')
 	, passport = require('passport')
 	, config = require('./server/Config/auth');
 
+require('./server/Config/passport')(passport);
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
@@ -38,6 +39,7 @@ app.get('/api/logout', function( req, res ) {
 	res.redirect('/#/home');
 });
 app.get('/api/auth', userCtrl.isAuth, userCtrl.auth);
+app.get('/api/adminauth', userCtrl.isAdmin, userCtrl.auth);
 
 
 	/////////////

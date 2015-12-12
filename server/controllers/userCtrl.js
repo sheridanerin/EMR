@@ -87,6 +87,14 @@ module.exports = {
 		}
 	},
 
+	isAdmin: function( req, res, next ) {
+		if(req.user && req.user.admin) {
+			next();
+		} else {
+			res.status(403).send('Not Allowed');
+		}
+	},
+
 	auth: function( req, res ) {
 		res.send(req.user);
 	}
