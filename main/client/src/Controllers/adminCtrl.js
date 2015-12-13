@@ -2,7 +2,7 @@ angular.module('EMRapp')
 .controller('adminCtrl', function( $scope, userService, userList ) {
 	
 	$scope.permissions = {
-		insuranceInfo: false
+		  insuranceInfo: false
 		, visitNotes: false
 		, patientGoals: false
 	}

@@ -3,6 +3,7 @@ var Appointment = require('../models/appointment.js');
 module.exports = {
 
 	addAppointment: function( req, res ) {
+		console.log(req.body);
 		new Appointment( req.body ).save(function( err, appointment ) {
 			if ( err ) { 
 				res.status(500).send( err );
@@ -20,6 +21,16 @@ module.exports = {
 				res.send( appointment );
 			}
 		});
+	},
+
+	getDayAppointments: function( req, res ) {
+		Appointment.find({ date: new Date( req.query.day )}, function( err, appointments ) {
+			if (err) {
+				return res.status(500).send(err);
+			}
+			
+			res.send(appointments);
+		})
 	},
 
 	getAppointment: function( req, res ) {

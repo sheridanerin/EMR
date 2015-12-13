@@ -15,9 +15,9 @@ angular.module('EMRapp')
 
 	};
 
-	this.getOnePatient = function() {
+	this.getOnePatient = function( patientid ) {
 
-		$http.get('api/patient')
+		return $http.get('api/patient?id=' + patientid);
 		
 	};
 

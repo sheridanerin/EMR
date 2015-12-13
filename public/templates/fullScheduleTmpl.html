@@ -1,0 +1,82 @@
+<navbar-dir></navbar-dir>
+
+<div class="fullSchedView" ng-controller="fullScheduleCtrl as fullScheduleCtrl" ng-cloak>
+	
+	<div class="md-inline-form md-whiteframe-3dp">
+
+		<div layout="row" layout-wrap>
+
+			<br>
+	
+			<div id="patientText" flex="10">
+				Patient:
+			</div> 
+				
+			<div flex="30">
+
+				<form ng-submit="$event.preventDefault()">
+
+			      	<md-autocomplete
+			        	ng-disabled="fullScheduleCtrl.isDisabled"
+			            md-no-cache="fullScheduleCtrl.noCache"
+			        	md-selected-item="fullScheduleCtrl.selectedItem"
+			        	md-search-text-change="fullScheduleCtrl.searchTextChange(fullScheduleCtrl.searchText)"
+			        	md-search-text="fullScheduleCtrl.searchText"
+			        	md-selected-item-change="fullScheduleCtrl.selectedItemChange(patient)"
+			        	md-items="patient in fullScheduleCtrl.querySearch(fullScheduleCtrl.searchText)"
+			        	md-item-text="patient.firstName + ' ' + patient.lastName"
+			        	md-min-length="0"
+			        	placeholder="Search for a Patient"
+			        	md-menu-class="autocomplete-custom-template"
+			        	class="searchBar">
+
+				        <md-item-template>
+					        <span class="item-title">
+					            <span> {{ patient.firstName }} {{ patient.lastName }} </span>
+					        </span>
+					        <span class="item-metadata">
+						        <span class="item-metastat">
+					            	Birthday: <strong>{{ patient.birthDay }}, {{ patient.birthMonth }} >{{ patient.birthYear }}</strong>
+					            </span>
+					            <span class="item-metastat">			              
+					            	Gender: <strong>{{ patient.gender }}</strong>
+						        </span>
+				        	</span>
+				        </md-item-template>
+
+			    	</md-autocomplete>
+				    
+				</form>
+
+			</div>
+
+			<md-datepicker ng-model="appointment.date" md-placeholder="Enter date" flex="60"></md-datepicker>
+
+			<md-input-container flex="50">
+				<label>Start Time</label>
+				<md-select ng-model="appointment.startTime">
+					<md-option ng-repeat="time in times track by $index" value="{{ time.value }}"> {{ time.display }}</md-option>
+				</md-select>
+			</md-input-container>
+						
+			<md-input-container flex="50">
+				<label>End Time</label>
+				<md-select ng-model="appointment.endTime">
+					<md-option ng-repeat="time in times track by $index" value="{{ time.value }}"> {{ time.display }}</md-option>
+				</md-select>
+			</md-input-container>
+
+			<div flex="100">
+				<md-input-container>
+						<label>Description</label>
+						<input ng-model="appointment.description">
+				</md-input-container>
+			</div>
+
+			<md-button class="md-raised md-primary buttonWidth" ng-click="addNewAppointment()">Submit</md-button>
+
+		</div>
+
+	</div>
+
+</div>

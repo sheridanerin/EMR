@@ -12,8 +12,12 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				templateUrl: 'templates/userHomeTmpl.html',
 				controller: 'userHomeCtrl',
 				resolve: {
-					user: function( authService ) {
-						return authService.getAuth();
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	},
+					appointments: function( appointmentsService ) {
+						var today = new Date();
+						return appointmentsService.getDayAppointments(today);
 					}
 				}
 			})
@@ -21,39 +25,51 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				url:'/newpatient',
 				templateUrl: 'templates/newPatientTmpl.html',
 				controller: 'newPatientCtrl',
-				resolve: {
-					user: function( authService ) {
-						return authService.getAuth();
-					}
-				}
+				// resolve: {
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	}
+				// }
 			})
 			.state('searchResults', {
 				url:'/searchresults',
 				templateUrl: 'templates/searchResultsTmpl.html',
 				controller: 'searchResultsCtrl',
-				resolve: {
-					user: function( authService ) {
-						return authService.getAuth();
-					}
-				}
+				// resolve: {
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	}
+				// }
 			})
 			.state('fullSchedule', {
 				url:'/fullschedule',
 				templateUrl: 'templates/fullScheduleTmpl.html',
 				controller: 'fullScheduleCtrl',
 				resolve: {
-					user: function( authService ) {
-						return authService.getAuth();
-					}
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	},
+					// appointments: function( appointmentsService ) {
+					// 	return appointmentsService.getAppointments().then(function( res ) {
+					// 		return res;
+					// 	});
+					// }
 				}
 			})
 			.state('patientChart', {
-				url:'/patientchart',
+				url:'/patientchart/:patientid',
 				templateUrl: 'templates/patientChartTmpl.html',
 				controller: 'patientChartCtrl',
 				resolve: {
-					user: function( authService ) {
-						return authService.getAuth();
+				// 	user: function( authService ) {
+				// 		return authService.getAuth();
+				// 	},
+					patient: function( patientService, $stateParams ) {
+						if ( $stateParams.patientid ) {
+							return patientService.getOnePatient( $stateParams.patientid );
+						} else {
+							return { data: null };
+						}
 					}
 				}
 			})

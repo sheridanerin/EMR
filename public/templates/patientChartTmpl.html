@@ -2,22 +2,112 @@
 
 <div class="patientChartView">
 
-	<div class="md-inline-form md-whiteframe-3dp">
+	<div layout="column" class="md-inline-form md-whiteframe-3dp">
 
 		<!-- <md-content class="md-padding"> -->
 			<md-tabs md-selected="selectedIndex" md-dynamic-height md-border-bottom md-autoselect>
 
 				<md-tab label="Contact Information">
-					<br>
-					<div flex="50"> Last Name: {{ patient.lastName }} </div> 
-					<div flex="50"> First Name: {{ patient.firstName}} </div
+
+        			<div layout="row" layout-sm="column" layout-wrap>
+        				
+        				<h2 class="md-title" flex="100">Patient Info: </h2>
+						<div flex="33"> First Name: {{ patient.firstName }} </div>
+						<div flex="33"> Last Name: {{ patient.lastName }} </div> 
+						<div flex="33"> Birthday: {{ patient.birthDay }} {{ patient.birthMonth }} {{ patient.birthYear }} </div> <br>
+						<div flex="100"> If separated/Divorced, child resides with: {{ patient.ifSepLivesWith }} </div>	<br>
+						<div flex="100"> If separated/Divorced, mail statements to: {{ patient.ifSepBillAddress }} </div> <br>
+						
+						<h2 class="md-title" flex="100">First Parent Info: </h2>
+						<div flex="33"> First Name: {{ patient.parent1FirstName }} </div>	
+						<div flex="33"> Last Name: {{ patient.parent1LastName }} </div>	
+						<div flex="100"> Street Address: {{ patient.parent1StreetAddress }} </div>	
+						<div flex="100"> Street Address 2: {{ patient.parent1StreetAddress2 }} </div>	
+						<div flex="33"> City: {{ patient.parent1City }} </div>	
+						<div flex="33"> Zip: {{ patient.parent1Zip }} </div>
+						<div flex="33"> Email: {{ patient.parent1Email }} </div>	
+						<div flex="33"> Phone 1: {{ patient.parent1Phone1 }} </div>	
+						<div flex="33"> Phone 2: {{ patient.parente1Phone2 }} </div>	
+
+						<h2 class="md-title" flex="100">Second Parent Info: </h2>
+						<div flex="33"> First Name: {{ patient.parent2FirstName }} </div>	
+						<div flex="33"> Last Name: {{ patient.parent2LastName }} </div>	
+						<div flex="100"> Street Address: {{ patient.parent2StreetAddress }} </div>	
+						<div flex="100"> Street Address 2: {{ patient.parent2StreetAddress2 }} </div>	
+						<div flex="33"> City: {{ patient.parent2City }} </div>	
+						<div flex="33"> Zip: {{ patient.parent2Zip }} </div>
+						<div flex="33"> Email: {{ patient.parent2Email }} </div>	
+						<div flex="33"> Phone 1: {{ patient.parent2Phone1 }} </div>	
+						<div flex="33"> Phone 2: {{ patient.parente2Phone2 }} </div>
+
+						<h2 class="md-title" flex="100">Emergency Contact Info (If other than Parent): </h2>
+						<div flex="33"> First Name: {{ patient.emergencyFirstName }} </div>	
+						<div flex="33"> Last Name: {{ patient.emergencyLastName }} </div>	
+						<div flex="33"> Email: {{ patient.emergencyEmail }} </div>	
+						<div flex="33"> Phone 1: {{ patient.emergencyPhone1 }} </div>	
+						<div flex="33"> Phone 2: {{ patient.emergencyPhone2 }} </div>	
+
+					</div>
 
 				<md-tab label="Medical History">
+
+					<div layout="row" layout-sm="column" layout-wrap>
+					 	<h2 class="md-title" flex="100">Condition List<h2>
+					 	<div ng-show="patient.conditions.seasonalAllergies"> Seasonal Allergies </div>
+					 	<div ng-show="patient.conditions.anemia"> Anemia </div>
+					 	<div ng-show="patient.conditions.tensionHeadaches"> Tension Headaches </div>
+					 	<div ng-show="patient.conditions.osteoarthritis"> Osteoarthritis </div>
+					 	<div ng-show="patient.conditions.asthma"> Asthma </div>
+					 	<div ng-show="patient.conditions.positiveTBTest"> Positive TBTest </div>
+					 	<div ng-show="patient.conditions.GIBleed"> GI Bleed </div>
+					 	<div ng-show="patient.conditions.anxiety"> Anxiety </div>
+					 	<div ng-show="patient.conditions.emphsemaCOPD"> Emphsema/COPD </div>
+					 	<div ng-show="patient.conditions.atrialFibrillation"> Atrial Fibrillation </div>
+					 	<div ng-show="patient.conditions.migraines"> Migraines </div>
+					 	<div ng-show="patient.conditions.rheumatoidArthritis"> Rheumatoid Arthritis </div>
+					 	<div ng-show="patient.conditions.ADDADHD"> ADD/ADHD </div>
+					 	<div ng-show="patient.conditions.GERD"> GERD </div>
+					 	<div ng-show="patient.conditions.acne"> Acne </div>
+					 	<div ng-show="patient.conditions.depression"> Depression </div>
+					 	<div ng-show="patient.conditions.glaucoma"> Glaucoma </div>
+					 	<div ng-show="patient.conditions.cataracts"> Cataracts </div>
+					 	<div ng-show="patient.conditions.gout"> Gout </div>
+					 	<div ng-show="patient.conditions.diabetes"> Diabetes </div>
+					 	<div ng-show="patient.conditions.psoriasis"> Psoriasis </div>
+					 	<div ng-show="patient.conditions.hearingLoss"> Hearing Loss </div>
+					 	<div ng-show="patient.conditions.visionLoss"> Vision Loss </div>
+					 	<div ng-show="patient.conditions.seizureDisorder"> Seizure Disorder </div>
+					 	<div ng-show="patient.conditions.hypothyroidism"> Hypothyroidism </div>
+					 	<div ng-show="patient.conditions.hyperthyroidism"> Hyperthyroidism </div>
+					 	<div ng-show="patient.conditions.other.checked"> {{ patient.conditions.other.condition }} </div>
+
+					</div>
 					<br>
+
 				<md-tab label="Visit Notes">
+
+					
+
 					<br>
 				<md-tab label="Insurance Information">
-					<br>
+
+					<div layout="row" layout-sm="column" layout-wrap>
+
+						<div flex="100"><br></div>
+						<div flex="33"> Insurance Company: {{ patient.insuranceInfo.insuranceCompany }} </div>	
+						<div flex="33"> Group #: {{ patient.insuranceInfo.groupID }} </div>	
+						<div flex="100"> Name of Insured: {{ patient.insuranceInfo.nameOfInsured }} </div>	
+						<div flex="33"> Birthday: {{ patient.insuranceInfo.birthDay }} {{ patient.insuranceInfo.birthMonth }} {{ patient.insuranceInfo.birthYear }} </div>	
+						<div flex="66"> Relation to Parent: {{ patient.insuranceInfo.relToPatient }} </div>	
+						<div flex="100"> Address: {{ patient.insuranceInfo.streetAddress }} </div>	
+						<div flex="33"> City: {{ patient.insuranceInfo.city }} </div>	
+						<div flex="33"> State: {{ patient.insuranceInfo.state }} </div>	
+						<div flex="33"> Zip Code: {{ patient.insuranceInfo.zip }} </div>
+						<div flex="100"> Email: {{ patient.insuranceInfo.email }} </div>	
+						<div flex="33"> Phone 1: {{ patient.insuranceInfo.phone1 }} </div>	
+						<div flex="33"> Phone 2: {{ patient.insuranceInfo.phone2 }} </div>	
+
+					</div>
 
 			</md-tabs>
 		<!-- </md-content -->

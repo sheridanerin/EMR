@@ -10,7 +10,6 @@ angular.module('EMRapp')
     self.searchTextChange   = searchTextChange;
 
     loadAll().then(function( patients ) {
-    	  console.log(patients);
     	  self.repos = patients;
     });
 
@@ -47,7 +46,6 @@ angular.module('EMRapp')
 	   		return console.error(err);
 	   	})
 
-	   	console.log(deferred.promise);
 	   	return deferred.promise;
     }
 
@@ -55,7 +53,6 @@ angular.module('EMRapp')
     function createFilterFor(query) {
         var lowercaseQuery = angular.lowercase(query);
         return function filterFn(item) {
-      	    console.log(item);
             return (item.value.indexOf(lowercaseQuery) === 0);
         };
     }
@@ -72,6 +69,10 @@ angular.module('EMRapp')
     }
 
     $scope.currentUser = authService.currentUser();
+
+    self.patientChartRedirect = function() {
+        $state.go( 'patientChart', { patientid: self.selectedItem._id } )
+    }
 
 
 

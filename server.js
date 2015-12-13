@@ -71,6 +71,7 @@ app.put('/api/user/updateperm', userCtrl.updateUserPermissions); //Need to provi
 	// APPOINTMENT //
 	/////////////////
 app.get('/api/appointments', appointmentCtrl.getAppointments); //No query needed.
+app.get('/api/dayappointments', appointmentCtrl.getDayAppointments); //Need to provide "day" query.
 app.get('/api/appointment', appointmentCtrl.getAppointment); //Need to provide user "id" query.
 app.post('/api/appointment', appointmentCtrl.addAppointment); //No query needed.
 app.put('/api/appointment/update', appointmentCtrl.updateAppointment); //Need to provide user "id" query.

@@ -1,16 +1,24 @@
 <navbar-dir></navbar-dir>
 
-<div class="userHomeView" ng-controller="userHomeCtrl as userHomeCtrl" ng-cloak>
+<div class="userHomeView" ng-cloak>
 
 	<div class="md-inline-form md-whiteframe-3dp">
 
+        <md-datepicker ng-model="chosenDate" md-placeholder="Enter date"></md-datepicker> <md-button class="md-raised" ng-click="getDayAppointments(chosenDate)">Submit</md-button>
+
         <md-content layout="column" id="calendar-content">
             <md-virtual-repeat-container id="vertical-container">
-                <div md-virtual-repeat="time in userHomeCtrl.times" class="repeated-item" flex>
+				<calendar-dir ng-repeat="appointment in appointments track by $index" index="$index" appointment="appointment"></calendar-dir>
+                <div md-virtual-repeat="time in times" class="repeated-item" flex>
                 {{ time }}
                 </div>
             </md-virtual-repeat-container>
         </md-content>
+        
 	</div>
 
 </div>
+
+
+
+<!-- <div ng-repeat="appts" style="height: {{appt.duration * something}}; top: {{appt.time * something }}"> {{ }} </div> -->
