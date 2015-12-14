@@ -3,9 +3,11 @@ var Patient = require('../models/patient.js');
 module.exports = {
 
 	addPatient: function( req, res ) {
+		console.log(req.body)
 		new Patient(req.body).save(function( err, patient ) {
 			if (err) { 
-				res.status(500).send(err);
+				console.log(err);
+				return res.status(500).send(err);
 			}
 			res.send(patient);
 		});

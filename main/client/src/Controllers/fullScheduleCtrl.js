@@ -60,7 +60,15 @@ angular.module('EMRapp')
 
     $scope.times = [
     	{
-    		  display: '8:00 AM'
+    		display: '7:00 AM'
+            , value: 7
+        },
+        {
+            display: '7:30 AM'
+            , value: 7.5
+        },
+        {
+              display: '8:00 AM'
     		, value: 8
     	},
     	{

@@ -77,16 +77,16 @@
 			        	md-item-text="patient.firstName + ' ' + patient.lastName"
 			        	md-min-length="0"
 			        	placeholder="Search for a Patient"
-			        	md-menu-class="autocomplete-custom-template"
+			        	md-menu-class="searchTemplate"
 			        	class="searchBar">
 
-				        <md-item-template>
+				        <md-item-template class="searchTemplate">
 					        <span class="item-title">
 					            <span> {{ patient.firstName }} {{ patient.lastName }} </span>
 					        </span>
 					        <span class="item-metadata">
 						        <span class="item-metastat">
-					            	Birthday: <strong>{{ patient.birthDay }}, {{ patient.birthMonth }} >{{ patient.birthYear }}</strong>
+					            	Birthday: <strong>{{ patient.birthDay }}, {{ patient.birthMonth }} {{ patient.birthYear }}</strong>
 					            </span>
 					            <span class="item-metastat">			              
 					            	Gender: <strong>{{ patient.gender }}</strong>

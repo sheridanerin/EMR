@@ -1,5 +1,14 @@
 angular.module('EMRapp', ['ui.router', 'ngMaterial'])
-	.config(function( $stateProvider, $urlRouterProvider ) {
+	.config(function( $stateProvider, $urlRouterProvider, $mdThemingProvider ) {
+
+		var stupidMD = $mdThemingProvider.extendPalette('blue', {
+    		'500': '005566'
+  		});
+
+  		$mdThemingProvider.definePalette('mainBlue', stupidMD);
+
+  		$mdThemingProvider.theme('default')
+    		.primaryPalette('mainBlue')
 
 		$stateProvider
 			.state('home', {

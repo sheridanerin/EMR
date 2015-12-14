@@ -8,13 +8,13 @@ var Patient = Schema({
 	, birthDay: { type: Number, required: true }
 	, birthMonth: { type: String, required: true }
 	, birthYear: { type: Number, required: true }
-	, gender: { type: String, require: true}
+	, gender: { type: String, required: true }
 	, ifSepLivesWith: { type: String }
 	, ifSepBillAddress: { type: String }
 	, parent1FirstName: { type: String, required: true } 
 	, parent1LastName: { type: String, required: true }
 	, parent1StreetAddress: { type: String, required: true }
-	, parent1StreetAddress2: { type: String, required: true }
+	, parent1StreetAddress2: { type: String }
 	, parent1City: { type: String, required: true }
 	, parent1State: { type: String, required: true }
 	, parent1Zip: { type: Number, required: true }

@@ -19,7 +19,7 @@
 
 			<md-input-container flex>
 				<label>Gender</label>
-				<md-select ng-model="gender">
+				<md-select ng-change="test()" ng-model="patient.gender">
 					<md-option ng-repeat="gender in genders" value= "{{ gender }}"> {{ gender }}</md-option>
 				</md-select>
 			</md-input-container>
