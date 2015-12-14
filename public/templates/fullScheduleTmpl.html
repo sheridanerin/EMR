@@ -1,6 +1,6 @@
 <navbar-dir></navbar-dir>
 
-<div class="fullSchedView" ng-controller="fullScheduleCtrl as fullScheduleCtrl" ng-cloak>
+<div class="fullSchedView" ng-cloak>
 	
 	<div class="md-inline-form md-whiteframe-3dp">
 
@@ -17,13 +17,13 @@
 				<form ng-submit="$event.preventDefault()">
 
 			      	<md-autocomplete
-			        	ng-disabled="fullScheduleCtrl.isDisabled"
-			            md-no-cache="fullScheduleCtrl.noCache"
-			        	md-selected-item="fullScheduleCtrl.selectedItem"
-			        	md-search-text-change="fullScheduleCtrl.searchTextChange(fullScheduleCtrl.searchText)"
-			        	md-search-text="fullScheduleCtrl.searchText"
-			        	md-selected-item-change="fullScheduleCtrl.selectedItemChange(patient)"
-			        	md-items="patient in fullScheduleCtrl.querySearch(fullScheduleCtrl.searchText)"
+			        	ng-disabled="isDisabled"
+			            md-no-cache="noCache"
+			        	md-selected-item="selectedItem"
+			        	md-search-text-change="searchTextChange(fullScheduleCtrl.searchText)"
+			        	md-search-text="searchText"
+			        	md-selected-item-change="selectedItemChange(patient)"
+			        	md-items="patient in querySearch(searchText)"
 			        	md-item-text="patient.firstName + ' ' + patient.lastName"
 			        	md-min-length="0"
 			        	placeholder="Search for a Patient"
@@ -78,5 +78,17 @@
 		</div>
 
 	</div>
+
+		<br><br><br>
+
+    <div class="md-inline-form md-whiteframe-3dp">
+
+    	<md-datepicker ng-model="chosenDate" md-placeholder="Enter date"></md-datepicker> <md-button class="md-raised" ng-click="getDayAppointments(chosenDate)">Submit</md-button>
+
+    	<br>
+
+        <main-calendar-dir></main-calendar-dir>
+
+    </div>
 
 </div>

@@ -1,21 +1,21 @@
 angular.module('EMRapp')
-.controller('fullScheduleCtrl', function( $scope, $state, patientService, $timeout, $q, $log, appointmentsService ) {
+.controller('fullScheduleCtrl', function( $scope, $state, patientService, $timeout, $q, $log, appointments, appointmentsService ) {
 	
-	var self = this;
-    self.simulateQuery = false;
-    self.isDisabled    = false;
-    // self.repos         = loadAll();
-    self.querySearch   = querySearch;
-    self.selectedItemChange = selectedItemChange;
-    self.searchTextChange   = searchTextChange;
+	// var $scope = this;
+    $scope.simulateQuery = false;
+    $scope.isDisabled    = false;
+    // $scope.repos         = loadAll();
+    $scope.querySearch   = querySearch;
+    $scope.selectedItemChange = selectedItemChange;
+    $scope.searchTextChange   = searchTextChange;
 
     loadAll().then(function( patients ) {
 
-    	  self.repos = patients;
+    	  $scope.repos = patients;
     });
 
     function querySearch (query) {
-      	var results = query ? self.repos.filter( createFilterFor(query) ) : self.repos,
+      	var results = query ? $scope.repos.filter( createFilterFor(query) ) : $scope.repos,
         	deferred;
 
         return results;
@@ -164,9 +164,17 @@ angular.module('EMRapp')
     
 
     $scope.addNewAppointment = function() {
-    	$scope.appointment.patient = self.selectedItem._id;
+    	$scope.appointment.patient = $scope.selectedItem._id;
 		appointmentsService.addNewAppointment($scope.appointment);
 	}
+
+    $scope.appointments = appointments.data;
+
+    $scope.getDayAppointments = function( date ) {
+        appointmentsService.getDayAppointments(date).then(function( appointments ) {
+            $scope.appointments = appointments.data;
+        });
+    } 
 
 
 });

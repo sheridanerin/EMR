@@ -46,6 +46,10 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				templateUrl: 'templates/fullScheduleTmpl.html',
 				controller: 'fullScheduleCtrl',
 				resolve: {
+					appointments: ["appointmentsService", function( appointmentsService ) {
+						var today = new Date();
+						return appointmentsService.getDayAppointments(today);
+					}]
 				// 	user: function( authService ) {
 				// 		return authService.getAuth();
 				// 	},
@@ -113,23 +117,23 @@ angular.module('EMRapp')
 	
 }]);
 angular.module('EMRapp')
-.controller('fullScheduleCtrl', ["$scope", "$state", "patientService", "$timeout", "$q", "$log", "appointmentsService", function( $scope, $state, patientService, $timeout, $q, $log, appointmentsService ) {
+.controller('fullScheduleCtrl', ["$scope", "$state", "patientService", "$timeout", "$q", "$log", "appointments", "appointmentsService", function( $scope, $state, patientService, $timeout, $q, $log, appointments, appointmentsService ) {
 	
-	var self = this;
-    self.simulateQuery = false;
-    self.isDisabled    = false;
-    // self.repos         = loadAll();
-    self.querySearch   = querySearch;
-    self.selectedItemChange = selectedItemChange;
-    self.searchTextChange   = searchTextChange;
+	// var $scope = this;
+    $scope.simulateQuery = false;
+    $scope.isDisabled    = false;
+    // $scope.repos         = loadAll();
+    $scope.querySearch   = querySearch;
+    $scope.selectedItemChange = selectedItemChange;
+    $scope.searchTextChange   = searchTextChange;
 
     loadAll().then(function( patients ) {
 
-    	  self.repos = patients;
+    	  $scope.repos = patients;
     });
 
     function querySearch (query) {
-      	var results = query ? self.repos.filter( createFilterFor(query) ) : self.repos,
+      	var results = query ? $scope.repos.filter( createFilterFor(query) ) : $scope.repos,
         	deferred;
 
         return results;
@@ -278,9 +282,17 @@ angular.module('EMRapp')
     
 
     $scope.addNewAppointment = function() {
-    	$scope.appointment.patient = self.selectedItem._id;
+    	$scope.appointment.patient = $scope.selectedItem._id;
 		appointmentsService.addNewAppointment($scope.appointment);
 	}
+
+    $scope.appointments = appointments.data;
+
+    $scope.getDayAppointments = function( date ) {
+        appointmentsService.getDayAppointments(date).then(function( appointments ) {
+            $scope.appointments = appointments.data;
+        });
+    } 
 
 
 }]);
@@ -471,7 +483,7 @@ angular.module('EMRapp')
 angular.module('EMRapp')
 .controller('userHomeCtrl', ["$scope", "appointments", "appointmentsService", function( $scope, appointments, appointmentsService ) {
 
-    $scope.times = ['7:00', '7:30', '8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '1:00', '1:30', '2:00', '2:30', '3:00', '3:30', '4:00', '4:30', '5:00', '5:30', '6:00', '6:30', '7:00', '7:30', '8:00'];
+    // $scope.times = ['7:00', '7:30', '8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '1:00', '1:30', '2:00', '2:30', '3:00', '3:30', '4:00', '4:30', '5:00', '5:30', '6:00', '6:30', '7:00', '7:30', '8:00'];
 
 	$scope.appointments = appointments.data;
 
@@ -480,6 +492,7 @@ angular.module('EMRapp')
 			$scope.appointments = appointments.data;
 		});
 	} 
+	
 }]);
 angular.module('EMRapp').directive('calendarDir', function() {
 	return {
@@ -600,6 +613,18 @@ angular.module('EMRapp').directive('calendarDir', function() {
 			// $('#appointment' + scope.index).css('background-color', 'blue');
 		}]
 	}
+});
+angular.module('EMRapp')
+.directive('mainCalendarDir', function() {
+	
+	return {
+		  restrict: 'E'
+		, templateUrl: 'templates/mainCalendarTmpl.html'
+		, controller: ["$scope", function( $scope ) {
+    		$scope.calendarTimes = ['7:00', '7:30', '8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '1:00', '1:30', '2:00', '2:30', '3:00', '3:30', '4:00', '4:30', '5:00', '5:30', '6:00', '6:30', '7:00', '7:30', '8:00'];
+		}]
+	}
+
 });
 angular.module('EMRapp').directive('navbarDir', function() {
 		return {

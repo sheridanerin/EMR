@@ -46,6 +46,10 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				templateUrl: 'templates/fullScheduleTmpl.html',
 				controller: 'fullScheduleCtrl',
 				resolve: {
+					appointments: function( appointmentsService ) {
+						var today = new Date();
+						return appointmentsService.getDayAppointments(today);
+					}
 				// 	user: function( authService ) {
 				// 		return authService.getAuth();
 				// 	},

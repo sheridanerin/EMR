@@ -1,0 +1,12 @@
+<md-content layout="column" id="calendar-content">
+    <md-virtual-repeat-container id="vertical-container">
+
+		<calendar-dir ng-repeat="appointment in appointments track by $index" index="$index" appointment="appointment"></calendar-dir>
+
+        <div md-virtual-repeat="time in calendarTimes" class="repeated-item" flex>
+        {{ time }}
+        </div>
+
+    </md-virtual-repeat-container>
+</md-content>
+
