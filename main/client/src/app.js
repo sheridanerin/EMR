@@ -51,12 +51,16 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				// }
 			})
 			.state('fullSchedule', {
-				url:'/fullschedule',
+				url:'/fullschedule/:date',
 				templateUrl: 'templates/fullScheduleTmpl.html',
 				controller: 'fullScheduleCtrl',
 				resolve: {
-					appointments: function( appointmentsService ) {
-						var today = new Date();
+					appointments: function( appointmentsService, $stateParams ) {
+						// if ($stateParams.date) {
+						// 	var today = new Date($stateParams.date);
+						// } else {
+							var today = new Date();
+						// }
 						return appointmentsService.getDayAppointments(today);
 					}
 				// 	user: function( authService ) {

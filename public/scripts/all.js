@@ -51,12 +51,16 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				// }
 			})
 			.state('fullSchedule', {
-				url:'/fullschedule',
+				url:'/fullschedule/:date',
 				templateUrl: 'templates/fullScheduleTmpl.html',
 				controller: 'fullScheduleCtrl',
 				resolve: {
-					appointments: ["appointmentsService", function( appointmentsService ) {
-						var today = new Date();
+					appointments: ["appointmentsService", "$stateParams", function( appointmentsService, $stateParams ) {
+						// if ($stateParams.date) {
+						// 	var today = new Date($stateParams.date);
+						// } else {
+							var today = new Date();
+						// }
 						return appointmentsService.getDayAppointments(today);
 					}]
 				// 	user: function( authService ) {
@@ -104,6 +108,68 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 			
 }]);
 
+angular.module('EMRapp').directive('calendarDir', function() {
+	return {
+		  restrict: 'E'
+		, templateUrl: 'templates/calendarTmpl.html'
+		, scope: {
+			  appointment: '='
+			, index: '='
+		}
+		, controller: ["$state", "$scope", "appointmentsService", function( $state, $scope, appointmentsService ) {
+
+			$scope.$watch('appointment', function() {
+				setTop();
+				setHeight();
+			});
+
+			function setTop() {
+				$scope.top = -42
+
+				if ( $scope.appointment.startTime === 8.5) {
+					$scope.top = 122;
+				} else {
+					for (var i = 7; i <= $scope.appointment.startTime; i += 0.5) {
+						$scope.top += 41;
+					}
+				}
+			}
+			setTop();
+
+			function setHeight() {
+				$scope.height = (( $scope.appointment.endTime - $scope.appointment.startTime ) * 80 );
+			}
+			setHeight();
+
+			$scope.deleteAppointment = function() {
+				appointmentsService.deleteAppointment( $scope.appointment ).then(function( response ) {
+					$state.go('fullSchedule', {}, { reload: true });
+				}).catch(function( err ) {
+					console.error( err );
+				});
+			}
+		}]
+	}
+});
+angular.module('EMRapp')
+.directive('mainCalendarDir', function() {
+	
+	return {
+		  restrict: 'E'
+		, templateUrl: 'templates/mainCalendarTmpl.html'
+		, controller: ["$scope", function( $scope ) {
+    		$scope.calendarTimes = ['7:00 AM', '7:30 AM', '8:00 AM', '8:30 AM', '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM', '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 PM', '8:00 PM'];
+		}]
+	}
+
+});
+angular.module('EMRapp').directive('navbarDir', function() {
+		return {
+			  restrict: 'E'
+			, templateUrl: 'templates/navBarTmpl.html'
+			, controller: 'navBarCtrl'
+		}
+});
 angular.module('EMRapp')
 .controller('adminCtrl', ["$scope", "userService", "userList", function( $scope, userService, userList ) {
 	
@@ -311,6 +377,14 @@ angular.module('EMRapp')
         });
     } 
 
+    $scope.deleteAppointment = function() {
+        console.log('work');
+        appointmentsService.deleteAppointment( appointment ).then(function( response ) {
+            appointmentsService.getDayAppointments( response.data.date ).then(function( response ) {
+                $scope.appointments = response.data;
+            })
+        });
+    }
 
 }]);
 
@@ -435,10 +509,6 @@ angular.module('EMRapp')
 
 angular.module('EMRapp')
 .controller('newPatientCtrl', ["$scope", "patientService", function( $scope, patientService ) {
-
-	$scope.test = function() {
-		console.log($scope.patient.gender);
-	}
 	
 	$scope.days = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
 	$scope.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 
@@ -489,16 +559,58 @@ angular.module('EMRapp')
 
 	$scope.addNewPatient = function() {
 		$scope.patient.conditions = $scope.conditions;
-		$scope.patient.insuranceInfo = [$scope.insuranceInfo];
+		$scope.patient.insuranceInfo = $scope.insuranceInfo;
 		patientService.addNewPatient($scope.patient);
 	}
 
 }]);
 angular.module('EMRapp')
-.controller('patientChartCtrl', ["$scope", "patient", function( $scope, patient ) {
+.controller('patientChartCtrl', ["$scope", "patient", "patientService", function( $scope, patient, patientService ) {
 	
+	$scope.days = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+	$scope.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 
+					'October', 'November', 'December'];
+	$scope.years = [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 
+					1984, 1985, 1986, 1987, 1988, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 
+					1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 
+					2013, 2014, 2015].reverse();
+	$scope.states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 
+					'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 
+					'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 
+					'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'];
+	$scope.genders = ['Female', 'Male'];
+
 	$scope.patient = patient.data;
 
+	$scope.saveContactInfo = function() {
+		patientService.updatePatient( $scope.patient );
+		$scope.editing = null;
+	}
+
+	$scope.saveMedHist = function() {
+		patientService.updatePatientHist( $scope.patient );
+		$scope.editing = null;
+	}
+
+	$scope.saveInsuranceInfo = function() {
+		patientService.updateInsuranceInfo( $scope.patient );
+		$scope.editing = null;
+	}
+
+	$scope.saveNewNote = function() {
+		patientService.saveNewNote( $scope.historicalVisitNotes, $scope.patient._id ).then(function( response ) {
+			patientService.getOnePatient( response.data._id ).then(function( patient ) {
+				$scope.patient = patient.data;
+				$scope.editing = null;
+				$scope.historicalVisitNotes = {};
+				// $scope.patient.historicalVisitNotes.reverse();
+			});
+		});
+	}
+
+	// if ($scope.patient.historicalVisitNotes) {
+	// 	$scope.patient.historicalVisitNotes.reverse();
+	// }
 }]);
 
 angular.module('EMRapp')
@@ -546,6 +658,11 @@ angular.module('EMRapp')
 		return $http.get('api/dayappointments?day=' + date);
 
 	}
+
+	this.deleteAppointment = function( appointment ) {
+		return $http.delete('/api/appointment?id=' + appointment._id);
+		
+	};
 
 }]);
 angular.module('EMRapp')
@@ -616,6 +733,44 @@ angular.module('EMRapp')
 	
 	};
 
+	this.updatePatient = function( patient ) {
+
+		return $http.put('/api/patient/update?id=' + patient._id, { changed: patient }).then(function( response ) {
+			return response.data;
+		}).catch( function( err ) {
+			console.error( err );
+		});
+
+	};
+
+	this.updatePatientHist = function( patient ) {
+
+		return $http.put('/api/patient/updateconditions?id=' + patient._id, { changed: patient.conditions }).then(function( response ) {
+			return response.data;
+		}).catch( function( err ) {
+			console.error( err );
+		});
+
+	};
+
+	this.updateInsuranceInfo = function( patient ) {
+		console.log(patient.insuranceInfo)
+
+		return $http.put('/api/patient/updateinfo?patientid=' + patient._id, { changed: patient.insuranceInfo }).then(function( response ) {
+			return response.data;
+		}).catch( function( err ) {
+			console.error( err );
+		});
+
+	};
+
+	this.saveNewNote = function( note, patientid ) {
+
+		return $http.post('/api/patient/newnote?id=' + patientid, note);
+	
+	}  
+
+
 }]);
 angular.module('EMRapp')
 .service('userService', ["$http", "$state", function( $http, $state ) {
@@ -641,40 +796,3 @@ angular.module('EMRapp')
 	};
 
 }]);
-angular.module('EMRapp').directive('calendarDir', function() {
-	return {
-		  restrict: 'E'
-		, templateUrl: 'templates/calendarTmpl.html'
-		, scope: {
-			  appointment: '='
-			, index: '='
-		}
-		, controller: ["$scope", function( $scope ) {
-			$scope.height = (( $scope.appointment.endTime - $scope.appointment.startTime ) * 80 );
-
-			$scope.top = -42;
-				for (var i = 7; i <= $scope.appointment.startTime; i += 0.5) {
-				$scope.top += 41;
-			}
-		}]
-	}
-});
-angular.module('EMRapp')
-.directive('mainCalendarDir', function() {
-	
-	return {
-		  restrict: 'E'
-		, templateUrl: 'templates/mainCalendarTmpl.html'
-		, controller: ["$scope", function( $scope ) {
-    		$scope.calendarTimes = ['7:00 AM', '7:30 AM', '8:00 AM', '8:30 AM', '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM', '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 PM', '8:00 PM'];
-		}]
-	}
-
-});
-angular.module('EMRapp').directive('navbarDir', function() {
-		return {
-			  restrict: 'E'
-			, templateUrl: 'templates/navBarTmpl.html'
-			, controller: 'navBarCtrl'
-		}
-});

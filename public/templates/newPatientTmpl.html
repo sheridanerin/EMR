@@ -19,7 +19,7 @@
 
 			<md-input-container flex>
 				<label>Gender</label>
-				<md-select ng-change="test()" ng-model="patient.gender">
+				<md-select ng-model="patient.gender">
 					<md-option ng-repeat="gender in genders" value= "{{ gender }}"> {{ gender }}</md-option>
 				</md-select>
 			</md-input-container>
@@ -274,12 +274,12 @@
 
 			<md-input-container flex="50">
 				<label>Insurance Company</label>
-				<input ng-model="insuaranceInfo.insuranceCompany">
+				<input ng-model="insuranceInfo.insuranceCompany">
 			</md-input-container>
 
 			<md-input-container flex="50">
 				<label>Group #</label>
-				<input ng-model="insuaranceInfo.groupID">
+				<input ng-model="insuranceInfo.groupID">
 			</md-input-container>
 
 		</md-content>
@@ -288,12 +288,12 @@
 
 			<md-input-container flex="50">
 				<label>Name of Insured</label>
-				<input ng-model="insuaranceInfo.nameOfInsured">
+				<input ng-model="insuranceInfo.nameOfInsured">
 			</md-input-container>
 
 			<md-input-container flex="50">
 				<label>Relation to Patient</label>
-				<input ng-model="insuaranceInfo.relToPatient">
+				<input ng-model="insuranceInfo.relToPatient">
 			</md-input-container>
 
 		</md-content>
@@ -302,7 +302,7 @@
 
 			<md-input-container flex class="md-block">
 				<label>Address</label>
-				<input ng-model="insuaranceInfo.streetAddress">
+				<input ng-model="insuranceInfo.streetAddress">
 			</md-input-container>
 
 		</md-content>
@@ -311,19 +311,19 @@
 
 			<md-input-container flex>
 				<label>City</label>
-				<input ng-model="insuaranceInfo.city">
+				<input ng-model="insuranceInfo.city">
 			</md-input-container>
 
 			<md-input-container>
 				<label>State</label>
-				<md-select ng-model="insuaranceInfo.state">
+				<md-select ng-model="insuranceInfo.state">
 					<md-option ng-repeat="state in states" value= "{{ state }}"> {{ state }}</md-option>
 				</md-select>		
 			</md-input-container>
 
 			<md-input-container flex>
 				<label>Zip Code</label>
-				<input ng-model="insuaranceInfo.zip">
+				<input ng-model="insuranceInfo.zip">
 			</md-input-container>
 			
 		</md-content>
@@ -332,17 +332,17 @@
 
 			<md-input-container flex>
 				<label>Email</label>
-				<input ng-model="insuaranceInfo.email">
+				<input ng-model="insuranceInfo.email">
 			</md-input-container>
 
 			<md-input-container flex>
 				<label>Phone 1</label>
-				<input ng-model="insuaranceInfo.phone1">
+				<input ng-model="insuranceInfo.phone1">
 			</md-input-container>
 
 			<md-input-container flex>
 				<label>Phone 2</label>
-				<input ng-model="insuaranceInfo.phone2">
+				<input ng-model="insuranceInfo.phone2">
 			</md-input-container>
 
 		</md-content>
@@ -351,21 +351,21 @@
 
 			<md-input-container flex>
 				<label>Day of birth</label>
-				<md-select ng-model="insuaranceInfo.birthDay">
+				<md-select ng-model="insuranceInfo.birthDay">
 					<md-option ng-repeat="day in days" value= "{{ day }}"> {{ day }}</md-option>
 				</md-select>
 			</md-input-container>
 
 			<md-input-container flex>
 				<label>Month of birth</label>
-				<md-select ng-model="insuaranceInfo.birthMonth">
+				<md-select ng-model="insuranceInfo.birthMonth">
 					<md-option ng-repeat="month in months" value= "{{ month }}"> {{ month }}</md-option>
 				</md-select>
 			</md-input-container>
 
 			<md-input-container flex>
 				<label>Year of birth</label>
-				<md-select ng-model="insuaranceInfo.birthYear">
+				<md-select ng-model="insuranceInfo.birthYear">
 					<md-option ng-repeat="year in years" value= "{{ year }}"> {{ year }}</md-option>
 				</md-select>
 			</md-input-container>
@@ -547,11 +547,15 @@
 		        </md-checkbox>
 		    </div>
 
-			<div>
-				<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.other.checked" class="md-primary">
-		          Other 
-		          <input ng-model="conditions.other.condition">
-		        </md-checkbox>
+			<div flex="100">
+				
+		        <md-input-container>
+					<md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="conditions.other.checked" class="md-primary">
+		          		Other 
+		        	</md-checkbox>
+		        	<label>Enter Other Conditions</label>
+					<input ng-disabled="!conditions.other.checked" ng-model="conditions.other.condition">
+				</md-input-container>
 		    </div>
 				    
 		</div>	

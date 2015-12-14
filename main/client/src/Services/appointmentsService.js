@@ -30,4 +30,9 @@ angular.module('EMRapp')
 
 	}
 
+	this.deleteAppointment = function( appointment ) {
+		return $http.delete('/api/appointment?id=' + appointment._id);
+		
+	};
+
 });

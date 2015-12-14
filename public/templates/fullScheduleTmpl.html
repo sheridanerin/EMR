@@ -27,7 +27,7 @@
 			        	md-item-text="patient.firstName + ' ' + patient.lastName"
 			        	md-min-length="0"
 			        	placeholder="Search for a Patient"
-			        	md-menu-class="autocomplete-custom-template"
+			        	md-menu-class="searchTemplate"
 			        	class="searchBar">
 
 				        <md-item-template>
@@ -36,7 +36,7 @@
 					        </span>
 					        <span class="item-metadata">
 						        <span class="item-metastat">
-					            	Birthday: <strong>{{ patient.birthDay }}, {{ patient.birthMonth }} >{{ patient.birthYear }}</strong>
+					            	Birthday: <strong>{{ patient.birthDay }}, {{ patient.birthMonth }} {{ patient.birthYear }}</strong>
 					            </span>
 					            <span class="item-metastat">			              
 					            	Gender: <strong>{{ patient.gender }}</strong>
@@ -81,13 +81,15 @@
 
 		<br><br><br>
 
-    <div class="md-inline-form md-whiteframe-3dp">
+    <div class="md-inline-form md-whiteframe-3dp fullScheduleWindow">
+    	
+    	<div layout="row" layout-wrap>
+			<div flex="100"><br></div>
 
-		<div flex="100"><br></div>
-
-    	<md-datepicker ng-model="chosenDate" md-placeholder="Enter date"></md-datepicker> <md-button class="md-raised" ng-click="getDayAppointments(chosenDate)">Submit</md-button>
-
-    	<br>
+	    	<div flex="25"><md-datepicker flex="50" ng-model="chosenDate" md-placeholder="Enter date"></md-datepicker></div>
+	    	<div flex="75"><md-button class="md-raised md-primary" ng-click="getDayAppointments(chosenDate)">Submit</md-button></div>
+	    	<br>
+	    </div>
 
         <main-calendar-dir></main-calendar-dir>
 

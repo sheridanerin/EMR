@@ -24,13 +24,15 @@ module.exports = {
 	},
 
 	getDayAppointments: function( req, res ) {
-		Appointment.find({ date: new Date( req.query.day )}, function( err, appointments ) {
-			if (err) {
-				return res.status(500).send(err);
-			}
-			
-			res.send(appointments);
-		})
+		Appointment.find({ date: new Date( req.query.day )})
+			.populate('patient').exec(function( err, appointments ) {
+				if (err) {
+					return res.status(500).send(err);
+				}
+				
+				res.send( appointments );
+				
+			})
 	},
 
 	getAppointment: function( req, res ) {

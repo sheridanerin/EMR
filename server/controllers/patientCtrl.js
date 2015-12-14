@@ -49,6 +49,21 @@ module.exports = {
 		})	
 	},
 
+	updatePatientConditions: function( req, res ) {
+		Patient.findById(req.query.id, function( err, patient ) {
+	
+			patient.set('conditions', req.body.changed);
+
+			patient.save(function( err, updatedPatient ) {
+				if (err) {
+					return res.status(500).send(err);
+				}
+				res.send(updatedPatient)
+
+			})
+		})	
+	},
+
 	addNewNote: function( req, res ) {
 		Patient.findById(req.query.id, function( err, patient ) {
 			if (err) {
@@ -87,9 +102,12 @@ module.exports = {
 	updatePatientInsuranceInfo: function( req, res ) {
 		Patient.findById(req.query.patientid, function( err, patient ) {
 
-				for ( var property in req.body.changed ) {
-					patient.insuranceInfo.id(req.query.insurid).set(property, req.body.changed[property]); 
-				}
+				// for ( var property in req.body.changed ) {
+				// 	patient.insuranceInfo.id(req.query.insurid).set(property, req.body.changed[property]); 
+				// }
+
+			patient.set('insuranceInfo', req.body.changed);
+			console.log(req.body.changed);
 
 			patient.save(function( err, updatedPatient ) {
 				if (err) {

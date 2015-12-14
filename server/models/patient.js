@@ -74,7 +74,7 @@ var Patient = Schema({
 		, description: { type: String }
 		, notes: { type: String }
 	}]
-	, insuranceInfo: [{
+	, insuranceInfo: {
 		  insuranceCompany: { type: String }
 		, groupID: { type: String }
 		, nameOfInsured: { type: String }
@@ -90,7 +90,7 @@ var Patient = Schema({
 		, birthMonth: { type: String }
 		, birthYear: { type: Number }
 		, zip: { type: Number }
-	}]
+	}
 	, patientGoals: [{
 		  status: ["New", "Discontinued", "Hold", "Met", "Ongoing"]
 		, shortTermGoal: { type: String }
