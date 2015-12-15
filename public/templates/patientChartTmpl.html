@@ -561,13 +561,15 @@
 					</div>
 
 				<md-tab label="Visit Notes">
-					<div>
+					<!-- <div> -->
 
-						<div flex="100"><br></div>
+						<!-- <div flex="100"><br></div> -->
 
 						<div ng-show="editing === 'addVisitNote'">
+
+							<div flex="100"><br></div>
 							
-							<div layout="column" class="md-inline-form md-whiteframe-3dp">	
+							<div layout="column" class="md-inline-form md-whiteframe-3dp" layout-wrap>	
 
 	    						<div flex="100"><md-datepicker ng-model="historicalVisitNotes.date" md-placeholder="Enter date"></md-datepicker></div>
 
@@ -609,7 +611,7 @@
 
 						<div flex="100"><br></div>
 				
-					</div>
+					<!-- </div> -->
 					<br>
 
 				<md-tab label="Insurance Information">

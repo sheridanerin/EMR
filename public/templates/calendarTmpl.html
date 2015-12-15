@@ -3,9 +3,10 @@
 	<div layout="row" layout-wrap class="calendarAppt">
 
 		<div flex="10"> Name: </div> 
-		<div flex="15"> <span id="boldValues"> {{ appointment.patient.firstName }} {{ appointment.patient.lastName }} </span> </div>
+		<div flex="25"> <span id="boldValues"> {{ appointment.patient.firstName }} {{ appointment.patient.lastName }} </span> </div>
 		<div flex="15">Description: </div> 
-		<div flex="25" class="calendarContentOverflow"> <span id="boldValues">{{ appointment.description }} </span></div>
+		<div class="calendarContentOverflow"> <span class="calendarContentOverflow" id="boldValues">{{ appointment.description }} </span></div>
+		<div flex="5"></div>
 		<div flex="10"> Time: </div> 
 		<div flex="10"> <span id="boldValues">{{ appointment.startTime }} - {{ appointment.endTime }}</span>
 		<div flex="15"> 

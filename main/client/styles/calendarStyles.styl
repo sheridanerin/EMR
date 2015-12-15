@@ -7,11 +7,18 @@
 	position absolute
 	left 100px
 	
-.calendarContentOverflow
-	overflow scroll
+.calendarContentOverflow {
+	white-space: nowrap;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	width: 80px;
+}
 	
 #boldValues
 	font-weight bold
+	
+.right
+	float right
 	
 .dialogBox
 	width 350px

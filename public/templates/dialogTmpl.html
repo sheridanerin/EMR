@@ -7,6 +7,12 @@
 		<div flex="50"> Birthday: </div> <div flex="50"> <span id="boldValues">{{ selected.patient.birthDay }} {{ selected.patient.birthMonth }} {{ selected.patient.birthYear }}</span></div>
 		<div flex="50"> Appt Description: </div> <div flex="50"> <span id="boldValues">{{ selected.description }} </span></div>
 
+		<div flex="100"><br></div>
+		<div flex="40"></div>
+
+		<div flex="60">
+			<md-button class="md-raised md-primary right" ng-click="goToPatientChart()">View Patient Chart</md-button>
+		</div>
 	</div>
 
 </md-dialog>

@@ -69,7 +69,7 @@ angular.module('EMRapp').directive('calendarDir', function() {
 	}
 });
 
-function DialogController($scope, $mdDialog, selected) {
+function DialogController( $state, $scope, $mdDialog, selected ) {
 	$scope.selected = selected;
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -80,4 +80,9 @@ function DialogController($scope, $mdDialog, selected) {
 	$scope.answer = function(answer) {
 		$mdDialog.hide(answer);
 	};
+
+	$scope.goToPatientChart = function() {
+		$mdDialog.hide();
+		$state.go('patientChart', { patientid: $scope.selected.patient._id });
+	}
 };
