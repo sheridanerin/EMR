@@ -169,8 +169,6 @@ angular.module('EMRapp')
     	},
     ];
 
-    
-
     $scope.addNewAppointment = function() {
     	$scope.appointment.patient = $scope.selectedItem._id;
 		appointmentsService.addNewAppointment($scope.appointment);
@@ -185,7 +183,6 @@ angular.module('EMRapp')
     } 
 
     $scope.deleteAppointment = function() {
-        console.log('work');
         appointmentsService.deleteAppointment( appointment ).then(function( response ) {
             appointmentsService.getDayAppointments( response.data.date ).then(function( response ) {
                 $scope.appointments = response.data;

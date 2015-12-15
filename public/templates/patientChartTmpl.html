@@ -10,7 +10,7 @@
 				<md-tab label="Contact Information">
         				
     				<div flex="100"><br></div>
-
+					
 					<div ng-hide="editing==='editContactInfo'">
 
 						<div layout="row" layout-sm="column" class="chartContentStyles" layout-wrap>
@@ -56,6 +56,7 @@
 							<md-button class="md-raised md-primary" ng-click="editing = 'editContactInfo'">Edit</md-button>
 
 						</div>
+					</div>
 
 						<div ng-show="editing==='editContactInfo'" class="editContactInfo">
 
@@ -325,34 +326,36 @@
 
 						<div ng-hide="editing==='editMedHist'">
 
-						 	<h2 class="md-title" flex="100">Condition List<h2>
-						 	<div ng-show="patient.conditions.seasonalAllergies"> Seasonal Allergies </div>
-						 	<div ng-show="patient.conditions.anemia"> Anemia </div>
-						 	<div ng-show="patient.conditions.tensionHeadaches"> Tension Headaches </div>
-						 	<div ng-show="patient.conditions.osteoarthritis"> Osteoarthritis </div>
-						 	<div ng-show="patient.conditions.asthma"> Asthma </div>
-						 	<div ng-show="patient.conditions.positiveTBTest"> Positive TBTest </div>
-						 	<div ng-show="patient.conditions.GIBleed"> GI Bleed </div>
-						 	<div ng-show="patient.conditions.anxiety"> Anxiety </div>
-						 	<div ng-show="patient.conditions.emphsemaCOPD"> Emphsema/COPD </div>
-						 	<div ng-show="patient.conditions.atrialFibrillation"> Atrial Fibrillation </div>
-						 	<div ng-show="patient.conditions.migraines"> Migraines </div>
-						 	<div ng-show="patient.conditions.rheumatoidArthritis"> Rheumatoid Arthritis </div>
-						 	<div ng-show="patient.conditions.ADDADHD"> ADD/ADHD </div>
-						 	<div ng-show="patient.conditions.GERD"> GERD </div>
-						 	<div ng-show="patient.conditions.acne"> Acne </div>
-						 	<div ng-show="patient.conditions.depression"> Depression </div>
-						 	<div ng-show="patient.conditions.glaucoma"> Glaucoma </div>
-						 	<div ng-show="patient.conditions.cataracts"> Cataracts </div>
-						 	<div ng-show="patient.conditions.gout"> Gout </div>
-						 	<div ng-show="patient.conditions.diabetes"> Diabetes </div>
-						 	<div ng-show="patient.conditions.psoriasis"> Psoriasis </div>
-						 	<div ng-show="patient.conditions.hearingLoss"> Hearing Loss </div>
-						 	<div ng-show="patient.conditions.visionLoss"> Vision Loss </div>
-						 	<div ng-show="patient.conditions.seizureDisorder"> Seizure Disorder </div>
-						 	<div ng-show="patient.conditions.hypothyroidism"> Hypothyroidism </div>
-						 	<div ng-show="patient.conditions.hyperthyroidism"> Hyperthyroidism </div>
-						 	<div ng-show="patient.conditions.other.checked"> {{ patient.conditions.other.condition }} </div>
+						 	<h2 flex="100">Condition List</h2>
+						 	<ul>
+							 	<li ng-show="patient.conditions.seasonalAllergies"> <h4> Seasonal Allergies </h4> </li>
+							 	<li ng-show="patient.conditions.anemia"> <h4> Anemia </h4></li>
+							 	<li ng-show="patient.conditions.tensionHeadaches"> <h4> Tension Headaches</h4> </li>
+							 	<li ng-show="patient.conditions.osteoarthritis"> <h4> Osteoarthritis</h4> </li>
+							 	<li ng-show="patient.conditions.asthma"> <h4> Asthma</h4> </li>
+							 	<li ng-show="patient.conditions.positiveTBTest"> <h4> Positive TBTest</h4> </li>
+							 	<li ng-show="patient.conditions.GIBleed"> <h4> GI Bleed</h4> </li>
+							 	<li ng-show="patient.conditions.anxiety"> <h4> Anxiety</h4> </li>
+							 	<li ng-show="patient.conditions.emphsemaCOPD"> <h4> Emphsema/COPD</h4> </li>
+							 	<li ng-show="patient.conditions.atrialFibrillation"> <h4> Atrial Fibrillation</h4> </li>
+							 	<li ng-show="patient.conditions.migraines"> <h4> Migraines</h4> </li>
+							 	<li ng-show="patient.conditions.rheumatoidArthritis"> <h4> Rheumatoid Arthritis</h4> </li>
+							 	<li ng-show="patient.conditions.ADDADHD"> <h4> ADD/ADHD</h4> </li>
+							 	<li ng-show="patient.conditions.GERD"> <h4> GERD</h4> </li>
+							 	<li ng-show="patient.conditions.acne"> <h4> Acne</h4> </li>
+							 	<li ng-show="patient.conditions.depression"> <h4> Depression</h4> </li>
+							 	<li ng-show="patient.conditions.glaucoma"> <h4> Glaucoma</h4> </li>
+							 	<li ng-show="patient.conditions.cataracts"> <h4> Cataracts</h4> </li>
+							 	<li ng-show="patient.conditions.gout"> <h4> Gout</h4> </li>
+							 	<li ng-show="patient.conditions.diabetes"> <h4> Diabetes</h4> </li>
+							 	<li ng-show="patient.conditions.psoriasis"> <h4> Psoriasis</h4> </li>
+							 	<li ng-show="patient.conditions.hearingLoss"> <h4> Hearing Loss</h4> </li>
+							 	<li ng-show="patient.conditions.visionLoss"> <h4> Vision Loss</h4> </li>
+							 	<li ng-show="patient.conditions.seizureDisorder"> <h4> Seizure Disorder</h4> </li>
+							 	<li ng-show="patient.conditions.hypothyroidism"> <h4> Hypothyroidism</h4> </li>
+							 	<li ng-show="patient.conditions.hyperthyroidism"> <h4> Hyperthyroidism</h4> </li>
+							 	<li ng-show="patient.conditions.other.checked"> <h4> {{ patient.conditions.other.condition }}</h4> </li>
+						 	</ul>
 
 						<div flex="100"><br></div>
 
@@ -594,11 +597,15 @@
 
 						<div flex="85"><br></div>
 
-						<div ng-repeat="note in patient.historicalVisitNotes | orderBy : date : true" flex="100">
-							<div flex="100"> Date: <span>{{ note.date | date : 'fullDate' }}</span> </div>	
-							<div flex="100"> Description: <span>{{ note.description }}</span> </div>	
-							<div flex="100"> Notes: <span>{{ note.notes }}</span> </div>
-						</div>
+							<div ng-repeat="note in patient.historicalVisitNotes | orderBy : 'date' : true">
+								<div layout="row" layout-wrap class="md-inline-form md-whiteframe-3dp">	
+									<div flex="20"> Date: </div> <div flex="80"><span>{{ note.date | date : 'fullDate' }}</span> </div>	
+									<div flex="20"> Description: </div> <div flex="80"> <span>{{ note.description }}</span> </div>	
+									<div flex="20"> Notes: </div> <div flex="80"> <span>{{ note.notes }}</span> </div>
+								</div>
+								<div flex="100"><br></div>
+							</div>
+
 
 						<div flex="100"><br></div>
 				

@@ -108,68 +108,6 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 			
 }]);
 
-angular.module('EMRapp').directive('calendarDir', function() {
-	return {
-		  restrict: 'E'
-		, templateUrl: 'templates/calendarTmpl.html'
-		, scope: {
-			  appointment: '='
-			, index: '='
-		}
-		, controller: ["$state", "$scope", "appointmentsService", function( $state, $scope, appointmentsService ) {
-
-			$scope.$watch('appointment', function() {
-				setTop();
-				setHeight();
-			});
-
-			function setTop() {
-				$scope.top = -42
-
-				if ( $scope.appointment.startTime === 8.5) {
-					$scope.top = 122;
-				} else {
-					for (var i = 7; i <= $scope.appointment.startTime; i += 0.5) {
-						$scope.top += 41;
-					}
-				}
-			}
-			setTop();
-
-			function setHeight() {
-				$scope.height = (( $scope.appointment.endTime - $scope.appointment.startTime ) * 80 );
-			}
-			setHeight();
-
-			$scope.deleteAppointment = function() {
-				appointmentsService.deleteAppointment( $scope.appointment ).then(function( response ) {
-					$state.go('fullSchedule', {}, { reload: true });
-				}).catch(function( err ) {
-					console.error( err );
-				});
-			}
-		}]
-	}
-});
-angular.module('EMRapp')
-.directive('mainCalendarDir', function() {
-	
-	return {
-		  restrict: 'E'
-		, templateUrl: 'templates/mainCalendarTmpl.html'
-		, controller: ["$scope", function( $scope ) {
-    		$scope.calendarTimes = ['7:00 AM', '7:30 AM', '8:00 AM', '8:30 AM', '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM', '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 PM', '8:00 PM'];
-		}]
-	}
-
-});
-angular.module('EMRapp').directive('navbarDir', function() {
-		return {
-			  restrict: 'E'
-			, templateUrl: 'templates/navBarTmpl.html'
-			, controller: 'navBarCtrl'
-		}
-});
 angular.module('EMRapp')
 .controller('adminCtrl', ["$scope", "userService", "userList", function( $scope, userService, userList ) {
 	
@@ -362,8 +300,6 @@ angular.module('EMRapp')
     	},
     ];
 
-    
-
     $scope.addNewAppointment = function() {
     	$scope.appointment.patient = $scope.selectedItem._id;
 		appointmentsService.addNewAppointment($scope.appointment);
@@ -378,7 +314,6 @@ angular.module('EMRapp')
     } 
 
     $scope.deleteAppointment = function() {
-        console.log('work');
         appointmentsService.deleteAppointment( appointment ).then(function( response ) {
             appointmentsService.getDayAppointments( response.data.date ).then(function( response ) {
                 $scope.appointments = response.data;
@@ -627,6 +562,110 @@ angular.module('EMRapp')
 	} 
 	
 }]);
+angular.module('EMRapp').directive('calendarDir', function() {
+	return {
+		  restrict: 'E'
+		, templateUrl: 'templates/calendarTmpl.html'
+		, scope: {
+			  appointment: '='
+			, index: '='
+		}
+		, controller: ["$state", "$scope", "appointmentsService", "$mdDialog", "$mdMedia", function( $state, $scope, appointmentsService, $mdDialog, $mdMedia ) {
+
+			$scope.$watch('appointment', function() {
+				setTop();
+				setHeight();
+			});
+
+			function setTop() {
+				$scope.top = -42
+
+				if ( $scope.appointment.startTime === 8.5) {
+					$scope.top = 122;
+				} else {
+					for (var i = 7; i <= $scope.appointment.startTime; i += 0.5) {
+						$scope.top += 41;
+					}
+				}
+			};
+			setTop();
+
+			function setHeight() {
+				$scope.height = (( $scope.appointment.endTime - $scope.appointment.startTime ) * 80 );
+			};
+			setHeight();
+
+			$scope.deleteAppointment = function() {
+				appointmentsService.deleteAppointment( $scope.appointment ).then(function( response ) {
+					$state.go('fullSchedule', {}, { reload: true });
+				}).catch(function( err ) {
+					console.error( err );
+				});
+			};
+
+			$scope.showAdvanced = function(ev) {
+				$scope.selected = $scope.appointment;
+				console.log($scope.selected);
+				$mdDialog.show({
+					controller: DialogController,
+					templateUrl: '../templates/dialogTmpl.html',
+					parent: angular.element(document.body),
+					targetEvent: ev,
+					clickOutsideToClose:true,
+					fullscreen: $mdMedia('sm') && $scope.customFullscreen,
+					locals: {
+						selected: $scope.selected
+					}
+				})
+				.then(function(answer) {
+					$scope.status = 'You said the information was "' + answer + '".';
+				}, function() {
+					$scope.status = 'You cancelled the dialog.';
+				});
+				$scope.$watch(function() {
+					return $mdMedia('sm');
+				}, function(sm) {
+					$scope.customFullscreen = (sm === true);
+				});
+			};
+
+		}]
+	}
+});
+
+function DialogController($scope, $mdDialog, selected) {
+	$scope.selected = selected;
+	$scope.hide = function() {
+		$mdDialog.hide();
+	};
+	$scope.cancel = function() {
+		$mdDialog.cancel();
+	};
+	$scope.answer = function(answer) {
+		$mdDialog.hide(answer);
+	};
+}
+DialogController.$inject = ["$scope", "$mdDialog", "selected"];;
+
+angular.module('EMRapp')
+.directive('mainCalendarDir', function() {
+	
+	return {
+		  restrict: 'E'
+		, templateUrl: 'templates/mainCalendarTmpl.html'
+		, controller: ["$scope", function( $scope ) {
+    		$scope.calendarTimes = ['7:00 AM', '7:30 AM', '8:00 AM', '8:30 AM', '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM', '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 PM', '8:00 PM'];
+		}]
+	}
+
+});
+angular.module('EMRapp').directive('navbarDir', function() {
+		return {
+			  restrict: 'E'
+			, templateUrl: 'templates/navBarTmpl.html'
+			, controller: 'navBarCtrl'
+		}
+});
 angular.module('EMRapp')
 .service('appointmentsService', ["$http", "$state", function( $http, $state ) {
 

@@ -78,12 +78,13 @@
 
 				<md-tab label="Current Users">
 
+					<table>
+						<tr><td></td><td></td><td></td><td></td></tr>
 
+						<div ng-repeat="user in users">
 
-					<ul>
-						<li ng-repeat="user in users">{{ user.username }}</li>
-					</ul>
-
+						{{ user.username }}</div>
+					<table
 			</md-tabs>
 
 	</div>

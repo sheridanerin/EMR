@@ -1,0 +1,12 @@
+<md-dialog aria-label="appointment dialog"  class="dialogBox" ng-cloak>
+
+	<div layout="row" layout-wrap class="calendarAppt">
+
+		<div flex="50"> Name: </div> <div flex="50"><span id="boldValues"> {{ selected.patient.firstName }} {{ selected.patient.lastName }} </span> </div>
+		<div flex="50"> Gender: </div> <div flex="50"> <span id="boldValues">{{ selected.patient.gender }} </span></div>
+		<div flex="50"> Birthday: </div> <div flex="50"> <span id="boldValues">{{ selected.patient.birthDay }} {{ selected.patient.birthMonth }} {{ selected.patient.birthYear }}</span></div>
+		<div flex="50"> Appt Description: </div> <div flex="50"> <span id="boldValues">{{ selected.description }} </span></div>
+
+	</div>
+
+</md-dialog>

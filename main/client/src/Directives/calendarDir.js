@@ -6,7 +6,7 @@ angular.module('EMRapp').directive('calendarDir', function() {
 			  appointment: '='
 			, index: '='
 		}
-		, controller: function( $state, $scope, appointmentsService ) {
+		, controller: function( $state, $scope, appointmentsService, $mdDialog, $mdMedia ) {
 
 			$scope.$watch('appointment', function() {
 				setTop();
@@ -23,12 +23,12 @@ angular.module('EMRapp').directive('calendarDir', function() {
 						$scope.top += 41;
 					}
 				}
-			}
+			};
 			setTop();
 
 			function setHeight() {
 				$scope.height = (( $scope.appointment.endTime - $scope.appointment.startTime ) * 80 );
-			}
+			};
 			setHeight();
 
 			$scope.deleteAppointment = function() {
@@ -37,7 +37,47 @@ angular.module('EMRapp').directive('calendarDir', function() {
 				}).catch(function( err ) {
 					console.error( err );
 				});
-			}
+			};
+
+			$scope.showAdvanced = function(ev) {
+				$scope.selected = $scope.appointment;
+				console.log($scope.selected);
+				$mdDialog.show({
+					controller: DialogController,
+					templateUrl: '../templates/dialogTmpl.html',
+					parent: angular.element(document.body),
+					targetEvent: ev,
+					clickOutsideToClose:true,
+					fullscreen: $mdMedia('sm') && $scope.customFullscreen,
+					locals: {
+						selected: $scope.selected
+					}
+				})
+				.then(function(answer) {
+					$scope.status = 'You said the information was "' + answer + '".';
+				}, function() {
+					$scope.status = 'You cancelled the dialog.';
+				});
+				$scope.$watch(function() {
+					return $mdMedia('sm');
+				}, function(sm) {
+					$scope.customFullscreen = (sm === true);
+				});
+			};
+
 		}
 	}
 });
+
+function DialogController($scope, $mdDialog, selected) {
+	$scope.selected = selected;
+	$scope.hide = function() {
+		$mdDialog.hide();
+	};
+	$scope.cancel = function() {
+		$mdDialog.cancel();
+	};
+	$scope.answer = function(answer) {
+		$mdDialog.hide(answer);
+	};
+};
