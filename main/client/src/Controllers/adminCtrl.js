@@ -1,5 +1,5 @@
 angular.module('EMRapp')
-.controller('adminCtrl', function( $scope, userService, userList, user ) {
+.controller('adminCtrl', function( $scope, userService, userList ) {
 	
 	console.log(user)
 

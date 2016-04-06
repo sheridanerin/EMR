@@ -1,7 +1,6 @@
 angular.module('EMRapp')
-.controller('userHomeCtrl', function( $scope, appointments, appointmentsService, user ) {
+.controller('userHomeCtrl', function( $scope, appointments, appointmentsService ) {
 
-		console.log(user);
 		
 		$scope.getDate = function() {
 			var date = new Date();

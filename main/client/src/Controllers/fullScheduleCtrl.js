@@ -1,5 +1,5 @@
 angular.module('EMRapp')
-.controller('fullScheduleCtrl', function( $scope, $state, patientService, $timeout, $q, $log, appointments, appointmentsService, user ) {
+.controller('fullScheduleCtrl', function( $scope, $state, patientService, $timeout, $q, $log, appointments, appointmentsService ) {
 	
 	// var $scope = this;
     $scope.simulateQuery = false;

@@ -78,9 +78,9 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				templateUrl: 'templates/patientChartTmpl.html',
 				controller: 'patientChartCtrl',
 				resolve: {
-				// 	user: function( authService ) {
-				// 		return authService.getAuth();
-				// 	},
+					// user: function( authService ) {
+					// 	return authService.getAuth();
+					// },
 					patient: ["patientService", "$stateParams", function( patientService, $stateParams ) {
 						if ( $stateParams.patientid ) {
 							return patientService.getOnePatient( $stateParams.patientid );
@@ -97,7 +97,7 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				resolve: {
 					userList: ["userService", function( userService ) {
 						return userService.getUsers();
-					}],
+					}]
 					// user: function( authService ) {
 					// 	return authService.getAdminAuth();
 					// }
@@ -110,6 +110,8 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 angular.module('EMRapp')
 .controller('adminCtrl', ["$scope", "userService", "userList", function( $scope, userService, userList ) {
 	
+	console.log(user)
+
 	$scope.permissions = {
 		  insuranceInfo: false
 		, visitNotes: false
@@ -331,6 +333,7 @@ angular.module('EMRapp')
 	
 	$scope.login = function() {
 		authService.login($scope.user);
+		// console.log($scope.user);
 	}
 
 }]);
@@ -550,6 +553,7 @@ angular.module('EMRapp')
 angular.module('EMRapp')
 .controller('userHomeCtrl', ["$scope", "appointments", "appointmentsService", function( $scope, appointments, appointmentsService ) {
 
+		
 		$scope.getDate = function() {
 			var date = new Date();
 		}
@@ -717,8 +721,10 @@ angular.module('EMRapp')
 	var currentUser;
 
 	this.getAuth = function() {
+		// console.log("help!!!!");
 		return $http.get('/api/auth').success(function(user) {
 			currentUser = user;
+			console.log(user);
 			return user;
 		}).error(function(err) {
 			$state.go('home')
