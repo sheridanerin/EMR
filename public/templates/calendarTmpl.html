@@ -1,19 +1,29 @@
-<div style="top: {{ top }}px; height: {{ height }}px"  class="appointmentDiv" ng-click="showAdvanced($event)">
+<div style="top: {{ top }}px; height: {{ height }}px" class="appointmentDiv">
 	
-	<div layout="row" layout-wrap class="calendarAppt">
+	<div ng-click="showAdvanced($event)">
+		<div layout="row" layout-wrap class="calendarAppt">
 
-		<div flex="10"> Name: </div> 
-		<div flex="25"> <span id="boldValues"> {{ appointment.patient.firstName }} {{ appointment.patient.lastName }} </span> </div>
-		<div flex="15">Description: </div> 
-		<div class="calendarContentOverflow"> <span class="calendarContentOverflow" id="boldValues">{{ appointment.description }} </span></div>
-		<div flex="5"></div>
-		<div flex="10"> Time: </div> 
-		<div flex="10"> <span id="boldValues">{{ appointment.startTime }} - {{ appointment.endTime }}</span>
-		<div flex="15"> 
-			<md-button class="md-fab md-primary trashIcon" ng-click="deleteAppointment( appointment )">
-	        	<i class="fa fa-trash-o fa-2x"></i>
-	        </md-button>
+			<div flex="10"> Name: </div> 
+			<div flex="25"> <span id="boldValues"> {{ appointment.patient.firstName }} {{ appointment.patient.lastName }} </span> </div>
+			<div flex="15">Description: </div> 
+			<div flex="15" class="calendarContentOverflow"> <span class="calendarContentOverflow" id="boldValues">{{ appointment.description }} </span></div>
+			<div flex="5"></div>
+			<div flex="10"> Time: </div> 
+			<div flex="10"> <span id="boldValues">{{ appointment.startTime }} - {{ appointment.endTime }}</span></div>
+
 		</div>
 	</div>
 
+		<div layout="row" layout-wrap>
+
+			<div flex="90"></div>
+			<div flex="10"> 
+				<md-button class="md-fab md-mini md-primary trashIcon" ng-click="deleteAppointment( appointment )">
+		        	<i class="fa fa-trash-o fa-2x"></i>
+		        </md-button>
+			</div>
+
+		</div>
+
 </div>
+

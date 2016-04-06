@@ -39,9 +39,8 @@ angular.module('EMRapp').directive('calendarDir', function() {
 				});
 			};
 
-			$scope.showAdvanced = function(ev) {
+			$scope.showAdvanced = function( ev ) {
 				$scope.selected = $scope.appointment;
-				console.log($scope.selected);
 				$mdDialog.show({
 					controller: DialogController,
 					templateUrl: '../templates/dialogTmpl.html',
@@ -53,14 +52,14 @@ angular.module('EMRapp').directive('calendarDir', function() {
 						selected: $scope.selected
 					}
 				})
-				.then(function(answer) {
+				.then(function( answer ) {
 					$scope.status = 'You said the information was "' + answer + '".';
 				}, function() {
 					$scope.status = 'You cancelled the dialog.';
 				});
 				$scope.$watch(function() {
 					return $mdMedia('sm');
-				}, function(sm) {
+				}, function( sm ) {
 					$scope.customFullscreen = (sm === true);
 				});
 			};

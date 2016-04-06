@@ -4,8 +4,10 @@ angular.module('EMRapp')
 	var currentUser;
 
 	this.getAuth = function() {
+		// console.log("help!!!!");
 		return $http.get('/api/auth').success(function(user) {
 			currentUser = user;
+			console.log(user);
 			return user;
 		}).error(function(err) {
 			$state.go('home')

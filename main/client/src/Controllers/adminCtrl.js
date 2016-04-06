@@ -1,6 +1,8 @@
 angular.module('EMRapp')
-.controller('adminCtrl', function( $scope, userService, userList ) {
+.controller('adminCtrl', function( $scope, userService, userList, user ) {
 	
+	console.log(user)
+
 	$scope.permissions = {
 		  insuranceInfo: false
 		, visitNotes: false

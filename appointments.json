@@ -1,0 +1,26 @@
+{"_id":{"$oid":"566f14b9d98bcd100969863d"},"date":{"$date":"2015-12-14T07:00:00.000Z"},"startTime":8.5,"endTime":9.5,"description":"hilarious accident","patient":{"$oid":"566e56868ec373b3032742fc"},"__v":0}
+{"_id":{"$oid":"566f2549d6c6bc060a58b963"},"date":{"$date":"2015-12-14T07:00:00.000Z"},"startTime":12,"endTime":13,"description":"Ate his shorts","patient":{"$oid":"566f229f75e239f409c11bc2"},"__v":0}
+{"_id":{"$oid":"566f25e3d6c6bc060a58b965"},"date":{"$date":"2015-12-15T07:00:00.000Z"},"startTime":12,"endTime":13.5,"description":"Bender stole my blood","patient":{"$oid":"566f23fd75e239f409c11bc3"},"__v":0}
+{"_id":{"$oid":"566f909f9e2e1ad110fd0846"},"date":{"$date":"2015-12-15T07:00:00.000Z"},"startTime":9.5,"endTime":10.5,"description":"PTSD from getting farted on too many times","patient":{"$oid":"566e59cb36bedfc2032b57c5"},"__v":0}
+{"_id":{"$oid":"566fb3df031343ad13387e81"},"date":{"$date":"2015-12-14T07:00:00.000Z"},"startTime":7,"endTime":7.5,"description":"blah","patient":{"$oid":"566f23fd75e239f409c11bc3"},"__v":0}
+{"_id":{"$oid":"56703dd264c2d27c14b2450d"},"date":{"$date":"2015-12-15T07:00:00.000Z"},"startTime":8,"endTime":8.5,"description":"I'm a rabbit","patient":{"$oid":"566e53581dac6c9303d7dc55"},"__v":0}
+{"_id":{"$oid":"5670552f8d57d2ab14588d9e"},"startTime":13.5,"endTime":14,"date":{"$date":"2015-12-15T07:00:00.000Z"},"description":"Swimmers Ear","patient":{"$oid":"56704f388d57d2ab14588d9d"},"__v":0}
+{"_id":{"$oid":"5671c3f15fd2646320db17c1"},"date":{"$date":"2015-12-16T07:00:00.000Z"},"startTime":8,"endTime":9,"description":"Being chased by an angry bald stuttering nimrod.","patient":{"$oid":"566e53581dac6c9303d7dc55"},"__v":0}
+{"_id":{"$oid":"5671c4855fd2646320db17c2"},"date":{"$date":"2015-12-16T07:00:00.000Z"},"startTime":11,"endTime":11.5,"description":"PTSD from getting farted in the face too many times.","patient":{"$oid":"566e59cb36bedfc2032b57c5"},"__v":0}
+{"_id":{"$oid":"5671c5115fd2646320db17c3"},"date":{"$date":"2015-12-16T07:00:00.000Z"},"startTime":9,"endTime":9.5,"description":"Ate his shorts","patient":{"$oid":"566f229f75e239f409c11bc2"},"__v":0}
+{"_id":{"$oid":"5671c79c5fd2646320db17c4"},"date":{"$date":"2015-12-16T07:00:00.000Z"},"startTime":10,"endTime":10.5,"description":"yay","patient":{"$oid":"566e59cb36bedfc2032b57c5"},"__v":0}
+{"_id":{"$oid":"5679a9ac756b472432fe2aa1"},"date":{"$date":"2015-12-22T07:00:00.000Z"},"startTime":13,"endTime":14,"description":"Melting from Acid","patient":{"$oid":"566e56868ec373b3032742fc"},"__v":0}
+{"_id":{"$oid":"5679ac5aaafa4a33329e6767"},"date":{"$date":"2015-12-22T07:00:00.000Z"},"startTime":8.5,"endTime":9.5,"description":"melted a bit from acid :(","patient":{"$oid":"566e56868ec373b3032742fc"},"__v":0}
+{"_id":{"$oid":"567efa95d9fef3ec0b901da7"},"date":{"$date":"2015-12-26T07:00:00.000Z"},"startTime":7,"endTime":8,"description":"being a bunny","patient":{"$oid":"566e53581dac6c9303d7dc55"},"__v":0}
+{"_id":{"$oid":"567efb39f5847aff0be955cc"},"date":{"$date":"2015-12-26T07:00:00.000Z"},"startTime":8.5,"endTime":9,"description":"Being a douche","patient":{"$oid":"566f229f75e239f409c11bc2"},"__v":0}
+{"_id":{"$oid":"5682e45ae7c6dd160ca14072"},"date":{"$date":"2015-12-29T07:00:00.000Z"},"startTime":9.5,"endTime":10.5,"description":"Not a human","patient":{"$oid":"566e56868ec373b3032742fc"},"__v":0}
+{"_id":{"$oid":"5691bb4557ff13c1047715f5"},"date":{"$date":"2016-01-09T05:00:00.000Z"},"startTime":8,"endTime":9,"description":"blalahalha","patient":{"$oid":"566e53581dac6c9303d7dc55"},"__v":0}
+{"_id":{"$oid":"56a11f086af2f91871d6276f"},"date":{"$date":"2016-01-21T07:00:00.000Z"},"startTime":7.5,"endTime":8.5,"description":"Not a human","patient":{"$oid":"566e53581dac6c9303d7dc55"},"__v":0}
+{"_id":{"$oid":"56a11f686af2f91871d62771"},"date":{"$date":"2016-01-21T07:00:00.000Z"},"startTime":9,"endTime":10,"description":"Stubbed Toe","patient":{"$oid":"5691b9b757ff13c1047715f2"},"__v":0}
+{"_id":{"$oid":"56a11fa36af2f91871d62772"},"date":{"$date":"2016-01-21T07:00:00.000Z"},"startTime":12,"endTime":14,"description":"Time Travel Sickness","patient":{"$oid":"566f23fd75e239f409c11bc3"},"__v":0}
+{"_id":{"$oid":"56f1be77fb5de0fc04fe4e79"},"date":{"$date":"2016-03-22T06:00:00.000Z"},"startTime":8,"endTime":9.5,"description":"snagged a fin. bleh","patient":{"$oid":"56704f388d57d2ab14588d9d"},"__v":0}
+{"_id":{"$oid":"56f955af9612e11f06e78fe9"},"date":{"$date":"2016-03-28T06:00:00.000Z"},"startTime":8,"endTime":8.5,"description":"123","patient":{"$oid":"566e53581dac6c9303d7dc55"},"__v":0}
+{"_id":{"$oid":"56fbf2776a43181b10e0bb56"},"date":{"$date":"2016-03-30T06:00:00.000Z"},"startTime":7.5,"endTime":8,"description":"acid burns","patient":{"$oid":"566e56868ec373b3032742fc"},"__v":0}
+{"_id":{"$oid":"5702efbc7ae998d72394ca44"},"date":{"$date":"2016-04-04T06:00:00.000Z"},"startTime":7.5,"endTime":8,"description":"got shot by elmur fudd","patient":{"$oid":"566e53581dac6c9303d7dc55"},"__v":0}
+{"_id":{"$oid":"5703d77f7ae998d72394ca47"},"date":{"$date":"2016-04-05T06:00:00.000Z"},"startTime":7.5,"endTime":8.5,"description":"carrot breath","patient":{"$oid":"566e53581dac6c9303d7dc55"},"__v":0}
+{"_id":{"$oid":"5703d9c27ae998d72394ca48"},"date":{"$date":"2016-04-05T06:00:00.000Z"},"startTime":9,"endTime":9.5,"description":"Hat hair","patient":{"$oid":"566e59cb36bedfc2032b57c5"},"__v":0}

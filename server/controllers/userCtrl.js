@@ -80,6 +80,7 @@ module.exports = {
 	},
 
 	isAuth: function( req, res, next ) {
+		console.log(req);
 		if(req.user) {
 			next();
 		} else {
@@ -96,6 +97,7 @@ module.exports = {
 	},
 
 	auth: function( req, res ) {
+		console.log(req.user);
 		res.send(req.user);
 	}
 

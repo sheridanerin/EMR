@@ -21,9 +21,9 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				templateUrl: 'templates/userHomeTmpl.html',
 				controller: 'userHomeCtrl',
 				resolve: {
-				// 	user: function( authService ) {
-				// 		return authService.getAuth();
-				// 	},
+					// user: function( authService ) {
+					// 	return authService.getAuth();
+					// },
 					appointments: ["appointmentsService", function( appointmentsService ) {
 						var today = new Date();
 						return appointmentsService.getDayAppointments(today);
@@ -34,21 +34,21 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 				url:'/newpatient',
 				templateUrl: 'templates/newPatientTmpl.html',
 				controller: 'newPatientCtrl',
-				// resolve: {
-				// 	user: function( authService ) {
-				// 		return authService.getAuth();
-				// 	}
-				// }
+				resolve: {
+					// user: function( authService ) {
+					// 	return authService.getAuth();
+					// }
+				}
 			})
 			.state('searchResults', {
 				url:'/searchresults',
 				templateUrl: 'templates/searchResultsTmpl.html',
 				controller: 'searchResultsCtrl',
-				// resolve: {
-				// 	user: function( authService ) {
-				// 		return authService.getAuth();
-				// 	}
-				// }
+				resolve: {
+					// user: function( authService ) {
+					// 	return authService.getAuth();
+					// }
+				}
 			})
 			.state('fullSchedule', {
 				url:'/fullschedule/:date',
@@ -62,10 +62,10 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 							var today = new Date();
 						// }
 						return appointmentsService.getDayAppointments(today);
-					}]
-				// 	user: function( authService ) {
-				// 		return authService.getAuth();
-				// 	},
+					}],
+					// user: function( authService ) {
+					// 	return authService.getAuth();
+					// }
 					// appointments: function( appointmentsService ) {
 					// 	return appointmentsService.getAppointments().then(function( res ) {
 					// 		return res;
@@ -98,16 +98,15 @@ angular.module('EMRapp', ['ui.router', 'ngMaterial'])
 					userList: ["userService", function( userService ) {
 						return userService.getUsers();
 					}],
-					user: ["authService", function( authService ) {
-						return authService.getAdminAuth();
-					}]
+					// user: function( authService ) {
+					// 	return authService.getAdminAuth();
+					// }
 				}
 			})
 
 			$urlRouterProvider.otherwise('/');
 			
 }]);
-
 angular.module('EMRapp')
 .controller('adminCtrl', ["$scope", "userService", "userList", function( $scope, userService, userList ) {
 	
@@ -551,17 +550,21 @@ angular.module('EMRapp')
 angular.module('EMRapp')
 .controller('userHomeCtrl', ["$scope", "appointments", "appointmentsService", function( $scope, appointments, appointmentsService ) {
 
-    // $scope.times = ['7:00', '7:30', '8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '1:00', '1:30', '2:00', '2:30', '3:00', '3:30', '4:00', '4:30', '5:00', '5:30', '6:00', '6:30', '7:00', '7:30', '8:00'];
+		$scope.getDate = function() {
+			var date = new Date();
+		}
 
-	$scope.appointments = appointments.data;
+		$scope.appointments = appointments.data;
 
-	$scope.getDayAppointments = function( date ) {
-		appointmentsService.getDayAppointments(date).then(function( appointments ) {
-			$scope.appointments = appointments.data;
-		});
-	} 
+		$scope.getDayAppointments = function( date ) {
+			appointmentsService.getDayAppointments(date).then(function( appointments ) {
+				$scope.appointments = appointments.data;
+			});
+		} 
 	
 }]);
+
+
 angular.module('EMRapp').directive('calendarDir', function() {
 	return {
 		  restrict: 'E'
@@ -603,9 +606,8 @@ angular.module('EMRapp').directive('calendarDir', function() {
 				});
 			};
 
-			$scope.showAdvanced = function(ev) {
+			$scope.showAdvanced = function( ev ) {
 				$scope.selected = $scope.appointment;
-				console.log($scope.selected);
 				$mdDialog.show({
 					controller: DialogController,
 					templateUrl: '../templates/dialogTmpl.html',
@@ -617,14 +619,14 @@ angular.module('EMRapp').directive('calendarDir', function() {
 						selected: $scope.selected
 					}
 				})
-				.then(function(answer) {
+				.then(function( answer ) {
 					$scope.status = 'You said the information was "' + answer + '".';
 				}, function() {
 					$scope.status = 'You cancelled the dialog.';
 				});
 				$scope.$watch(function() {
 					return $mdMedia('sm');
-				}, function(sm) {
+				}, function( sm ) {
 					$scope.customFullscreen = (sm === true);
 				});
 			};
